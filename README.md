@@ -1,4 +1,4 @@
-GDG Boomerang site converted to run on Google App Engine.
+Boomerang converted for App Engine (Java)
 ==============================
 This is forked from the [GDG-X boomerang] project.
 GDG boilerplate, feeds from DevSite and Google+ using AngularJS and Twitter Bootstrap.

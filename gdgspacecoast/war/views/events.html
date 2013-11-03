@@ -3,7 +3,7 @@
     <div class="gdg_loading" ng-show="loading"></div>
     <div class="row">
         <h3 ng-show="events.future.length" class="span12">Upcoming Events</h3>
-        <div class="media span12" ng-repeat="event in events.future">
+        <div class="media span12" ng-repeat="event in events.future | orderBy:'start'">
             <a ng-show="event.iconUrl" class="pull-left" ng-href="https://developers.google.com{{event.link}}" target="_blank">
                 <img class="media-object" ng-src="https://developers.google.com{{event.iconUrl}}"></a>
             <div class="media-body">
@@ -15,7 +15,7 @@
     </div>
     <div class="row">
         <h3 ng-show="events.past.length" class="span12">Past Events</h3>
-        <div class="media span12" ng-repeat="event in events.past">
+        <div class="media span12" ng-repeat="event in events.past | orderBy:'-end'">
             <a ng-show="event.iconUrl" class="pull-left" ng-href="https://developers.google.com{{event.link}}" target="_blank">
                 <img class="media-object" ng-src="https://developers.google.com{{event.iconUrl}}"></a>
             <div class="media-body">

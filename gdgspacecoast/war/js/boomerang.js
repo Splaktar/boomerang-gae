@@ -157,7 +157,7 @@ boomerang.controller("PhotosControl", function ($scope, $http, Config) {
 
     var pwa = 'https://picasaweb.google.com/data/feed/api/user/' + Config.id + '/albumid/' + Config.pwa_id +
         '?access=public&alt=json-in-script&kind=photo&max-results=20&fields=entry(title,link/@href,summary,content/@src)&v=2.0&callback=JSON_CALLBACK';
-    
+
     $http.jsonp(pwa).
         success(function (d) {
             var p = d.feed.entry;
@@ -172,4 +172,39 @@ boomerang.controller("PhotosControl", function ($scope, $http, Config) {
             }
             $scope.loading = false;
         });
+});
+
+// HTML-ified linky from http://plnkr.co/edit/IEpLfZ8gO2B9mJcTKuWY?p=preview
+boomerang.filter('htmlLinky', function($sanitize, linkyFilter) {
+	var ELEMENT_NODE = 1;
+	var TEXT_NODE = 3;
+	var linkifiedDOM = document.createElement('div');
+	var inputDOM = document.createElement('div');
+
+	var linkify = function linkify(startNode) {
+		var i, ii, currentNode;
+
+		for (i = 0, ii = startNode.childNodes.length; i < ii; i++) {
+			currentNode = startNode.childNodes[i];
+
+			switch (currentNode.nodeType) {
+			case ELEMENT_NODE:
+				linkify(currentNode);
+				break;
+			case TEXT_NODE:
+				linkifiedDOM.innerHTML = linkyFilter(currentNode.textContent);
+				i += linkifiedDOM.childNodes.length - 1;
+				while(linkifiedDOM.childNodes.length)
+					startNode.insertBefore(linkifiedDOM.childNodes[0], currentNode);
+				startNode.removeChild(currentNode);
+			}
+		}
+
+		return startNode;
+	};
+
+	return function(input) {
+		inputDOM.innerHTML = input;
+		return linkify(inputDOM).innerHTML;
+	};
 });

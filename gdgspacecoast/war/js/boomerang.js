@@ -194,8 +194,10 @@ boomerang.filter('htmlLinky', function($sanitize, linkyFilter) {
 			case TEXT_NODE:
 				linkifiedDOM.innerHTML = linkyFilter(currentNode.textContent);
 				i += linkifiedDOM.childNodes.length - 1;
+
 				while(linkifiedDOM.childNodes.length)
 					startNode.insertBefore(linkifiedDOM.childNodes[0], currentNode);
+
 				startNode.removeChild(currentNode);
 			}
 		}

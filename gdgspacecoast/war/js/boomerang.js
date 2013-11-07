@@ -182,9 +182,9 @@ boomerang.filter('htmlLinky', function($sanitize, linkyFilter) {
 	var inputDOM = document.createElement('div');
 
 	var linkify = function linkify(startNode) {
-		var i, ii, currentNode;
+		var i, currentNode;
 
-		for (i = 0, ii = startNode.childNodes.length; i < ii; i++) {
+		for (i = 0; i < startNode.childNodes.length; i++) {
 			currentNode = startNode.childNodes[i];
 
 			switch (currentNode.nodeType) {

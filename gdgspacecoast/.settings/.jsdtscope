@@ -8,6 +8,6 @@
 			<attribute name="hide" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.wst.jsdt.USER_LIBRARY/AngularJS-1.2.0-rc3"/>
+	<classpathentry kind="con" path="org.eclipse.wst.jsdt.USER_LIBRARY/AngularJS"/>
 	<classpathentry kind="output" path=""/>
 </classpath>

@@ -1,0 +1,29 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="App Engine API:war exploded">
+    <output-path>$PROJECT_DIR$/gdgspacecoast/war</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="gdgspacecoast" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="JPA 1.0" />
+          <element id="file-copy" path="$PROJECT_DIR$/gdgspacecoast/war/WEB-INF/lib/appengine-endpoints.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/gdgspacecoast/war/WEB-INF/lib/datanucleus-api-jpa-3.1.3.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/gdgspacecoast/war/WEB-INF/lib/datanucleus-core-3.1.3.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/gdgspacecoast/war/WEB-INF/lib/asm-4.0.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/gdgspacecoast/war/WEB-INF/lib/appengine-jsr107cache-1.8.5.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/gdgspacecoast/war/WEB-INF/lib/appengine-api-1.0-sdk-1.8.5.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/gdgspacecoast/war/WEB-INF/lib/appengine-api-labs.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/gdgspacecoast/war/WEB-INF/lib/jta-1.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/gdgspacecoast/war/WEB-INF/lib/geronimo-jpa_2.0_spec-1.0.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/gdgspacecoast/war/WEB-INF/lib/jsr107cache-1.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/gdgspacecoast/war/WEB-INF/lib/datanucleus-appengine-2.1.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/gdgspacecoast/war/WEB-INF/lib/jdo-api-3.0.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/gdgspacecoast/war/WEB-INF/lib/servlet-api.jar" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="gdgspacecoast/web/Web" />
+    </root>
+  </artifact>
+</component>

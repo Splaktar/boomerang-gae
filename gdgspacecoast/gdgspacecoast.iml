@@ -18,7 +18,7 @@
       </configuration>
       <facet type="google-app-engine" name="Google App Engine">
         <configuration>
-          <sdk-home-path>$USER_HOME$/.eclipse/org.eclipse.platform_4.3.0_1473617060_linux_gtk_x86_64/plugins/com.google.appengine.eclipse.sdkbundle_1.8.5/appengine-java-sdk-1.8.5</sdk-home-path>
+          <sdk-home-path>/opt/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.8.7/appengine-java-sdk-1.8.7</sdk-home-path>
           <run-enhancer-on-make>true</run-enhancer-on-make>
           <files-to-enhance>
             <file path="$MODULE_DIR$/src" />
@@ -44,6 +44,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="jdk" jdkName="1.7" jdkType="JavaSDK" />
     <orderEntry type="library" scope="PROVIDED" name="AppEngine Dev" level="application_server_libraries" />
+    <orderEntry type="library" name="JPA 1.0" level="project" />
   </component>
 </module>
 

@@ -2,19 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28fdc04a-2ee1-4a88-b058-4ae25ac5086c" name="Default" comment="Merge branch 'master' of https://github.com/Splaktar/boomerang-gae.git&#10;&#10;Conflicts:&#10;&#9;.idea/jsLibraryMappings.xml&#10;&#9;.idea/libraries/AngularJS.xml&#10;&#9;.idea/misc.xml&#10;&#9;gdgspacecoast/.classpath&#10;&#9;gdgspacecoast/war/WEB-INF/.gitignore&#10;&#9;gdgspacecoast/war/index.html&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/qaplug_profiles.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/splaktar.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/AngularJS.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/JPA_1_0.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/App_Engine_API_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/App_Engine_API_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gdgspacecoast/src/org/gdgspacecoast/GdgspacecoastServlet.java" afterPath="$PROJECT_DIR$/gdgspacecoast/src/org/gdgspacecoast/GdgspacecoastServlet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gdgspacecoast/war/WEB-INF/appengine-web.xml" afterPath="$PROJECT_DIR$/gdgspacecoast/war/WEB-INF/appengine-web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gdgspacecoast/war/js/boomerang.js" afterPath="$PROJECT_DIR$/gdgspacecoast/war/js/boomerang.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gdgspacecoast/war/js/config.js" afterPath="$PROJECT_DIR$/gdgspacecoast/war/js/config.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gdgspacecoast/gdgspacecoast.iml" afterPath="$PROJECT_DIR$/gdgspacecoast/gdgspacecoast.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gdgspacecoast/war/index.html" afterPath="$PROJECT_DIR$/gdgspacecoast/war/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLinters/jshint.xml" afterPath="$PROJECT_DIR$/.idea/jsLinters/jshint.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="gdgspacecoast.iws" />
@@ -762,12 +754,15 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
     <MESSAGE value="Commit WebStorm configuration." />
     <MESSAGE value="Merge branch 'master' of https://github.com/Splaktar/boomerang-gae.git&#10;&#10;Conflicts:&#10;&#9;.idea/jsLibraryMappings.xml&#10;&#9;.idea/libraries/AngularJS.xml&#10;&#9;.idea/misc.xml&#10;&#9;gdgspacecoast/.classpath&#10;&#9;gdgspacecoast/war/WEB-INF/.gitignore&#10;&#9;gdgspacecoast/war/index.html&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/Splaktar/boomerang-gae.git&#10;&#10;Conflicts:&#10;&#9;.idea/jsLibraryMappings.xml&#10;&#9;.idea/libraries/AngularJS.xml&#10;&#9;.idea/misc.xml&#10;&#9;gdgspacecoast/.classpath&#10;&#9;gdgspacecoast/war/WEB-INF/.gitignore&#10;&#9;gdgspacecoast/war/index.html&#10;" />
+    <MESSAGE value="Display up to 50 photos in Gallery instead of only 20." />
+    <option name="LAST_COMMIT_MESSAGE" value="Display up to 50 photos in Gallery instead of only 20." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />

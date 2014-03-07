@@ -16,22 +16,24 @@
           <root url="file://$MODULE_DIR$/war" relative="/" />
         </webroots>
       </configuration>
-      <facet type="google-app-engine" name="Google App Engine">
-        <configuration>
-          <sdk-home-path>/opt/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.8.7/appengine-java-sdk-1.8.7</sdk-home-path>
-          <run-enhancer-on-make>true</run-enhancer-on-make>
-          <files-to-enhance>
-            <file path="$MODULE_DIR$/src" />
-          </files-to-enhance>
-        </configuration>
-      </facet>
     </facet>
     <facet type="jpa" name="JPA">
       <configuration>
         <setting name="validation-enabled" value="true" />
         <setting name="provider-name" value="" />
-        <datasource-mapping />
+        <datasource-mapping>
+          <factory-entry name="transactions-optional" />
+        </datasource-mapping>
         <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/META-INF/persistence.xml" />
+      </configuration>
+    </facet>
+    <facet type="google-app-engine" name="Google App Engine">
+      <configuration>
+        <sdk-home-path>/opt/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.8.9/appengine-java-sdk-1.8.9</sdk-home-path>
+        <run-enhancer-on-make>true</run-enhancer-on-make>
+        <files-to-enhance>
+          <file path="$MODULE_DIR$/src" />
+        </files-to-enhance>
       </configuration>
     </facet>
   </component>
@@ -43,8 +45,12 @@
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="jdk" jdkName="1.7" jdkType="JavaSDK" />
-    <orderEntry type="library" scope="PROVIDED" name="AppEngine Dev" level="application_server_libraries" />
-    <orderEntry type="library" name="JPA 1.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="appengine-java-sdk-1.8.9" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="JPA" level="application" />
+    <orderEntry type="library" name="servlet-api" level="application" />
+    <orderEntry type="library" name="angular" level="application" />
+    <orderEntry type="library" name="plusone" level="application" />
+    <orderEntry type="library" name="angular-sanitize" level="application" />
   </component>
 </module>
 

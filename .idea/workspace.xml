@@ -4,7 +4,6 @@
     <list default="true" id="28fdc04a-2ee1-4a88-b058-4ae25ac5086c" name="Default" comment="Merge branch 'master' of https://github.com/Splaktar/boomerang-gae.git&#10;&#10;Conflicts:&#10;&#9;.idea/jsLibraryMappings.xml&#10;&#9;.idea/libraries/AngularJS.xml&#10;&#9;.idea/misc.xml&#10;&#9;gdgspacecoast/.classpath&#10;&#9;gdgspacecoast/war/WEB-INF/.gitignore&#10;&#9;gdgspacecoast/war/index.html&#10;">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gdgspacecoast/src/org/gdgspacecoast/GdgspacecoastServlet.java" afterPath="$PROJECT_DIR$/gdgspacecoast/src/org/gdgspacecoast/GdgspacecoastServlet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gdgspacecoast/war/WEB-INF/appengine-web.xml" afterPath="$PROJECT_DIR$/gdgspacecoast/war/WEB-INF/appengine-web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gdgspacecoast/war/js/config.js" afterPath="$PROJECT_DIR$/gdgspacecoast/war/js/config.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gdgspacecoast/gdgspacecoast.iml" afterPath="$PROJECT_DIR$/gdgspacecoast/gdgspacecoast.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gdgspacecoast/war/index.html" afterPath="$PROJECT_DIR$/gdgspacecoast/war/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -762,7 +761,8 @@
     <MESSAGE value="Commit WebStorm configuration." />
     <MESSAGE value="Merge branch 'master' of https://github.com/Splaktar/boomerang-gae.git&#10;&#10;Conflicts:&#10;&#9;.idea/jsLibraryMappings.xml&#10;&#9;.idea/libraries/AngularJS.xml&#10;&#9;.idea/misc.xml&#10;&#9;gdgspacecoast/.classpath&#10;&#9;gdgspacecoast/war/WEB-INF/.gitignore&#10;&#9;gdgspacecoast/war/index.html&#10;" />
     <MESSAGE value="Display up to 50 photos in Gallery instead of only 20." />
-    <option name="LAST_COMMIT_MESSAGE" value="Display up to 50 photos in Gallery instead of only 20." />
+    <MESSAGE value="Update cover for Dart Flight School." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update cover for Dart Flight School." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />

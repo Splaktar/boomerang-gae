@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="JPA 1.0">
-    <CLASSES>
-      <root url="jar:///opt/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.8.7/appengine-java-sdk-1.8.7/lib/tools/orm/geronimo-jpa_3.0_spec-1.1.1.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

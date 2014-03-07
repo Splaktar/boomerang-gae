@@ -1,26 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="CheckstyleConfigurable">
+    <option name="suppFilterFilename" value="" />
+    <option name="suppCommentFilter" value="false" />
+    <option name="offComment" value="CHECKSTYLE\:OFF" />
+    <option name="onComment" value="CHECKSTYLE\:ON" />
+    <option name="checkFormat" value=".*" />
+    <option name="messageFormat" value="" />
+    <option name="checkCPP" value="true" />
+    <option name="checkC" value="true" />
+    <option name="suppNearbyCommentFilter" value="false" />
+    <option name="snCommentFormat" value="SUPPRESS CHECKSTYLE (\w+)" />
+    <option name="snCheckFormat" value="$1" />
+    <option name="snMessageFormat" value="" />
+    <option name="snInfluenceFormat" value="0" />
+    <option name="snCheckCPP" value="true" />
+    <option name="snCheckC" value="true" />
+    <option name="pathToUserRulesConfiguration" value="" />
+    <option name="pathToJarWithRules" value="" />
+  </component>
   <component name="EntryPointsManager">
     <entry_points version="2.0" />
   </component>
-  <component name="FrameworkDetectionExcludesConfiguration">
-    <file type="gwt" url="file://$USER_HOME$/.eclipse/org.eclipse.platform_4.3.0_1473617060_linux_gtk_x86_64/plugins/com.google.appengine.eclipse.sdkbundle_1.8.5/appengine-java-sdk-1.8.5/demos/sticky/src/com/google/appengine/demos/sticky/Sticky.gwt.xml" />
-    <file type="gwt" url="file://$USER_HOME$/.eclipse/org.eclipse.platform_4.3.0_1473617060_linux_gtk_x86_64/plugins/com.google.appengine.eclipse.sdkbundle_1.8.5/appengine-java-sdk-1.8.5/demos/taskengine/src/com/google/appengine/demos/taskengine/Tasks.gwt.xml" />
-    <file type="web" url="file://$USER_HOME$/.eclipse/org.eclipse.platform_4.3.0_1473617060_linux_gtk_x86_64/plugins/com.google.appengine.eclipse.sdkbundle_1.8.5/appengine-java-sdk-1.8.5/demos/guestbook/war/WEB-INF/web.xml" />
-    <file type="web" url="file://$USER_HOME$/.eclipse/org.eclipse.platform_4.3.0_1473617060_linux_gtk_x86_64/plugins/com.google.appengine.eclipse.sdkbundle_1.8.5/appengine-java-sdk-1.8.5/demos/helloorm/war/WEB-INF/web.xml" />
-    <file type="web" url="file://$USER_HOME$/.eclipse/org.eclipse.platform_4.3.0_1473617060_linux_gtk_x86_64/plugins/com.google.appengine.eclipse.sdkbundle_1.8.5/appengine-java-sdk-1.8.5/demos/helloorm2/war/WEB-INF/web.xml" />
-    <file type="web" url="file://$USER_HOME$/.eclipse/org.eclipse.platform_4.3.0_1473617060_linux_gtk_x86_64/plugins/com.google.appengine.eclipse.sdkbundle_1.8.5/appengine-java-sdk-1.8.5/demos/helloservers/war/WEB-INF/web.xml" />
-    <file type="web" url="file://$USER_HOME$/.eclipse/org.eclipse.platform_4.3.0_1473617060_linux_gtk_x86_64/plugins/com.google.appengine.eclipse.sdkbundle_1.8.5/appengine-java-sdk-1.8.5/demos/helloxmpp/war/WEB-INF/web.xml" />
-    <file type="web" url="file://$USER_HOME$/.eclipse/org.eclipse.platform_4.3.0_1473617060_linux_gtk_x86_64/plugins/com.google.appengine.eclipse.sdkbundle_1.8.5/appengine-java-sdk-1.8.5/demos/jdoexamples/war/WEB-INF/web.xml" />
-    <file type="web" url="file://$USER_HOME$/.eclipse/org.eclipse.platform_4.3.0_1473617060_linux_gtk_x86_64/plugins/com.google.appengine.eclipse.sdkbundle_1.8.5/appengine-java-sdk-1.8.5/demos/mandelbrot/war/WEB-INF/web.xml" />
-    <file type="web" url="file://$USER_HOME$/.eclipse/org.eclipse.platform_4.3.0_1473617060_linux_gtk_x86_64/plugins/com.google.appengine.eclipse.sdkbundle_1.8.5/appengine-java-sdk-1.8.5/demos/mediastore/war/WEB-INF/web.xml" />
-    <file type="web" url="file://$USER_HOME$/.eclipse/org.eclipse.platform_4.3.0_1473617060_linux_gtk_x86_64/plugins/com.google.appengine.eclipse.sdkbundle_1.8.5/appengine-java-sdk-1.8.5/demos/new_project_template/src/WEB-INF/web.xml" />
-    <file type="web" url="file://$USER_HOME$/.eclipse/org.eclipse.platform_4.3.0_1473617060_linux_gtk_x86_64/plugins/com.google.appengine.eclipse.sdkbundle_1.8.5/appengine-java-sdk-1.8.5/demos/shardedcounter/war/WEB-INF/web.xml" />
-    <file type="web" url="file://$USER_HOME$/.eclipse/org.eclipse.platform_4.3.0_1473617060_linux_gtk_x86_64/plugins/com.google.appengine.eclipse.sdkbundle_1.8.5/appengine-java-sdk-1.8.5/demos/sticky/war/WEB-INF/web.xml" />
-    <file type="web" url="file://$USER_HOME$/.eclipse/org.eclipse.platform_4.3.0_1473617060_linux_gtk_x86_64/plugins/com.google.appengine.eclipse.sdkbundle_1.8.5/appengine-java-sdk-1.8.5/demos/taskengine/war/WEB-INF/web.xml" />
-    <file type="web" url="file://$USER_HOME$/.eclipse/org.eclipse.platform_4.3.0_1473617060_linux_gtk_x86_64/plugins/com.google.appengine.eclipse.sdkbundle_1.8.5/appengine-java-sdk-1.8.5/demos/taskqueueexamples/war/WEB-INF/web.xml" />
+  <component name="FindBugsConfigurable">
+    <option name="make" value="true" />
+    <option name="effort" value="default" />
+    <option name="priority" value="Medium" />
+    <option name="excludeFilter" value="" />
   </component>
   <component name="IdProvider" IDEtalkID="C73B4CCD24B3B48A0A83DFF13B8F2495" />
+  <component name="ProjectKey">
+    <option name="state" value="https://github.com/Splaktar/boomerang-gae.git" />
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" assert-keyword="true" jdk-15="true" project-jdk-name="1.7" project-jdk-type="JavaSDK" />
+  <component name="SuppressionsComponent">
+    <option name="suppComments" value="[]" />
+  </component>
 </project>
 

@@ -6,11 +6,11 @@ boomerang.factory('Config', function () {
         'google_api'    : 'AIzaSyA9ALjr2iWvhf3Rsz9-bH0cEcDcrdkpuAg',
         'pwa_id'        : '5915725140705884785', //picasa web album id, must belong to google+ id above
         'cover' : {
-            title : 'GWT.create',
-            subtitle : 'The largest event about GWT in 2013 with 2 days and more than 60 presentations.',
+            title : 'Dart Flight School',
+            subtitle : 'Dart hit 1.0 and is now Flight Ready! Developer communities around the world are hosting Dart Flight School events during February-March 2014.',
             button : {
-                text : 'Register',
-                url : 'http://gwtcreate.com/'
+                text : 'Find Local Event',
+                url : 'https://www.dartlang.org/events/2014/flight-school/'
             }
         }
     };

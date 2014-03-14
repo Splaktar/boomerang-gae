@@ -150,7 +150,6 @@ boomerang.controller("EventsControl", function ($scope, $http, Config) {
             }
             $scope.loading = false;
         });
-
 });
 
 boomerang.controller("PhotosControl", function ($scope, $http, Config) {
@@ -159,7 +158,7 @@ boomerang.controller("PhotosControl", function ($scope, $http, Config) {
     $scope.photos = [];
 
     var pwa = 'https://picasaweb.google.com/data/feed/api/user/' + Config.id + '/albumid/' + Config.pwa_id +
-        '?access=public&alt=json-in-script&kind=photo&max-results=20&fields=entry(title,link/@href,summary,content/@src)&v=2.0&callback=JSON_CALLBACK';
+        '?access=public&alt=json-in-script&kind=photo&max-results=50&fields=entry(title,link/@href,summary,content/@src)&v=2.0&callback=JSON_CALLBACK';
 
     $http.jsonp(pwa).
         success(function (d) {

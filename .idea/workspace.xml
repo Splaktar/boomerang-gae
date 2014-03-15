@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28fdc04a-2ee1-4a88-b058-4ae25ac5086c" name="Default" comment="Merge branch 'master' of https://github.com/Splaktar/boomerang-gae&#10;&#10;Conflicts:&#10;&#9;.idea/artifacts/App_Engine_API_war_exploded.xml&#10;&#9;gdgspacecoast/war/index.html&#10;#&#10;# It looks like you may be committing a merge.&#10;# If this is not correct, please remove the file&#10;#&#9;.git/MERGE_HEAD&#10;# and try again.&#10;&#10;&#10;# Please enter the commit message for your changes. Lines starting&#10;# with '#' will be ignored, and an empty message aborts the commit.&#10;# On branch master&#10;# Your branch and 'origin/master' have diverged,&#10;# and have 2 and 6 different commits each, respectively.&#10;#   (use &quot;git pull&quot; to merge the remote branch into yours)&#10;#&#10;# All conflicts fixed but you are still merging.&#10;#   (use &quot;git commit&quot; to conclude merge)&#10;#&#10;# Changes to be committed:&#10;#&#10;#&#9;modified:   .idea/artifacts/App_Engine_API_war_exploded.xml&#10;#&#9;new file:   .idea/dictionaries/splaktar.xml&#10;#&#9;modified:   .idea/jsLinters/jshint.xml&#10;#&#9;deleted:    .idea/libraries/JPA_1_0.xml&#10;#&#9;modified:   .idea/misc.xml&#10;#&#9;new file:   .idea/qaplug_profiles.xml&#10;#&#9;new file:   .idea/workspace.xml&#10;#&#9;modified:   gdgspacecoast/gdgspacecoast.iml&#10;#&#9;modified:   gdgspacecoast/src/org/gdgspacecoast/GdgspacecoastServlet.java&#10;#&#9;modified:   gdgspacecoast/war/WEB-INF/.gitignore&#10;#&#9;modified:   gdgspacecoast/war/WEB-INF/appengine-web.xml&#10;#&#9;modified:   gdgspacecoast/war/index.html&#10;#&#9;modified:   gdgspacecoast/war/js/boomerang.js&#10;#&#9;modified:   gdgspacecoast/war/js/config.js&#10;#&#10;# Untracked files:&#10;#   (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)&#10;#&#10;#&#9;.idea/artifacts/App_Engine_API_war_exploded.xml~&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gdgspacecoast/war/images/Google-Developers.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gdgspacecoast/war/images/sponsor1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gdgspacecoast/war/images/sponsor2.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gdgspacecoast/war/views/about.html" afterPath="$PROJECT_DIR$/gdgspacecoast/war/views/about.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gdgspacecoast/war/css/gdg.css" afterPath="$PROJECT_DIR$/gdgspacecoast/war/css/gdg.css" />
+    <list default="true" id="28fdc04a-2ee1-4a88-b058-4ae25ac5086c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gdgspacecoast/.settings/com.google.appengine.eclipse.core.prefs" afterPath="$PROJECT_DIR$/gdgspacecoast/.settings/com.google.appengine.eclipse.core.prefs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="gdgspacecoast.iws" />
@@ -83,7 +79,7 @@
       <file leaf-file-name="about.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gdgspacecoast/war/views/about.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="14" selection-start="954" selection-end="954" vertical-scroll-proportion="0.92045456" vertical-offset="0" max-vertical-offset="783">
+            <state line="23" column="6" selection-start="972" selection-end="972" vertical-scroll-proportion="0.64620185" vertical-offset="0" max-vertical-offset="961">
               <folding />
             </state>
           </provider>
@@ -515,7 +511,7 @@
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32888466" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32888466" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -570,7 +566,8 @@
     <MESSAGE value="Upgrade to IntelliJ 13 and App Engine SDK 1.8.9." />
     <MESSAGE value="More upgrades to IntelliJ 13 and App Engine 1.8.9." />
     <MESSAGE value="MInor reformatting of index." />
-    <option name="LAST_COMMIT_MESSAGE" value="MInor reformatting of index." />
+    <MESSAGE value="Add space for sponsors on About page." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add space for sponsors on About page." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -814,7 +811,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gdgspacecoast/war/views/about.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="14" selection-start="954" selection-end="954" vertical-scroll-proportion="0.92045456" vertical-offset="0" max-vertical-offset="783">
+        <state line="23" column="6" selection-start="972" selection-end="972" vertical-scroll-proportion="0.64620185" vertical-offset="0" max-vertical-offset="961">
           <folding />
         </state>
       </provider>

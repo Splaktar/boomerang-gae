@@ -45,9 +45,7 @@
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="jdk" jdkName="1.7" jdkType="JavaSDK" />
-    <orderEntry type="library" scope="PROVIDED" name="appengine-java-sdk-1.8.9" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="JPA" level="application" />
-    <orderEntry type="library" name="servlet-api" level="application" />
+    <orderEntry type="library" name="appengine-java-sdk-1.8.9" level="application" />
     <orderEntry type="library" name="angular" level="application" />
     <orderEntry type="library" name="plusone" level="application" />
     <orderEntry type="library" name="angular-sanitize" level="application" />

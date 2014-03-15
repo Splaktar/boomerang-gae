@@ -6,6 +6,9 @@
         <element id="directory" name="classes">
           <element id="module-output" name="gdgspacecoast" />
           <element id="jpa-descriptors" facet="gdgspacecoast/jpa/JPA" />
+          <element id="library" level="application" name="angular" />
+          <element id="library" level="application" name="angular-sanitize" />
+          <element id="library" level="application" name="plusone" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="application" name="JPA" />

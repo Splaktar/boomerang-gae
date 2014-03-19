@@ -6,14 +6,10 @@
         <element id="directory" name="classes">
           <element id="module-output" name="gdgspacecoast" />
           <element id="jpa-descriptors" facet="gdgspacecoast/jpa/JPA" />
-          <element id="library" level="application" name="angular" />
-          <element id="library" level="application" name="angular-sanitize" />
-          <element id="library" level="application" name="plusone" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="application" name="JPA" />
           <element id="library" level="application" name="servlet-api" />
-          <element id="library" level="application" name="appengine-java-sdk-1.8.9" />
+          <element id="library" level="application" name="appengine-java-sdk-1.9.0" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="gdgspacecoast/web/Web" />

@@ -29,7 +29,7 @@
     </facet>
     <facet type="google-app-engine" name="Google App Engine">
       <configuration>
-        <sdk-home-path>/opt/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.9.0/appengine-java-sdk-1.9.0</sdk-home-path>
+        <sdk-home-path>/opt/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.9.1/appengine-java-sdk-1.9.1</sdk-home-path>
         <run-enhancer-on-make>true</run-enhancer-on-make>
         <files-to-enhance>
           <file path="$MODULE_DIR$/src" />
@@ -45,11 +45,7 @@
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="jdk" jdkName="1.7" jdkType="JavaSDK" />
-    <orderEntry type="library" name="angular" level="application" />
-    <orderEntry type="library" name="plusone" level="application" />
-    <orderEntry type="library" name="angular-sanitize" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="appengine-java-sdk-1.9.0" level="application" />
-    <orderEntry type="library" name="servlet-api" level="application" />
+    <orderEntry type="library" name="appengine-java-sdk-1.9.1" level="application" />
   </component>
 </module>
 

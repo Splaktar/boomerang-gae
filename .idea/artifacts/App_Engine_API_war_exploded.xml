@@ -8,8 +8,7 @@
           <element id="jpa-descriptors" facet="gdgspacecoast/jpa/JPA" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="application" name="servlet-api" />
-          <element id="library" level="application" name="appengine-java-sdk-1.9.0" />
+          <element id="library" level="application" name="appengine-java-sdk-1.9.1" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="gdgspacecoast/web/Web" />

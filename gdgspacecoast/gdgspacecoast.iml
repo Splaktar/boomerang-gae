@@ -30,7 +30,6 @@
     <facet type="google-app-engine" name="Google App Engine">
       <configuration>
         <sdk-home-path>/opt/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.9.1/appengine-java-sdk-1.9.1</sdk-home-path>
-        <run-enhancer-on-make>true</run-enhancer-on-make>
         <files-to-enhance>
           <file path="$MODULE_DIR$/src" />
         </files-to-enhance>

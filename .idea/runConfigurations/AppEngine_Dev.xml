@@ -1,8 +1,10 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="AppEngine Dev" type="GoogleAppEngineDevServer" factoryName="Local" APPLICATION_SERVER_NAME="AppEngine Dev" ALTERNATIVE_JRE_ENABLED="false" ALTERNATIVE_JRE_PATH="">
+    <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8888" />
     <option name="SHOW_DIALOG_ON_UPDATE" value="false" />
     <server-settings>
       <option name="artifact" value="App Engine API:war exploded" />
+      <option name="port" value="8888" />
     </server-settings>
     <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
     <RunnerSettings RunnerId="Run" />

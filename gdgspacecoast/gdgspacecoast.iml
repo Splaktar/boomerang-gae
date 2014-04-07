@@ -29,7 +29,7 @@
     </facet>
     <facet type="google-app-engine" name="Google App Engine">
       <configuration>
-        <sdk-home-path>/opt/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.9.1/appengine-java-sdk-1.9.1</sdk-home-path>
+        <sdk-home-path>/opt/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.9.2/appengine-java-sdk-1.9.2</sdk-home-path>
         <files-to-enhance>
           <file path="$MODULE_DIR$/src" />
         </files-to-enhance>
@@ -44,7 +44,7 @@
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="jdk" jdkName="1.7" jdkType="JavaSDK" />
-    <orderEntry type="library" name="appengine-java-sdk-1.9.1" level="application" />
+    <orderEntry type="library" name="appengine-java-sdk" level="application" />
   </component>
 </module>
 

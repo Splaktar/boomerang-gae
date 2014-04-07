@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="App Engine API:war exploded">
+  <artifact type="exploded-war" build-on-make="true" name="App Engine API:war exploded">
     <output-path>$PROJECT_DIR$/gdgspacecoast/war</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
@@ -8,7 +8,7 @@
           <element id="jpa-descriptors" facet="gdgspacecoast/jpa/JPA" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="application" name="appengine-java-sdk-1.9.1" />
+          <element id="library" level="application" name="appengine-java-sdk" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="gdgspacecoast/web/Web" />

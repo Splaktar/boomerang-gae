@@ -7,9 +7,7 @@
           <element id="module-output" name="gdgspacecoast" />
           <element id="jpa-descriptors" facet="gdgspacecoast/jpa/JPA" />
         </element>
-        <element id="directory" name="lib">
-          <element id="library" level="application" name="appengine-java-sdk" />
-        </element>
+        <element id="directory" name="lib" />
       </element>
       <element id="javaee-facet-resources" facet="gdgspacecoast/web/Web" />
     </root>

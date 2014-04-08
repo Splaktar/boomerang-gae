@@ -52,7 +52,7 @@ Thumbs.db
 ## File-based project format
 *.ipr
 *.iws
-*.iml
+#*.iml
 
 ## Additional for IntelliJ
 out/

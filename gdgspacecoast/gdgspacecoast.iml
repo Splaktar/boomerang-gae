@@ -29,7 +29,7 @@
     </facet>
     <facet type="google-app-engine" name="Google App Engine">
       <configuration>
-        <sdk-home-path>/opt/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.9.2/appengine-java-sdk-1.9.2</sdk-home-path>
+        <sdk-home-path>/opt/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.9.3/appengine-java-sdk-1.9.3</sdk-home-path>
         <files-to-enhance>
           <file path="$MODULE_DIR$/src" />
         </files-to-enhance>

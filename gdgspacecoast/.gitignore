@@ -98,3 +98,8 @@ local.properties
 
 # TeXlipse plugin
 .texlipse
+
+# App Engine
+war/WEB-INF/classes
+war/WEB-INF/lib
+war/WEB-INF/appengine-generated

@@ -1,6 +1,7 @@
-Boomerang converted for App Engine (Java)
+GDG Boomerang for App Engine (Java)
 ==============================
 This is forked from the [GDG-X boomerang] project.
+
 GDG boilerplate, feeds from DevSite and Google+ using AngularJS and Twitter Bootstrap.
 
 This project is setup for use with both IntelliJ IDEA and Eclipse. Some tweaking will be needed to point to the App Engine SDK install on your local machine. 

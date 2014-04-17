@@ -1,5 +1,8 @@
 var boomerang = angular.module('gdgBoomerang', ['ngSanitize', 'ui.bootstrap'])
-    .config(function ($routeProvider) {
+    .config(function ($routeProvider, $locationProvider) {
+
+        $locationProvider.hashPrefix('!');
+
         $routeProvider.
             when("/about", {templateUrl: 'views/about.html', controller: "AboutControl"}).
             when("/news", {templateUrl: 'views/news.html', controller: "NewsControl"}).
@@ -12,6 +15,7 @@ boomerang.controller('MainControl', function ($scope, Config) {
     $scope.chapter_name = Config.name;
     $scope.google_plus_link = 'https://plus.google.com/' + Config.id;
     $scope.isNavCollapsed = true;
+    $scope.status = 'ready';
 });
 
 boomerang.controller('AboutControl', function ($scope, $http, $location, Config) {
@@ -26,10 +30,12 @@ boomerang.controller('AboutControl', function ($scope, $http, $location, Config)
                 $scope.cover.url = data.cover.coverPhoto.url;
             }
             $scope.loading = false;
+            $scope.status = 'ready';
         })
         .error(function (data) {
             $scope.desc = "Sorry, we failed to retrieve the About text from the Google+ API.";
             $scope.loading = false;
+            $scope.status = 'ready';
         });
 });
 
@@ -124,6 +130,7 @@ boomerang.controller("NewsControl", function ($scope, $http, $timeout, Config) {
                 gapi.plusone.go();
             });
             $scope.loading = false;
+            $scope.status = 'ready';
         });
 
 });
@@ -149,6 +156,7 @@ boomerang.controller("EventsControl", function ($scope, $http, Config) {
                 }
             }
             $scope.loading = false;
+            $scope.status = 'ready';
         });
 });
 
@@ -173,6 +181,7 @@ boomerang.controller("PhotosControl", function ($scope, $http, Config) {
                 $scope.photos.push(photo);
             }
             $scope.loading = false;
+            $scope.status = 'ready';
         });
 });
 

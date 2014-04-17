@@ -1,0 +1,421 @@
+<html ng-app="gdgBoomerang" class="ng-scope"><head><script async="" src="//www.google-analytics.com/analytics.js"></script><script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en_US.jD7c_eWmJ8o.O/m=plusone/rt=j/sv=1/d=1/ed=1/am=AQ/rs=AItRSTOVkhs5T9JHenv6-7ampqIEF9M-cA/cb=gapi.loaded_0" async=""></script><script type="text/javascript">(function(){new Image().src="http://1-ps.googleusercontent.com/x/s.gdgspacecoast.appspot.com/www.gdgspacecoast.org/lib/angular.ui.min.js.pagespeed.jm.6iMBZu4zFR.js";new Image().src="http://1-ps.googleusercontent.com/x/s.gdgspacecoast.appspot.com/www.gdgspacecoast.org/js/boomerang.js.pagespeed.jm.Uc_Yg00B4g.js";new Image().src="http://1-ps.googleusercontent.com/x/s.gdgspacecoast.appspot.com/www.gdgspacecoast.org/js/config.js.pagespeed.jm.FXqxSAdvjl.js";})()</script><script type="text/psa_flush_style" id="tepED4FPOv">body{overflow-y:scroll}#cover{margin-top:-300px;margin-bottom:30px;color:#fff;height:300px;background:-moz-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,.8) 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(0,0,0,0)),color-stop(100%,rgba(0,0,0,.8)));background:-webkit-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,.8) 100%);background:-o-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,.8) 100%);background:-ms-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,.8) 100%);background:linear-gradient(to bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,.8) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#cc000000',GradientType=0 )}#cover-content{margin-top:140px}.gdg_loading{background:url(http://1-ps.googleusercontent.com/x/s.gdgspacecoast.appspot.com/www.gdgspacecoast.org/images/gdg_loading.gif.pagespeed.ce.Jb8Oc1ySI2.gif) no-repeat 0 0 #fff;width:64px;height:64px}.sponsor{padding:20px}</script><script type="text/javascript">window.mod_pagespeed_prefetch_start = Number(new Date());window.mod_pagespeed_num_resources_prefetched = 4</script>
+        <title>Google Developer Group</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="description" content="Google Developer Groups (GDG) are technology user groups that meet to discuss the latest Technologies, Tools, SDKs, &amp; APIs like Android, GWT, GAE, &amp; GCP.">
+        <meta name="application-name" content="GDG Boomerang">
+        <meta name="fragment" content="!">
+        <script type="text/javascript">window.mod_pagespeed_start = Number(new Date());</script><link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,300,700" rel="stylesheet" type="text/css">
+        <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+        <script id="psa_flush_style_early" pagespeed_no_defer="">var applyFlushedCriticalCss = function(script_id, mediaString) {  var scripts = document.getElementsByTagName('script');  var styleScript = document.getElementById(script_id);  if (styleScript == null) {    return;  }  var cssText = styleScript.innerHTML || styleScript.textContent ||                 styleScript.data || "";  var styleElem = document.createElement('style');  styleElem.type = 'text/css';  if (styleElem.styleSheet) {    styleElem.styleSheet.cssText = cssText;  } else {    styleElem.appendChild(document.createTextNode(cssText));  }  if (mediaString) {    styleElem.setAttribute("media", mediaString);  }  var currentScript = scripts[scripts.length-1];  currentScript.parentNode.insertBefore(styleElem, currentScript);};</script><style type="text/css" media="screen">body{overflow-y:scroll}#cover{margin-top:-300px;margin-bottom:30px;color:#fff;height:300px;background:-moz-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,.8) 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(0,0,0,0)),color-stop(100%,rgba(0,0,0,.8)));background:-webkit-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,.8) 100%);background:-o-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,.8) 100%);background:-ms-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,.8) 100%);background:linear-gradient(to bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,.8) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#cc000000',GradientType=0 )}#cover-content{margin-top:140px}.gdg_loading{background:url(http://1-ps.googleusercontent.com/x/s.gdgspacecoast.appspot.com/www.gdgspacecoast.org/images/gdg_loading.gif.pagespeed.ce.Jb8Oc1ySI2.gif) no-repeat 0 0 #fff;width:64px;height:64px}.sponsor{padding:20px}</style><script pagespeed_no_defer="">applyFlushedCriticalCss("tepED4FPOv", "screen");</script>
+        <script src="http://code.angularjs.org/1.0.8/angular.min.js"></script><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak{display:none !important;}ng\:form{display:block;}</style>
+        <script src="http://code.angularjs.org/1.0.8/angular-sanitize.min.js"></script>
+        <script type="text/javascript" src="https://apis.google.com/js/plusone.js" gapi_processed="true"></script>
+        <script src="http://1-ps.googleusercontent.com/x/s.gdgspacecoast.appspot.com/www.gdgspacecoast.org/lib/angular.ui.min.js.pagespeed.jm.6iMBZu4zFR.js"></script>
+        <script src="http://1-ps.googleusercontent.com/x/s.gdgspacecoast.appspot.com/www.gdgspacecoast.org/js/boomerang.js.pagespeed.jm.Uc_Yg00B4g.js"></script>
+        <script src="http://1-ps.googleusercontent.com/x/s.gdgspacecoast.appspot.com/www.gdgspacecoast.org/js/config.js.pagespeed.jm.FXqxSAdvjl.js"></script>
+        <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-41029375-2','gdgspacecoast.org');ga('send','pageview');</script>
+    </head>
+    <body ng-controller="MainControl" data-status="ready" class="ng-scope"><noscript>&lt;meta HTTP-EQUIV="refresh" content="0;url='http://www.gdgspacecoast.org/?ModPagespeed=noscript'" /&gt;&lt;style&gt;&lt;!--table,div,span,font,p{display:none} --&gt;&lt;/style&gt;&lt;div style="display:block"&gt;Please click &lt;a href="http://www.gdgspacecoast.org/?ModPagespeed=noscript"&gt;here&lt;/a&gt; if you are not redirected within a few seconds.&lt;/div&gt;</noscript>
+        <div class="navbar navbar-static-top navbar-inverse">
+            <div class="navbar-inner">
+                <div class="container">
+                    <button type="button" class="btn btn-navbar" ng-click="isNavCollapsed = !isNavCollapsed">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="brand ng-binding" id="gdg_chapter_name">GDG Space Coast</a>
+
+                    <div class="nav-collapse collapse" collapse="isNavCollapsed" ng-click="isNavCollapsed = true" style="height: 0px; ">
+                        <ul class="nav">
+                            <li ng-class="{ 'active' : activeTab=='about' }"><a href="#!/about">About</a></li>
+                            <li ng-class="{ 'active' : activeTab=='news' }"><a href="#!/news">News</a></li>
+                            <li ng-class="{ 'active' : activeTab=='events' }" class="active"><a href="#!/events">Events</a></li>
+                            <li ng-class="{ 'active' : activeTab=='photos' }"><a href="#!/photos">Photos</a></li>
+                            <li><a ng-href="https://plus.google.com/103959793061819610212" rel="publisher" target="_blank" href="https://plus.google.com/103959793061819610212">Google+</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row" ng-view=""><script type="text/javascript" class="ng-scope">window.mod_pagespeed_start = Number(new Date());</script><div class="span12 ng-scope">
+    <p>&nbsp;</p>
+    <div class="gdg_loading" ng-show="loading" style="display: none; "></div>
+    <h1 class="span12" ng-hide="loading" style="">GDG Space Coast events</h1>
+    <div class="row">
+        <h3 ng-show="events.future.length" class="span12" style="">Upcoming Events</h3>
+        <!-- ngRepeat: event in events.future | orderBy:'start' --><div class="media span12 ng-scope" ng-repeat="event in events.future | orderBy:'start'">
+            <a class="pull-left" ng-href="https://developers.google.com/events/5222889288630272/" target="_blank" href="https://developers.google.com/events/5222889288630272/">
+                <img class="media-object" ng-src="https://developers.google.com/_static/images/gdg-icon.png" alt="GDG Boomerang" src="https://developers.google.com/_static/images/gdg-icon.png">
+            </a>
+            <div class="media-body">
+                <h4 class="media-heading">
+                    <a ng-href="https://plus.google.com/events/c3ck2f2flrsfkg212bo46mj0vpc" target="_blank" class="ng-binding" href="https://plus.google.com/events/c3ck2f2flrsfkg212bo46mj0vpc">GDG Space Coast - Android Wear</a>
+                </h4>
+                <h5 class="ng-binding">907 East Strawbridge Avenue, Melbourne, FL, United States<br>Thursday, May 15, 2014 - 7:00 PM</h5>
+                <p ng-bind-html="event.description | htmlLinky | hashLinky" class="ng-binding">Android Wear was just announced by Google in March. At this event, Dan Grieve will talk about and demo the Android Wear SDK. The SDK just entered Developer Preview.
+<br><br>
+Dan has been working with the Pebble SDK for some time now. He will compare his experience with Pebble to the new Android Wear development experience.
+<br><br>
+We will be announcing additional speakers and topics soon.
+</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <h3 ng-show="events.past.length" class="span12" style="">Past Events</h3>
+        <!-- ngRepeat: event in events.past --><div class="media span12 ng-scope" ng-repeat="event in events.past">
+            <a class="pull-left" ng-href="https://developers.google.com/events/5059349114257408/" target="_blank" href="https://developers.google.com/events/5059349114257408/">
+                <img class="media-object" ng-src="https://developers.google.com/_static/images/gdg-icon.png" alt="GDG Boomerang" src="https://developers.google.com/_static/images/gdg-icon.png">
+            </a>
+            <div class="media-body">
+                <h4 class="media-heading">
+                    <a ng-href="https://plus.google.com/events/c3td30k6vkucrimhmfcao3kc4es" target="_blank" class="ng-binding" href="https://plus.google.com/events/c3td30k6vkucrimhmfcao3kc4es">GDG Space Coast - Google Glass Healthcare Applications Discussion</a>
+                </h4>
+                <h5 class="ng-binding">907 East Strawbridge Avenue, Melbourne, FL, United States<br>Saturday, March 29, 2014 - 3:00 PM</h5>
+                <p ng-bind-html="event.description | htmlLinky | hashLinky" class="ng-binding">This meetup will be fairly informal. The goal is to discuss possible applications for Google Glass in Healthcare. There are already a number of on-going projects in this area. Sanjay Gopal from Voalte, Inc. would like to do some brainstorming and get some feedback on his ideas.</p>
+            </div>
+        </div><div class="media span12 ng-scope" ng-repeat="event in events.past">
+            <a class="pull-left" ng-href="https://developers.google.com/events/4933000949137408/" target="_blank" href="https://developers.google.com/events/4933000949137408/">
+                <img class="media-object" ng-src="https://developers.google.com/_static/images/gdg-icon.png" alt="GDG Boomerang" src="https://developers.google.com/_static/images/gdg-icon.png">
+            </a>
+            <div class="media-body">
+                <h4 class="media-heading">
+                    <a ng-href="https://plus.google.com/events/cghov77bfsejqvsdnnnbrp3h02k" target="_blank" class="ng-binding" href="https://plus.google.com/events/cghov77bfsejqvsdnnnbrp3h02k">SEO for small businesses. Cloud Platform Live announcements.</a>
+                </h4>
+                <h5 class="ng-binding">TrepHub, 907 Strawbridge Ave, Melbourne, FL<br>Tuesday, March 25, 2014 - 7:00 PM</h5>
+                <p ng-bind-html="event.description | htmlLinky | hashLinky" class="ng-binding">There will be a lightning talk on SEO for small businesses and startups by Avery Piantedosi. She is the owner of a small business (Space Coast Real Estate One) and a marketing professional. This talk is intended to get a discussion started around SEO. So if you have input on the topic, please come and share!
+<br><br>
+After that we will recap and discuss the day's major announcements by the Google Cloud Platform.
+<br><br>
+﻿Russell Tewksbury has been forced to cancel his presentation on Google Apps for Business due to a personal emergency.
+<br><br>
+TrepHub is on the first floor. Entrance is on the street (192). Parking is available in marked spaces outside the building. There is also public parking across the street outside of the parking garage, and a public lot across the tracks on the left.</p>
+            </div>
+        </div><div class="media span12 ng-scope" ng-repeat="event in events.past">
+            <a class="pull-left" ng-href="https://developers.google.com/events/5184858842202112/" target="_blank" href="https://developers.google.com/events/5184858842202112/">
+                <img class="media-object" ng-src="https://developers.google.com/_static/images/gdg-icon.png" alt="GDG Boomerang" src="https://developers.google.com/_static/images/gdg-icon.png">
+            </a>
+            <div class="media-body">
+                <h4 class="media-heading">
+                    <a ng-href="https://plus.google.com/events/c5skn0dvjt6ld05foe4dq27qs30" target="_blank" class="ng-binding" href="https://plus.google.com/events/c5skn0dvjt6ld05foe4dq27qs30">Dart Flight School - GDG Space Coast</a>
+                </h4>
+                <h5 class="ng-binding">907 East Strawbridge Avenue, Melbourne, FL, United States<br>Saturday, March 1, 2014 - 1:00 PM</h5>
+                <p ng-bind-html="event.description | htmlLinky | hashLinky" class="ng-binding">This will be a Dart code lab focused event. There will be a brief introduction to Dart and AngularDart, but 90% of the time you will be coding and learning on your laptop.
+<br><br>
+This means that you should do some basic preparation before attending (if possible, not required). So here are some resources to help with that:
+<br><br>
+<a href="https://www.youtube.com/watch?v=2sxECSJ_f00"> December's GDG Space Coast Dart presentation</a><br>
+<a href="https://www.dartlang.org/docs/dart-up-and-running/">Dart: Up and Running Introduction</a><br>
+<a href="https://www.dartlang.org/docs/synonyms/">Dart concepts translated to JS/C#/Python</a>
+<br><br>
+There will be attendees at the event with Dart experience who can help you through issues that you might experience.
+<br><br>
+There will be some raffles for Dart branded gear and minor giveaways of Dart and Angular swag. Food and drinks will be provided.
+<br><br>
+Due to this event being a code lab event, it will not be recorded or streamed.
+<br><br>
+TrepHub is on the first floor. Entrance is on the street (192). Parking is available in marked spaces outside the building. There is also public parking across the street outside of the parking garage, and a public lot across the tracks on the left.</p>
+            </div>
+        </div><div class="media span12 ng-scope" ng-repeat="event in events.past">
+            <a class="pull-left" ng-href="https://developers.google.com/events/5497544603860992/" target="_blank" href="https://developers.google.com/events/5497544603860992/">
+                <img class="media-object" ng-src="https://developers.google.com/_static/images/gdg-icon.png" alt="GDG Boomerang" src="https://developers.google.com/_static/images/gdg-icon.png">
+            </a>
+            <div class="media-body">
+                <h4 class="media-heading">
+                    <a ng-href="https://plus.google.com/events/ch1kfonac2tiv5upomrs128injc" target="_blank" class="ng-binding" href="https://plus.google.com/events/ch1kfonac2tiv5upomrs128injc">GDG Space Coast - Android Study Group</a>
+                </h4>
+                <h5 class="ng-binding">TrepHub, 907 Strawbridge Ave, Melbourne, FL<br>Sunday, February 23, 2014 - 2:00 PM</h5>
+                <p ng-bind-html="event.description | htmlLinky | hashLinky" class="ng-binding">This is based off of the Coursera Class (<a href="https://class.coursera.org/android-001">https://class.coursera.org/android-001</a>) that many of us are taking.
+<br><br>
+We'll be recapping our experience so far and working on labs for Week 4 and 5. Please have your videos watched in advance if possible.
+<br><br>
+Please bring your laptops as the main focus here will be on working through the programming assignments.
+<br><br>
+If you haven't started the class yet, it isn't too late. The grades are based off of Weeks 3-8 and you can finish Week 4's assignments at this event. There are also late day credits that you can apply to get credit from Week 3 if desired.
+<br><br>
+At least a couple of us have registered for Signature Track (<a href="https://www.coursera.org/signature/guidebook">https://www.coursera.org/signature/guidebook</a>) which has a registration deadline (extended) of February 24th.</p>
+            </div>
+        </div><div class="media span12 ng-scope" ng-repeat="event in events.past">
+            <a class="pull-left" ng-href="https://developers.google.com/events/5762156133875712/" target="_blank" href="https://developers.google.com/events/5762156133875712/">
+                <img class="media-object" ng-src="https://developers.google.com/_static/images/gdg-icon.png" alt="GDG Boomerang" src="https://developers.google.com/_static/images/gdg-icon.png">
+            </a>
+            <div class="media-body">
+                <h4 class="media-heading">
+                    <a ng-href="https://plus.google.com/events/c4cg7r3kvga345icj21mar1q8es" target="_blank" class="ng-binding" href="https://plus.google.com/events/c4cg7r3kvga345icj21mar1q8es">Developing on Glass and GWT.create Trip Report</a>
+                </h4>
+                <h5 class="ng-binding">TrepHub, 907 Strawbridge Ave, Melbourne, FL<br>Thursday, January 30, 2014 - 7:00 PM</h5>
+                <p ng-bind-html="event.description | htmlLinky | hashLinky" class="ng-binding">Primary Topic: Developing on Google Glass.
+Lightning Talk: GWT.create Trip Report.
+<br><br>
+TrepHub is on the first floor. Entrance is on the street (192). Parking is available in marked spaces outside the building. There is also public parking across the street outside of the parking garage, and a public lot across the tracks on the left.</p>
+            </div>
+        </div><div class="media span12 ng-scope" ng-repeat="event in events.past">
+            <a class="pull-left" ng-href="https://developers.google.com/events/6377352359575552/" target="_blank" href="https://developers.google.com/events/6377352359575552/">
+                <img class="media-object" ng-src="https://developers.google.com/_static/images/gdg-icon.png" alt="GDG Boomerang" src="https://developers.google.com/_static/images/gdg-icon.png">
+            </a>
+            <div class="media-body">
+                <h4 class="media-heading">
+                    <a ng-href="https://plus.google.com/events/cjmefo6sci361du7f5cta9ue38c" target="_blank" class="ng-binding" href="https://plus.google.com/events/cjmefo6sci361du7f5cta9ue38c">GDG Space Coast - Intro to Dart and How to fix Git</a>
+                </h4>
+                <h5 class="ng-binding">TrepHub, 907 Strawbridge Ave, Melbourne, FL<br>Thursday, December 5, 2013 - 7:00 PM</h5>
+                <p ng-bind-html="event.description | htmlLinky | hashLinky" class="ng-binding">Primary Topics: Introduction to Dart. How to fix Git.
+<br><br>
+Dart is a web programming language by Google. It compiles to JavaScript, but has a lofty goal of replacing JavaScript. It aims to provide much more powerful tooling and performance compared to JavaScript. It can run native inside the custom Dartium browser. The Dart team just announced their 1.0 release this month!
+<br><br>
+Git is a free version control system that runs on most all platforms and is becoming incredibly popular. Both GitHub and Bitbucket support collaboration in Git. Most of the time it is fairly straight forward. But when problems occur, it is sometimes infuriating to try and solve them. In this presentation, you will be given some tools for dealing with those kinds of issues!
+<br><br>
+TrepHub is on the first floor. Entrance is on the street (192). Parking is available in marked spaces outside the building. There is also public parking across the street outside of the parking garage, and a public lot across the tracks on the left.</p>
+            </div>
+        </div><div class="media span12 ng-scope" ng-repeat="event in events.past">
+            <a class="pull-left" ng-href="https://developers.google.com/events/6277967302885376/" target="_blank" href="https://developers.google.com/events/6277967302885376/">
+                <img class="media-object" ng-src="https://developers.google.com/_static/images/gdg-icon.png" alt="GDG Boomerang" src="https://developers.google.com/_static/images/gdg-icon.png">
+            </a>
+            <div class="media-body">
+                <h4 class="media-heading">
+                    <a ng-href="https://plus.google.com/events/ckg9f0f6r56b58nor276ug6t08s" target="_blank" class="ng-binding" href="https://plus.google.com/events/ckg9f0f6r56b58nor276ug6t08s">GDG Space Coast: GCDC: Hackathon</a>
+                </h4>
+                <h5 class="ng-binding">TrepHub, 907 Strawbridge Ave, Melbourne, FL<br>Saturday, November 9, 2013 - 1:00 PM</h5>
+                <p ng-bind-html="event.description | htmlLinky | hashLinky" class="ng-binding">We'll be hosting a Google Cloud Developer Challenge Hackathon the day after the TrepHub launch party.</p>
+            </div>
+        </div><div class="media span12 ng-scope" ng-repeat="event in events.past">
+            <a class="pull-left" ng-href="https://developers.google.com/events/6069315207954432/" target="_blank" href="https://developers.google.com/events/6069315207954432/">
+                <img class="media-object" ng-src="https://developers.google.com/_static/images/gdg-icon.png" alt="GDG Boomerang" src="https://developers.google.com/_static/images/gdg-icon.png">
+            </a>
+            <div class="media-body">
+                <h4 class="media-heading">
+                    <a ng-href="https://plus.google.com/events/ctd3c67fcramite9bkeakjpupl8" target="_blank" class="ng-binding" href="https://plus.google.com/events/ctd3c67fcramite9bkeakjpupl8">GDG Space Coast: AngularJS Code Camp #2</a>
+                </h4>
+                <h5 class="ng-binding">TrepHub, 907 Strawbridge Ave, Melbourne, FL<br>Sunday, November 3, 2013 - 11:00 AM</h5>
+                <p ng-bind-html="event.description | htmlLinky | hashLinky" class="ng-binding">Bring your laptops! This is the fifth in a series of events focused around the <a href="https://plus.google.com/s/%23GCDC">#GCDC</a> 2013! Find out more about Google Cloud Developer Challenge 2013 and the $20,000 grand prizes here: <a href="http://www.google.com/events/gcdc2013/">http://www.google.com/events/gcdc2013/</a>
+<br><br>
+This is the second front-end focused event for <a href="https://plus.google.com/s/%23GCDC">#GCDC</a>. The primary topic is AngularJS but we will likely cover the Google+ API as well. The focus of the code camp is learning and not competition. There will be people there to help and answer questions.
+<br><br>
+The agenda is still a work in progress, but here is the proposed agenda:
+Setup and Configuration (fork from Github, configure GAE, etc).
+Presentation and selection of possible code lab tasks
+Investigation and implementation of code labs
+Review and merge of completed tasks into final application (hosted on GAE)
+<br><br>
+Unfortunately, this event will not be streamed online and you must be in attendance at TrepHub to learn with us.
+<br><br>
+TrepHub is located in the building across from city hall. We'll meet in the Co-Working Area. The entrance is on the street (Route 192).</p>
+            </div>
+        </div><div class="media span12 ng-scope" ng-repeat="event in events.past">
+            <a class="pull-left" ng-href="https://developers.google.com/events/4729239861460992/" target="_blank" href="https://developers.google.com/events/4729239861460992/">
+                <img class="media-object" ng-src="https://developers.google.com/_static/images/gdg-icon.png" alt="GDG Boomerang" src="https://developers.google.com/_static/images/gdg-icon.png">
+            </a>
+            <div class="media-body">
+                <h4 class="media-heading">
+                    <a ng-href="https://plus.google.com/events/ccnbsc0efpsfnmk0aptg0q2e424" target="_blank" class="ng-binding" href="https://plus.google.com/events/ccnbsc0efpsfnmk0aptg0q2e424">GDG Space Coast: AngularJS Code Camp</a>
+                </h4>
+                <h5 class="ng-binding">TrepHub, 907 Strawbridge Ave, Melbourne, FL<br>Saturday, October 26, 2013 - 1:00 PM</h5>
+                <p ng-bind-html="event.description | htmlLinky | hashLinky" class="ng-binding">Bring your laptops! This is the fourth in a series of events focused around the <a href="https://plus.google.com/s/%23GCDC">#GCDC</a> 2013! Find out more about Google Cloud Developer Challenge 2013 and the $20,000 grand prizes here: <a href="http://www.google.com/events/gcdc2013/">http://www.google.com/events/gcdc2013/</a>
+<br><br>
+This is the first front-end focused event for <a href="https://plus.google.com/s/%23GCDC">#GCDC</a>. The primary topic is AngularJS. The focus of the code camp is learning and not competition. There will be people there to help and answer questions.
+<br><br>
+The agenda is still a work in progress, but here is the proposed agenda:<br>
+Introductory Video/Presentation<br>
+Setup and Configuration (fork from Github, verify HTTP Server, verify AngularJS configurations).<br>
+Presentation and selection of possible code lab tasks<br>
+Investigation and implementation of code labs<br>
+Review and merge of completed tasks into final application (hosted on GAE)
+<br><br>
+Unfortunately, this event will not be streamed online and you must be in attendance at TrepHub to learn with us.
+<br><br>
+TrepHub is located in the building across from city hall. We'll meet in the Co-Working Area. The entrance is on the street (Route 192).</p>
+            </div>
+        </div><div class="media span12 ng-scope" ng-repeat="event in events.past">
+            <a class="pull-left" ng-href="https://developers.google.com/events/6504143686467584/" target="_blank" href="https://developers.google.com/events/6504143686467584/">
+                <img class="media-object" ng-src="https://developers.google.com/_static/images/gdg-icon.png" alt="GDG Boomerang" src="https://developers.google.com/_static/images/gdg-icon.png">
+            </a>
+            <div class="media-body">
+                <h4 class="media-heading">
+                    <a ng-href="https://plus.google.com/events/cetetngdopmtdoaisa509jrp2po" target="_blank" class="ng-binding" href="https://plus.google.com/events/cetetngdopmtdoaisa509jrp2po">GCDC: GDG Space Coast: App Engine Code Camp #3</a>
+                </h4>
+                <h5 class="ng-binding">TrepHub, 907 Strawbridge Ave, Melbourne, FL<br>Saturday, October 12, 2013 - 1:00 PM</h5>
+                <p ng-bind-html="event.description | htmlLinky | hashLinky" class="ng-binding">Bring your laptops! This is the third in a series of events focused around the <a href="https://plus.google.com/s/%23GCDC">#GCDC</a> 2013! Find out more about Google Cloud Developer Challenge 2013 and the $20,000 grand prize here: <a href="http://www.google.com/events/gcdc2013/">http://www.google.com/events/gcdc2013/</a>
+<br><br>
+The focus of the code camp is learning and not competition. There will be people there to help and answer questions as you walk through the steps to build a web application including things like Queues, Backends, Warmup Requests, and Pagination.
+<br><br>
+If you want more information about App Engine, here are the slides that we shared at our last GDG event: <a href="https://docs.google.com/presentation/d/1sBn6_IcLbZBwEJf94dyu_7fddRptQj1pbho_iIQTuvo/edit?usp=sharing">https://docs.google.com/presentation/d/1sBn6_IcLbZBwEJf94dyu_7fddRptQj1pbho_iIQTuvo/edit?usp=sharing</a>
+<br><br>
+The App Engine Code Camps will be run based on Java but you are welcome to attend and attempt to hack away using PHP, Go, or Python. You should be an advanced user of those languages if you decide to go that route though, as there will be less assistance available.
+<br><br>
+If you plan to work along with us in Java, you should have basic knowledge and understanding of the following concepts: GAE concepts from Code Lab <a href="https://plus.google.com/s/%231">#1</a>, Java syntax, object oriented concepts (objects, classes, interfaces, inheritance, modularity, etc), web servers, ORM concepts (Entities, JDO, JPA, etc), basic concepts of NoSQL and SQL databases, consumption of APIs, caching, Java Servlets, HTTP requests, JavaScript syntax, XML-Java Conversion, web services (REST and SOAP), and XML. Each of the 5 tutorials will build upon the previous tutorials.
+<br><br>
+Unfortunately, this event will not be streamed online and you must be in attendance at TrepHub to learn with us.
+<br><br>
+The code lab site that we'll be using is found here: <a href="http://googcloudlabs.appspot.com">http://googcloudlabs.appspot.com</a>
+<br><br>
+Here are some slides to help with workarounds and tips for the code lab: <a href="https://docs.google.com/presentation/d/12kxKC53k0E1o85X7iSAu3G-QXpqXauh3XAg_FJdOzG8/edit?usp=sharing">https://docs.google.com/presentation/d/12kxKC53k0E1o85X7iSAu3G-QXpqXauh3XAg_FJdOzG8/edit?usp=sharing</a> Please feel free to leave comments if you have anything to add and we will integrate them into the document.</p>
+            </div>
+        </div><div class="media span12 ng-scope" ng-repeat="event in events.past">
+            <a class="pull-left" ng-href="https://developers.google.com/events/920853905/" target="_blank" href="https://developers.google.com/events/920853905/">
+                <img class="media-object" ng-src="https://developers.google.com/_static/images/gdg-icon.png" alt="GDG Boomerang" src="https://developers.google.com/_static/images/gdg-icon.png">
+            </a>
+            <div class="media-body">
+                <h4 class="media-heading">
+                    <a ng-href="https://plus.google.com/events/c4q14pt07vmd16eqaj3d2mm4hkc" target="_blank" class="ng-binding" href="https://plus.google.com/events/c4q14pt07vmd16eqaj3d2mm4hkc">GDG Space Coast - GCDC: App Engine Code Camp #2</a>
+                </h4>
+                <h5 class="ng-binding">TrepHub, 907 Strawbridge Ave, Melbourne, FL<br>Saturday, October 5, 2013 - 1:00 PM</h5>
+                <p ng-bind-html="event.description | htmlLinky | hashLinky" class="ng-binding">Bring your laptops! This is the second in a series of events focused around the <a href="https://plus.google.com/s/%23GCDC">#GCDC</a> 2013! Find out more about Google Cloud Developer Challenge 2013 and the $20,000 grand prize here: <a href="http://www.google.com/events/gcdc2013/">http://www.google.com/events/gcdc2013/</a>
+<br><br>
+The focus of the code camp is learning and not competition. There will be people there to help and answer questions as you walk through the steps to build a web application including things like Web Services, High Replication, Custom Domain, Queues and Backends, Warmup Requests, and Pagination.
+<br><br>
+Assuming you attended or completed Code Camp <a href="https://plus.google.com/s/%231">#1</a>, by the end of the this Code Camp you should expect to have built your own fully functional web app using numerous powerful cloud features, deployed it to the cloud, and learned how to manage and track it.
+<br><br>
+If you want more information about App Engine, here are the slides that we shared at our last GDG event: <a href="https://docs.google.com/presentation/d/1sBn6_IcLbZBwEJf94dyu_7fddRptQj1pbho_iIQTuvo/edit?usp=sharing">https://docs.google.com/presentation/d/1sBn6_IcLbZBwEJf94dyu_7fddRptQj1pbho_iIQTuvo/edit?usp=sharing</a>
+<br><br>
+The App Engine Code Camps will be run based on <a href="https://plus.google.com/s/%23Java">#Java</a> but you are welcome to attend and attempt to hack away using PHP, Go, or Python. You should be an advanced user of those languages if you decide to go that route though, as there will be less assistance available.
+<br><br>
+If you plan to work along with us in Java, you should have basic knowledge and understanding of the following concepts: GAE concepts from Code Lab <a href="https://plus.google.com/s/%231">#1</a>, Java syntax, object oriented concepts (objects, classes, interfaces, inheritance, modularity, etc), web servers, ORM concepts (Entities, JDO, JPA, etc), basic concepts of NoSQL and SQL databases, consumption of APIs, caching, Java Servlets, HTTP requests, JavaScript syntax, XML-Java Conversion, web services (REST and SOAP), and XML. Each of the 5 tutorials will build upon the previous tutorials.
+<br><br>
+Unfortunately, this event will not be streamed online and you must be in attendance at TrepHub to learn with us.
+<br><br>
+The code lab site that we'll be using is found here: <a href="http://googcloudlabs.appspot.com">http://googcloudlabs.appspot.com</a>
+<br><br>
+Here are some slides to help with workarounds and tips for the code lab: <a href="https://docs.google.com/presentation/d/12kxKC53k0E1o85X7iSAu3G-QXpqXauh3XAg_FJdOzG8/edit?usp=sharing">https://docs.google.com/presentation/d/12kxKC53k0E1o85X7iSAu3G-QXpqXauh3XAg_FJdOzG8/edit?usp=sharing</a>﻿ Please feel free to leave comments if you have anything to add and we will integrate them into the document.</p>
+            </div>
+        </div><div class="media span12 ng-scope" ng-repeat="event in events.past">
+            <a class="pull-left" ng-href="https://developers.google.com/events/920932013/" target="_blank" href="https://developers.google.com/events/920932013/">
+                <img class="media-object" ng-src="https://developers.google.com/_static/images/gdg-icon.png" alt="GDG Boomerang" src="https://developers.google.com/_static/images/gdg-icon.png">
+            </a>
+            <div class="media-body">
+                <h4 class="media-heading">
+                    <a ng-href="https://plus.google.com/events/cuhistaiuuqcddp2rscet7ju50c" target="_blank" class="ng-binding" href="https://plus.google.com/events/cuhistaiuuqcddp2rscet7ju50c">GDG Space Coast - GCDC Kickoff: App Engine Code Camp #1</a>
+                </h4>
+                <h5 class="ng-binding">TrepHub, 907 Strawbridge Ave, Melbourne, FL<br>Saturday, September 28, 2013 - 1:00 PM</h5>
+                <p ng-bind-html="event.description | htmlLinky | hashLinky" class="ng-binding">Bring your laptops! This is the first in a series of events focused around the <a href="https://plus.google.com/s/%23GCDC">#GCDC</a>  2013! Find out more about Google Cloud Developer Challenge 2013 and the $20,000 grand prize here: <a href="http://www.google.com/events/gcdc2013/">http://www.google.com/events/gcdc2013/</a><br>
+<br>
+We will be starting out with 2 Code Camps focused on building web applications on Google App Engine. Then we will be holding 1-2 Code Camps focused on building a web front end with AngularJS. These events will be held on Saturday afternoons from 9/28 until the first round submission date on 11/21.<br>
+<br>
+The focus of the code camp is learning and not competition. There will be people there to help and answer questions as you walk through the steps to build a web application including things like NoSQL and SQL datastores, Entities, Memcache, XMPP, Mail, Task Queues, Relationships, and the Channel API.<br>
+<br>
+By the end of the 2nd App Engine Code Camp you should expect to have built your own fully functional web app using numerous powerful cloud features, deployed it to the cloud, and learned how to manage and track it.<br>
+<br>
+After the Code Camp series is completed, starting approximately 10/26, the focus will turn to Hackathon meetups at the same times. We will be using the knowledge gained in the Code Camps to build a applications to enter into the <a href="https://plus.google.com/s/%23GCDC">#GCDC</a>  ! Start recruiting your team of 3 now (and don't forget to think about graphic artists and designers).<br>
+<br>
+The App Engine Code Camps will be run based on <a href="https://plus.google.com/s/%23Java">#Java</a>  but you are welcome to attend and attempt to hack away using PHP, Go, or Python. You should be an advanced user of those languages if you decide to go that route though, as there will be less assistance available.</p>
+            </div>
+        </div><div class="media span12 ng-scope" ng-repeat="event in events.past">
+            <a class="pull-left" ng-href="https://developers.google.com/events/831598653/" target="_blank" href="https://developers.google.com/events/831598653/">
+                <img class="media-object" ng-src="https://developers.google.com/_static/images/gdg-icon.png" alt="GDG Boomerang" src="https://developers.google.com/_static/images/gdg-icon.png">
+            </a>
+            <div class="media-body">
+                <h4 class="media-heading">
+                    <a ng-href="https://plus.google.com/events/ckv7m50om4lhmoqf2ogbrc89puo" target="_blank" class="ng-binding" href="https://plus.google.com/events/ckv7m50om4lhmoqf2ogbrc89puo">GDG Space Coast - Intermediate Android Practices</a>
+                </h4>
+                <h5 class="ng-binding">TrepHub, 907 Strawbridge Ave, Melbourne, FL<br>Tuesday, September 17, 2013 - 7:00 PM</h5>
+                <p ng-bind-html="event.description | htmlLinky | hashLinky" class="ng-binding">Primary Topics: Android Networking with Volley, Android Design Guidelines, App Engine Services for Android.﻿
+<br><br>
+TrepHub is on the first floor past the glass doors. Parking is available in marked spaces outside the building. There is also public parking across the street outside of the parking garage, and a public lot across the tracks on the left.</p>
+            </div>
+        </div><div class="media span12 ng-scope" ng-repeat="event in events.past">
+            <a class="pull-left" ng-href="https://developers.google.com/events/831276975/" target="_blank" href="https://developers.google.com/events/831276975/">
+                <img class="media-object" ng-src="https://developers.google.com/_static/images/gdg-icon.png" alt="GDG Boomerang" src="https://developers.google.com/_static/images/gdg-icon.png">
+            </a>
+            <div class="media-body">
+                <h4 class="media-heading">
+                    <a ng-href="https://plus.google.com/events/cp026g1p4o3g02v67iagi84b3fg" target="_blank" class="ng-binding" href="https://plus.google.com/events/cp026g1p4o3g02v67iagi84b3fg">GDG Space Coast: Chrome Packaged Apps, Polymer, and the Cloud Platform</a>
+                </h4>
+                <h5 class="ng-binding">TrepHub, 907 Strawbridge Ave, Melbourne, FL<br>Tuesday, August 27, 2013 - 7:00 PM</h5>
+                <p ng-bind-html="event.description | htmlLinky | hashLinky" class="ng-binding">Primary topic: Chrome Packaged Apps.<br>
+Lightning talks: Into to Polymer and Web Components. Intro to Google App Engine and Google Compute Engine.
+<br><br>
+TrepHub is on the first floor past the glass doors. Parking is available in marked spaces outside the building. There is also public parking across the street outside of the parking garage, and a public lot across the tracks on the left.</p>
+            </div>
+        </div><div class="media span12 ng-scope" ng-repeat="event in events.past">
+            <a class="pull-left" ng-href="https://developers.google.com/events/831659177/" target="_blank" href="https://developers.google.com/events/831659177/">
+                <img class="media-object" ng-src="https://developers.google.com/_static/images/gdg-icon.png" alt="GDG Boomerang" src="https://developers.google.com/_static/images/gdg-icon.png">
+            </a>
+            <div class="media-body">
+                <h4 class="media-heading">
+                    <a ng-href="https://plus.google.com/events/clmdrshe1eeg7cqj1ecbraf20tk" target="_blank" class="ng-binding" href="https://plus.google.com/events/clmdrshe1eeg7cqj1ecbraf20tk">GDG Space Coast - Introduction to AngularJS and Google Maps</a>
+                </h4>
+                <h5 class="ng-binding">TrepHub, 907 Strawbridge Ave, Melbourne, FL<br>Tuesday, July 30, 2013 - 7:00 PM</h5>
+                <p ng-bind-html="event.description | htmlLinky | hashLinky" class="ng-binding">Primary topics: AngularJS and Google Maps for Android.<br> 
+Lightning talk: Trip Report: Google Los Angeles.
+<br>
+
+TrepHub is on the first floor past the glass doors. Parking is available in marked spaces outside the building. There is also public parking across the street outside of the parking garage, and a public lot across the tracks on the left.</p>
+            </div>
+        </div><div class="media span12 ng-scope" ng-repeat="event in events.past">
+            <a class="pull-left" ng-href="https://developers.google.com/events/717170999/" target="_blank" href="https://developers.google.com/events/717170999/">
+                <img class="media-object" ng-src="https://developers.google.com/_static/images/gdg-icon.png" alt="GDG Boomerang" src="https://developers.google.com/_static/images/gdg-icon.png">
+            </a>
+            <div class="media-body">
+                <h4 class="media-heading">
+                    <a ng-href="https://plus.google.com/events/c5est60ver0lvvpphq6aj0t8pi8" target="_blank" class="ng-binding" href="https://plus.google.com/events/c5est60ver0lvvpphq6aj0t8pi8">GDG Space Coast - Google Play Game Services</a>
+                </h4>
+                <h5 class="ng-binding">TrepHub, 907 Strawbridge Ave, Melbourne, FL<br>Thursday, June 27, 2013 - 7:00 PM</h5>
+                <p ng-bind-html="event.description | htmlLinky | hashLinky" class="ng-binding">Primary: Google Play Game Services (Android and Chrome).
+<br>Lightning talks: Google Cloud Messaging (GCM), Google Apps Script.</p>
+            </div>
+        </div><div class="media span12 ng-scope" ng-repeat="event in events.past">
+            <a class="pull-left" ng-href="https://developers.google.com/events/717472227/" target="_blank" href="https://developers.google.com/events/717472227/">
+                <img class="media-object" ng-src="https://developers.google.com/_static/images/gdg-icon.png" alt="GDG Boomerang" src="https://developers.google.com/_static/images/gdg-icon.png">
+            </a>
+            <div class="media-body">
+                <h4 class="media-heading">
+                    <a ng-href="https://plus.google.com/events/c50m3e8uqjiso58tvng3fa4njlo" target="_blank" class="ng-binding" href="https://plus.google.com/events/c50m3e8uqjiso58tvng3fa4njlo">GDG Space Coast - The New Android Dev Studio</a>
+                </h4>
+                <h5 class="ng-binding">TrepHub, 907 Strawbridge Ave, Melbourne, FL<br>Thursday, June 13, 2013 - 7:00 PM</h5>
+                <p ng-bind-html="event.description | htmlLinky | hashLinky" class="ng-binding">Primary: Intro to the new Android Dev Studio, Gradle, and changes to the Dev Console.
+<br>Lightning talks: Android Licensing Verification Library (LVL), Android Development Tools (ADT) v22.</p>
+            </div>
+        </div><div class="media span12 ng-scope" ng-repeat="event in events.past">
+            <a class="pull-left" ng-href="https://developers.google.com/events/717070612/" target="_blank" href="https://developers.google.com/events/717070612/">
+                <img class="media-object" ng-src="https://developers.google.com/_static/images/gdg-icon.png" alt="GDG Boomerang" src="https://developers.google.com/_static/images/gdg-icon.png">
+            </a>
+            <div class="media-body">
+                <h4 class="media-heading">
+                    <a ng-href="https://plus.google.com/events/cqkcpoeml0umtu3ktti7fjp5rks" target="_blank" class="ng-binding" href="https://plus.google.com/events/cqkcpoeml0umtu3ktti7fjp5rks">GDG Space Coast - Intro to Chromebooks and Chrome OS</a>
+                </h4>
+                <h5 class="ng-binding">TrepHub, 907 Strawbridge Ave, Melbourne, FL<br>Thursday, May 30, 2013 - 7:00 PM</h5>
+                <p ng-bind-html="event.description | htmlLinky | hashLinky" class="ng-binding">Primary: Intro to Chromebooks and Chrome OS.
+<br>Lightning talks: Google Glass Demo, Chromebook Pixel Demo.</p>
+            </div>
+        </div><div class="media span12 ng-scope" ng-repeat="event in events.past">
+            <a class="pull-left" ng-href="https://developers.google.com/events/501987924/" target="_blank" href="https://developers.google.com/events/501987924/">
+                <img class="media-object" ng-src="https://developers.google.com/_static/images/gdg-icon.png" alt="GDG Boomerang" src="https://developers.google.com/_static/images/gdg-icon.png">
+            </a>
+            <div class="media-body">
+                <h4 class="media-heading">
+                    <a ng-href="https://plus.google.com/events/cld270g9njgis42m40ps40ntvf4" target="_blank" class="ng-binding" href="https://plus.google.com/events/cld270g9njgis42m40ps40ntvf4">GDG Space Coast Kickoff Meeting - Google Web Toolkit (GWT)</a>
+                </h4>
+                <h5 class="ng-binding">TrepHub, 907 Strawbridge Ave, Melbourne, FL<br>Tuesday, May 14, 2013 - 7:00 PM</h5>
+                <p ng-bind-html="event.description | htmlLinky | hashLinky" class="ng-binding">This will be our first event. The day after this event is the start of the Google I/O 2013 Conference. The primary presentation at this event will be focused on the Google Web Toolkit (GWT).
+<br><br>
+<a href="https://plus.google.com/s/%23GDG">#GDG</a> Space Coast will be presenting on the 15th and 16th at the Google I/O Extended event in Orlando (UCF). That content will be presented/discussed at this meeting. This will include <a href="https://plus.google.com/s/%23gwt">#gwt</a> , <a href="https://plus.google.com/s/%23chromeos">#chromeos</a> , and <a href="https://plus.google.com/s/%23chromebook">#chromebook</a> . The GWT presentation will cover, 'what is Google Web Toolkit?', 'what's new in GWT', and 'how can i get started with GWT'?'.
+<br><br>
+There is no charge for the event and it is open to everyone who signs up here in advance.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script pagespeed_no_defer="" type="text/javascript" class="ng-scope">(function(){var e=window,f=Math,g="round",h="performance";e.pagespeed=e.pagespeed||{};var q=e.pagespeed;
+q.getResourceTimingData=function(){if(e[h]&&(e[h].getEntries||e[h].webkitGetEntries)){for(var r=0,s=0,k=0,t=0,l=0,u=0,m=0,v=0,n=0,w=0,p=0,c={},d=e[h].getEntries?e[h].getEntries():e[h].webkitGetEntries(),b=0;b<d.length;b++){var a=d[b].duration;0<a&&(r+=a,++k,s=f.max(s,a));a=d[b].connectEnd-d[b].connectStart;0<a&&(u+=a,++m);a=d[b].domainLookupEnd-d[b].domainLookupStart;0<a&&(t+=a,++l);a=d[b].initiatorType;c[a]?++c[a]:c[a]=1;a=d[b].requestStart-d[b].fetchStart;0<a&&(w+=a,++p);a=d[b].responseStart-d[b].requestStart;
+0<a&&(v+=a,++n)}return"&afd="+(k?f[g](r/k):0)+"&nfd="+k+"&mfd="+f[g](s)+"&act="+(m?f[g](u/m):0)+"&nct="+m+"&adt="+(l?f[g](t/l):0)+"&ndt="+l+"&abt="+(p?f[g](w/p):0)+"&nbt="+p+"&attfb="+(n?f[g](v/n):0)+"&nttfb="+n+(c.css?"&rit_css="+c.css:"")+(c.link?"&rit_link="+c.link:"")+(c.script?"&rit_script="+c.script:"")+(c.img?"&rit_img="+c.img:"")}return""};q.getResourceTimingData=q.getResourceTimingData;})();
+(function(){var c=encodeURIComponent,g=window,h="performance";g.pagespeed=g.pagespeed||{};var l=g.pagespeed,m=function(f,a,d,b){this.c=f;this.a=a;this.b=d;this.d=b};l.beaconUrl="";
+var n=function(f){var a=f.c,d=g.mod_pagespeed_start,b=Number(new Date)-d,a=a+(-1==a.indexOf("?")?"?":"&"),a=a+"ets="+("load"==f.a?"load:":"unload:"),a=a+b;if("beforeunload"!=f.a||!g.mod_pagespeed_loaded){a+="&r"+f.a+"=";if(g[h]){var b=g[h].timing,e=b.navigationStart,k=b.requestStart,a=a+(b[f.a+"EventStart"]-e),a=a+("&nav="+(b.fetchStart-e)),a=a+("&dns="+(b.domainLookupEnd-b.domainLookupStart)),a=a+("&connect="+(b.connectEnd-b.connectStart)),a=a+("&req_start="+(k-e)),a=a+("&ttfb="+(b.responseStart-
+k)),a=a+("&dwld="+(b.responseEnd-b.responseStart)),a=a+("&dom_c="+(b.domContentLoadedEventStart-e));g[h].navigation&&(a+="&nt="+g[h].navigation.type);e=-1;b.msFirstPaint?e=b.msFirstPaint:g.chrome&&g.chrome.loadTimes&&(e=Math.floor(1E3*g.chrome.loadTimes().firstPaintTime));e=e-k;0<=e&&(a+="&fp="+e)}else a+=b;l.getResourceTimingData&&g.parent==g&&(a+=l.getResourceTimingData());a+=g.parent!=g?"&ifr=1":"&ifr=0";"load"==f.a&&(g.mod_pagespeed_loaded=!0,(b=g.mod_pagespeed_num_resources_prefetched)&&(a+=
+"&nrp="+b),(b=g.mod_pagespeed_prefetch_start)&&(a+="&htmlAt="+(d-b)));l.panelLoader&&(d=l.panelLoader.getCsiTimingsString(),""!=d&&(a+="&b_csi="+d));l.criticalCss&&(d=l.criticalCss,a+="&ccis="+d.total_critical_inlined_size+"&cces="+d.total_original_external_size+"&ccos="+d.total_overhead_size+"&ccrl="+d.num_replaced_links+"&ccul="+d.num_unreplaced_links);""!=f.b&&(a+=f.b);document.referrer&&(a+="&ref="+c(document.referrer));a+="&url="+c(f.d);l.beaconUrl=a;(new Image).src=a}};
+l.e=function(f,a,d,b){var e=new m(f,a,d,b);g.addEventListener?g.addEventListener(a,function(){n(e)},!1):g.attachEvent("on"+a,function(){n(e)})};l.addInstrumentationInit=l.e;})();
+
+pagespeed.addInstrumentationInit('http://1-ps.googleusercontent.com/beacon?org=116_1_li', 'load', '&s_ttfb=98&id=1397695239811464', 'http://www.gdgspacecoast.org/views/events.html');</script></div>
+        </div>
+    <noscript class="psa_add_styles">&lt;link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,300,700' rel='stylesheet' type='text/css'&gt;&lt;link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet"&gt;&lt;link href="http://1-ps.googleusercontent.com/x/s.gdgspacecoast.appspot.com/www.gdgspacecoast.org/css/A.gdg.css.pagespeed.cf.oJiN0qiLh5.css" rel="stylesheet" media="screen"&gt;</noscript><script pagespeed_no_defer="">(function(){var e=window,g=document,h=this,k=function(a,d){var b=a.split("."),c=h;b[0]in c||!c.execScript||c.execScript("var "+b[0]);for(var f;b.length&&(f=b.shift());)b.length||void 0===d?c[f]?c=c[f]:c=c[f]={}:c[f]=d};var m=function(){var a=e,d=l;if(a.addEventListener)a.addEventListener("load",d,!1);else if(a.attachEvent)a.attachEvent("onload",d);else{var b=a.onload;a.onload=function(){d.call(this);b&&b.call(this)}}};var n=!1,l=function(){if(!n){n=!0;for(var a=g.getElementsByClassName("psa_add_styles"),d=0,b;b=a[d];++d)if("NOSCRIPT"==b.nodeName){var c=g.createElement("div");c.innerHTML=b.textContent;g.body.appendChild(c)}}};k("pagespeed.CriticalCssLoader.addAllStyles",l);k("pagespeed.CriticalCssLoader.Run",function(){var a=e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||null;a?a(function(){e.setTimeout(l,0)}):m()});})();
+pagespeed.CriticalCssLoader.Run();</script><script pagespeed_no_defer="">(function(){var e=window,f=Math,g="round",h="performance";e.pagespeed=e.pagespeed||{};var q=e.pagespeed;
+q.getResourceTimingData=function(){if(e[h]&&(e[h].getEntries||e[h].webkitGetEntries)){for(var r=0,s=0,k=0,t=0,l=0,u=0,m=0,v=0,n=0,w=0,p=0,c={},d=e[h].getEntries?e[h].getEntries():e[h].webkitGetEntries(),b=0;b<d.length;b++){var a=d[b].duration;0<a&&(r+=a,++k,s=f.max(s,a));a=d[b].connectEnd-d[b].connectStart;0<a&&(u+=a,++m);a=d[b].domainLookupEnd-d[b].domainLookupStart;0<a&&(t+=a,++l);a=d[b].initiatorType;c[a]?++c[a]:c[a]=1;a=d[b].requestStart-d[b].fetchStart;0<a&&(w+=a,++p);a=d[b].responseStart-d[b].requestStart;
+0<a&&(v+=a,++n)}return"&afd="+(k?f[g](r/k):0)+"&nfd="+k+"&mfd="+f[g](s)+"&act="+(m?f[g](u/m):0)+"&nct="+m+"&adt="+(l?f[g](t/l):0)+"&ndt="+l+"&abt="+(p?f[g](w/p):0)+"&nbt="+p+"&attfb="+(n?f[g](v/n):0)+"&nttfb="+n+(c.css?"&rit_css="+c.css:"")+(c.link?"&rit_link="+c.link:"")+(c.script?"&rit_script="+c.script:"")+(c.img?"&rit_img="+c.img:"")}return""};q.getResourceTimingData=q.getResourceTimingData;})();
+(function(){var c=encodeURIComponent,g=window,h="performance";g.pagespeed=g.pagespeed||{};var l=g.pagespeed,m=function(f,a,d,b){this.c=f;this.a=a;this.b=d;this.d=b};l.beaconUrl="";
+var n=function(f){var a=f.c,d=g.mod_pagespeed_start,b=Number(new Date)-d,a=a+(-1==a.indexOf("?")?"?":"&"),a=a+"ets="+("load"==f.a?"load:":"unload:"),a=a+b;if("beforeunload"!=f.a||!g.mod_pagespeed_loaded){a+="&r"+f.a+"=";if(g[h]){var b=g[h].timing,e=b.navigationStart,k=b.requestStart,a=a+(b[f.a+"EventStart"]-e),a=a+("&nav="+(b.fetchStart-e)),a=a+("&dns="+(b.domainLookupEnd-b.domainLookupStart)),a=a+("&connect="+(b.connectEnd-b.connectStart)),a=a+("&req_start="+(k-e)),a=a+("&ttfb="+(b.responseStart-
+k)),a=a+("&dwld="+(b.responseEnd-b.responseStart)),a=a+("&dom_c="+(b.domContentLoadedEventStart-e));g[h].navigation&&(a+="&nt="+g[h].navigation.type);e=-1;b.msFirstPaint?e=b.msFirstPaint:g.chrome&&g.chrome.loadTimes&&(e=Math.floor(1E3*g.chrome.loadTimes().firstPaintTime));e=e-k;0<=e&&(a+="&fp="+e)}else a+=b;l.getResourceTimingData&&g.parent==g&&(a+=l.getResourceTimingData());a+=g.parent!=g?"&ifr=1":"&ifr=0";"load"==f.a&&(g.mod_pagespeed_loaded=!0,(b=g.mod_pagespeed_num_resources_prefetched)&&(a+=
+"&nrp="+b),(b=g.mod_pagespeed_prefetch_start)&&(a+="&htmlAt="+(d-b)));l.panelLoader&&(d=l.panelLoader.getCsiTimingsString(),""!=d&&(a+="&b_csi="+d));l.criticalCss&&(d=l.criticalCss,a+="&ccis="+d.total_critical_inlined_size+"&cces="+d.total_original_external_size+"&ccos="+d.total_overhead_size+"&ccrl="+d.num_replaced_links+"&ccul="+d.num_unreplaced_links);""!=f.b&&(a+=f.b);document.referrer&&(a+="&ref="+c(document.referrer));a+="&url="+c(f.d);l.beaconUrl=a;(new Image).src=a}};
+l.e=function(f,a,d,b){var e=new m(f,a,d,b);g.addEventListener?g.addEventListener(a,function(){n(e)},!1):g.attachEvent("on"+a,function(){n(e)})};l.addInstrumentationInit=l.e;})();
+
+pagespeed.addInstrumentationInit('http://1-ps.googleusercontent.com/beacon?org=116_1_li', 'load', '&s_ttfb=3&id=1397695239151556', 'http://www.gdgspacecoast.org/');</script>
+<div><link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,300,700" rel="stylesheet" type="text/css"><link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet"><link href="http://1-ps.googleusercontent.com/x/s.gdgspacecoast.appspot.com/www.gdgspacecoast.org/css/A.gdg.css.pagespeed.cf.oJiN0qiLh5.css" rel="stylesheet" media="screen"></div></body></html>

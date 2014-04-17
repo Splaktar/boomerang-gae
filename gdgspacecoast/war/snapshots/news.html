@@ -1,0 +1,255 @@
+<html ng-app="gdgBoomerang" class="ng-scope"><head><script async="" src="//www.google-analytics.com/analytics.js"></script><script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en_US.jD7c_eWmJ8o.O/m=plusone/rt=j/sv=1/d=1/ed=1/am=AQ/rs=AItRSTOVkhs5T9JHenv6-7ampqIEF9M-cA/cb=gapi.loaded_0" async=""></script><script type="text/javascript">(function(){new Image().src="http://1-ps.googleusercontent.com/x/s.gdgspacecoast.appspot.com/www.gdgspacecoast.org/lib/angular.ui.min.js.pagespeed.jm.6iMBZu4zFR.js";new Image().src="http://1-ps.googleusercontent.com/x/s.gdgspacecoast.appspot.com/www.gdgspacecoast.org/js/boomerang.js.pagespeed.jm.Uc_Yg00B4g.js";new Image().src="http://1-ps.googleusercontent.com/x/s.gdgspacecoast.appspot.com/www.gdgspacecoast.org/js/config.js.pagespeed.jm.FXqxSAdvjl.js";})()</script><script type="text/psa_flush_style" id="tepED4FPOv">body{overflow-y:scroll}#cover{margin-top:-300px;margin-bottom:30px;color:#fff;height:300px;background:-moz-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,.8) 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(0,0,0,0)),color-stop(100%,rgba(0,0,0,.8)));background:-webkit-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,.8) 100%);background:-o-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,.8) 100%);background:-ms-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,.8) 100%);background:linear-gradient(to bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,.8) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#cc000000',GradientType=0 )}#cover-content{margin-top:140px}.gdg_loading{background:url(http://1-ps.googleusercontent.com/x/s.gdgspacecoast.appspot.com/www.gdgspacecoast.org/images/gdg_loading.gif.pagespeed.ce.Jb8Oc1ySI2.gif) no-repeat 0 0 #fff;width:64px;height:64px}.sponsor{padding:20px}</script><script type="text/javascript">window.mod_pagespeed_prefetch_start = Number(new Date());window.mod_pagespeed_num_resources_prefetched = 4</script>
+        <title>Google Developer Group</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="description" content="Google Developer Groups (GDG) are technology user groups that meet to discuss the latest Technologies, Tools, SDKs, &amp; APIs like Android, GWT, GAE, &amp; GCP.">
+        <meta name="application-name" content="GDG Boomerang">
+        <meta name="fragment" content="!">
+        <script type="text/javascript">window.mod_pagespeed_start = Number(new Date());</script><link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,300,700" rel="stylesheet" type="text/css">
+        <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+        <script id="psa_flush_style_early" pagespeed_no_defer="">var applyFlushedCriticalCss = function(script_id, mediaString) {  var scripts = document.getElementsByTagName('script');  var styleScript = document.getElementById(script_id);  if (styleScript == null) {    return;  }  var cssText = styleScript.innerHTML || styleScript.textContent ||                 styleScript.data || "";  var styleElem = document.createElement('style');  styleElem.type = 'text/css';  if (styleElem.styleSheet) {    styleElem.styleSheet.cssText = cssText;  } else {    styleElem.appendChild(document.createTextNode(cssText));  }  if (mediaString) {    styleElem.setAttribute("media", mediaString);  }  var currentScript = scripts[scripts.length-1];  currentScript.parentNode.insertBefore(styleElem, currentScript);};</script><style type="text/css" media="screen">body{overflow-y:scroll}#cover{margin-top:-300px;margin-bottom:30px;color:#fff;height:300px;background:-moz-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,.8) 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(0,0,0,0)),color-stop(100%,rgba(0,0,0,.8)));background:-webkit-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,.8) 100%);background:-o-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,.8) 100%);background:-ms-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,.8) 100%);background:linear-gradient(to bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,.8) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#cc000000',GradientType=0 )}#cover-content{margin-top:140px}.gdg_loading{background:url(http://1-ps.googleusercontent.com/x/s.gdgspacecoast.appspot.com/www.gdgspacecoast.org/images/gdg_loading.gif.pagespeed.ce.Jb8Oc1ySI2.gif) no-repeat 0 0 #fff;width:64px;height:64px}.sponsor{padding:20px}</style><script pagespeed_no_defer="">applyFlushedCriticalCss("tepED4FPOv", "screen");</script>
+        <script src="http://code.angularjs.org/1.0.8/angular.min.js"></script><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak{display:none !important;}ng\:form{display:block;}</style>
+        <script src="http://code.angularjs.org/1.0.8/angular-sanitize.min.js"></script>
+        <script type="text/javascript" src="https://apis.google.com/js/plusone.js" gapi_processed="true"></script>
+        <script src="http://1-ps.googleusercontent.com/x/s.gdgspacecoast.appspot.com/www.gdgspacecoast.org/lib/angular.ui.min.js.pagespeed.jm.6iMBZu4zFR.js"></script>
+        <script src="http://1-ps.googleusercontent.com/x/s.gdgspacecoast.appspot.com/www.gdgspacecoast.org/js/boomerang.js.pagespeed.jm.Uc_Yg00B4g.js"></script>
+        <script src="http://1-ps.googleusercontent.com/x/s.gdgspacecoast.appspot.com/www.gdgspacecoast.org/js/config.js.pagespeed.jm.FXqxSAdvjl.js"></script>
+        <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-41029375-2','gdgspacecoast.org');ga('send','pageview');</script>
+    </head>
+    <body ng-controller="MainControl" data-status="ready" class="ng-scope"><noscript>&lt;meta HTTP-EQUIV="refresh" content="0;url='http://www.gdgspacecoast.org/?ModPagespeed=noscript'" /&gt;&lt;style&gt;&lt;!--table,div,span,font,p{display:none} --&gt;&lt;/style&gt;&lt;div style="display:block"&gt;Please click &lt;a href="http://www.gdgspacecoast.org/?ModPagespeed=noscript"&gt;here&lt;/a&gt; if you are not redirected within a few seconds.&lt;/div&gt;</noscript>
+        <div class="navbar navbar-static-top navbar-inverse">
+            <div class="navbar-inner">
+                <div class="container">
+                    <button type="button" class="btn btn-navbar" ng-click="isNavCollapsed = !isNavCollapsed">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="brand ng-binding" id="gdg_chapter_name">GDG Space Coast</a>
+
+                    <div class="nav-collapse collapse" collapse="isNavCollapsed" ng-click="isNavCollapsed = true" style="height: 0px; ">
+                        <ul class="nav">
+                            <li ng-class="{ 'active' : activeTab=='about' }"><a href="#!/about">About</a></li>
+                            <li ng-class="{ 'active' : activeTab=='news' }" class="active"><a href="#!/news">News</a></li>
+                            <li ng-class="{ 'active' : activeTab=='events' }"><a href="#!/events">Events</a></li>
+                            <li ng-class="{ 'active' : activeTab=='photos' }"><a href="#!/photos">Photos</a></li>
+                            <li><a ng-href="https://plus.google.com/103959793061819610212" rel="publisher" target="_blank" href="https://plus.google.com/103959793061819610212">Google+</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row" ng-view=""><script type="text/javascript" class="ng-scope">window.mod_pagespeed_start = Number(new Date());</script><div class="span12 ng-scope">
+    <p>&nbsp;</p>
+    <div class="gdg_loading" ng-show="loading" style="display: none; "></div>
+    <h1 class="span12" ng-hide="loading" style="">GDG Space Coast News</h1>
+    <ul id="news-feed">
+        <!-- ngRepeat: article in news --><li ng-repeat="article in news" class="ng-scope">
+
+            <img class="icon" ng-src="https://lh4.googleusercontent.com/-H-GJkVCW_14/AAAAAAAAAAI/AAAAAAAAADo/1QorO3R-cgs/photo.jpg?sz=16" alt="Article Icon" src="https://lh4.googleusercontent.com/-H-GJkVCW_14/AAAAAAAAAAI/AAAAAAAAADo/1QorO3R-cgs/photo.jpg?sz=16">
+            <p ng-bind-html-unsafe="article.body" class="ng-binding"><b>Have you ever used Chrome Remote Desktop to remotely access your computer from a different laptop or...</b></p>
+
+            <ul class="thumbnails">
+                <!-- ngRepeat: tn in article.thumbnails --><li ng-repeat="tn in article.thumbnails" class="ng-scope">
+                    <a ng-href="https://lh3.googleusercontent.com/-kQh4UvPzMD8/U07LNAnsoKI/AAAAAAAA7TQ/zFYRTi5RXWw/w700-h368/Chrome%2BRemote%2BDesktop%2Bapp.png" href="https://lh3.googleusercontent.com/-kQh4UvPzMD8/U07LNAnsoKI/AAAAAAAA7TQ/zFYRTi5RXWw/w700-h368/Chrome%2BRemote%2BDesktop%2Bapp.png">
+                        <img ng-src="https://lh3.googleusercontent.com/-kQh4UvPzMD8/U07LNAnsoKI/AAAAAAAA7TQ/zFYRTi5RXWw/w506-h750/Chrome%2BRemote%2BDesktop%2Bapp.png" alt="Article Thumbnail" src="https://lh3.googleusercontent.com/-kQh4UvPzMD8/U07LNAnsoKI/AAAAAAAA7TQ/zFYRTi5RXWw/w506-h750/Chrome%2BRemote%2BDesktop%2Bapp.png">
+                    </a>
+                </li>
+            </ul>
+            <div class="meta">
+            <span class="from">
+
+            </span>
+            </div>
+            <span class="label"> <a ng-href="https://plus.google.com/103959793061819610212/posts/TK8phCuG4Md" target="_blank" href="https://plus.google.com/103959793061819610212/posts/TK8phCuG4Md">View</a> </span>
+            <span class="label ng-binding"> 0 comment<span ng-show="article.comments != 1">s</span> </span>
+            <span class="label ng-binding"> 0 share<span ng-show="article.reshares != 1">s</span> </span>
+            <div style="position: absolute; width: 450px; left: -10000px; " id="___plusone_0"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position:absolute;top:-10000px;width:450px;margin:0px;border-style:none" tabindex="0" vspace="0" width="100%" id="I0_1397695234117" name="I0_1397695234117" src="https://apis.google.com/_/+1/fastbutton?usegapi=1&amp;size=medium&amp;annotation=bubble&amp;origin=http%3A%2F%2Fwww.gdgspacecoast.org&amp;url=https%3A%2F%2Fplus.google.com%2F103959793061819610212%2Fposts%2FTK8phCuG4Md&amp;gsrc=3p&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en_US.jD7c_eWmJ8o.O%2Fm%3D__features__%2Fam%3DAQ%2Frt%3Dj%2Fd%3D1%2Fz%3Dzcms%2Frs%3DAItRSTOVkhs5T9JHenv6-7ampqIEF9M-cA#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh&amp;id=I0_1397695234117&amp;parent=http%3A%2F%2Fwww.gdgspacecoast.org&amp;pfname=&amp;rpctoken=42933223" data-gapiattached="true"></iframe></div><span class="g-plusone label" data-size="medium" data-annotation="bubble" data-href="https://plus.google.com/103959793061819610212/posts/TK8phCuG4Md" data-gapiscan="true" data-gapistub="true"></span>
+        </li><li ng-repeat="article in news" class="ng-scope">
+
+            <img class="icon" ng-src="https://lh4.googleusercontent.com/-H-GJkVCW_14/AAAAAAAAAAI/AAAAAAAAADo/1QorO3R-cgs/photo.jpg?sz=16" alt="Article Icon" src="https://lh4.googleusercontent.com/-H-GJkVCW_14/AAAAAAAAAAI/AAAAAAAAADo/1QorO3R-cgs/photo.jpg?sz=16">
+            <p ng-bind-html-unsafe="article.body" class="ng-binding"><b>Today we’re launching Google Camera, a new app for your Android phone or tablet that makes it easy to...</b></p>
+
+            <ul class="thumbnails">
+                <!-- ngRepeat: tn in article.thumbnails -->
+            </ul>
+            <div class="meta">
+            <span class="from">
+
+            </span>
+            </div>
+            <span class="label"> <a ng-href="https://plus.google.com/103959793061819610212/posts/59eqBrRjV3r" target="_blank" href="https://plus.google.com/103959793061819610212/posts/59eqBrRjV3r">View</a> </span>
+            <span class="label ng-binding"> 0 comment<span ng-show="article.comments != 1">s</span> </span>
+            <span class="label ng-binding"> 0 share<span ng-show="article.reshares != 1">s</span> </span>
+            <div style="position: absolute; width: 450px; left: -10000px; " id="___plusone_1"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position:absolute;top:-10000px;width:450px;margin:0px;border-style:none" tabindex="0" vspace="0" width="100%" id="I1_1397695234124" name="I1_1397695234124" src="https://apis.google.com/_/+1/fastbutton?usegapi=1&amp;size=medium&amp;annotation=bubble&amp;origin=http%3A%2F%2Fwww.gdgspacecoast.org&amp;url=https%3A%2F%2Fplus.google.com%2F103959793061819610212%2Fposts%2F59eqBrRjV3r&amp;gsrc=3p&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en_US.jD7c_eWmJ8o.O%2Fm%3D__features__%2Fam%3DAQ%2Frt%3Dj%2Fd%3D1%2Fz%3Dzcms%2Frs%3DAItRSTOVkhs5T9JHenv6-7ampqIEF9M-cA#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh&amp;id=I1_1397695234124&amp;parent=http%3A%2F%2Fwww.gdgspacecoast.org&amp;pfname=&amp;rpctoken=32701363" data-gapiattached="true"></iframe></div><span class="g-plusone label" data-size="medium" data-annotation="bubble" data-href="https://plus.google.com/103959793061819610212/posts/59eqBrRjV3r" data-gapiscan="true" data-gapistub="true"></span>
+        </li><li ng-repeat="article in news" class="ng-scope">
+
+            <img class="icon" ng-src="https://lh4.googleusercontent.com/-H-GJkVCW_14/AAAAAAAAAAI/AAAAAAAAADo/1QorO3R-cgs/photo.jpg?sz=16" alt="Article Icon" src="https://lh4.googleusercontent.com/-H-GJkVCW_14/AAAAAAAAAAI/AAAAAAAAADo/1QorO3R-cgs/photo.jpg?sz=16">
+            <p ng-bind-html-unsafe="article.body" class="ng-binding"><b>Here are the release notes for XE16 platform updates.<br><br>Oh, and it's not mentioned there, but Bluetooth...</b><div class="link-attachment"><a href="https://developers.google.com/glass/release-notes#xe16">Google Developers</a></div></p>
+
+            <ul class="thumbnails">
+                <!-- ngRepeat: tn in article.thumbnails -->
+            </ul>
+            <div class="meta">
+            <span class="from">
+
+            </span>
+            </div>
+            <span class="label"> <a ng-href="https://plus.google.com/103959793061819610212/posts/4KpiHbVeaGz" target="_blank" href="https://plus.google.com/103959793061819610212/posts/4KpiHbVeaGz">View</a> </span>
+            <span class="label ng-binding"> 0 comment<span ng-show="article.comments != 1">s</span> </span>
+            <span class="label ng-binding"> 0 share<span ng-show="article.reshares != 1">s</span> </span>
+            <div style="position: absolute; width: 450px; left: -10000px; " id="___plusone_2"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position:absolute;top:-10000px;width:450px;margin:0px;border-style:none" tabindex="0" vspace="0" width="100%" id="I2_1397695234128" name="I2_1397695234128" src="https://apis.google.com/_/+1/fastbutton?usegapi=1&amp;size=medium&amp;annotation=bubble&amp;origin=http%3A%2F%2Fwww.gdgspacecoast.org&amp;url=https%3A%2F%2Fplus.google.com%2F103959793061819610212%2Fposts%2F4KpiHbVeaGz&amp;gsrc=3p&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en_US.jD7c_eWmJ8o.O%2Fm%3D__features__%2Fam%3DAQ%2Frt%3Dj%2Fd%3D1%2Fz%3Dzcms%2Frs%3DAItRSTOVkhs5T9JHenv6-7ampqIEF9M-cA#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh&amp;id=I2_1397695234128&amp;parent=http%3A%2F%2Fwww.gdgspacecoast.org&amp;pfname=&amp;rpctoken=19691944" data-gapiattached="true"></iframe></div><span class="g-plusone label" data-size="medium" data-annotation="bubble" data-href="https://plus.google.com/103959793061819610212/posts/4KpiHbVeaGz" data-gapiscan="true" data-gapistub="true"></span>
+        </li><li ng-repeat="article in news" class="ng-scope">
+
+            <img class="icon" ng-src="https://lh4.googleusercontent.com/-H-GJkVCW_14/AAAAAAAAAAI/AAAAAAAAADo/1QorO3R-cgs/photo.jpg?sz=16" alt="Article Icon" src="https://lh4.googleusercontent.com/-H-GJkVCW_14/AAAAAAAAAAI/AAAAAAAAADo/1QorO3R-cgs/photo.jpg?sz=16">
+            <p ng-bind-html-unsafe="article.body" class="ng-binding"><b>If you haven't loaded up the #androidwear &nbsp;emulator yet, this is what it looks like without any apps...</b></p>
+
+            <ul class="thumbnails">
+                <!-- ngRepeat: tn in article.thumbnails -->
+            </ul>
+            <div class="meta">
+            <span class="from">
+
+            </span>
+            </div>
+            <span class="label"> <a ng-href="https://plus.google.com/103959793061819610212/posts/2KTu9nvwGTe" target="_blank" href="https://plus.google.com/103959793061819610212/posts/2KTu9nvwGTe">View</a> </span>
+            <span class="label ng-binding"> 0 comment<span ng-show="article.comments != 1">s</span> </span>
+            <span class="label ng-binding"> 0 share<span ng-show="article.reshares != 1">s</span> </span>
+            <div style="position: absolute; width: 450px; left: -10000px; " id="___plusone_3"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position:absolute;top:-10000px;width:450px;margin:0px;border-style:none" tabindex="0" vspace="0" width="100%" id="I3_1397695234131" name="I3_1397695234131" src="https://apis.google.com/_/+1/fastbutton?usegapi=1&amp;size=medium&amp;annotation=bubble&amp;origin=http%3A%2F%2Fwww.gdgspacecoast.org&amp;url=https%3A%2F%2Fplus.google.com%2F103959793061819610212%2Fposts%2F2KTu9nvwGTe&amp;gsrc=3p&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en_US.jD7c_eWmJ8o.O%2Fm%3D__features__%2Fam%3DAQ%2Frt%3Dj%2Fd%3D1%2Fz%3Dzcms%2Frs%3DAItRSTOVkhs5T9JHenv6-7ampqIEF9M-cA#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh&amp;id=I3_1397695234131&amp;parent=http%3A%2F%2Fwww.gdgspacecoast.org&amp;pfname=&amp;rpctoken=17171974" data-gapiattached="true"></iframe></div><span class="g-plusone label" data-size="medium" data-annotation="bubble" data-href="https://plus.google.com/103959793061819610212/posts/2KTu9nvwGTe" data-gapiscan="true" data-gapistub="true"></span>
+        </li><li ng-repeat="article in news" class="ng-scope">
+
+            <img class="icon" ng-src="https://lh4.googleusercontent.com/-H-GJkVCW_14/AAAAAAAAAAI/AAAAAAAAADo/1QorO3R-cgs/photo.jpg?sz=16" alt="Article Icon" src="https://lh4.googleusercontent.com/-H-GJkVCW_14/AAAAAAAAAAI/AAAAAAAAADo/1QorO3R-cgs/photo.jpg?sz=16">
+            <p ng-bind-html-unsafe="article.body" class="ng-binding"><b>Glassware are apps and services designed especially for Glass, built with Glass design principles. &nbsp;...</b><div class="link-attachment"><a href="https://developers.google.com/glass/">Glass Developers — Google Developers</a></div></p>
+
+            <ul class="thumbnails">
+                <!-- ngRepeat: tn in article.thumbnails -->
+            </ul>
+            <div class="meta">
+            <span class="from">
+
+            </span>
+            </div>
+            <span class="label"> <a ng-href="https://plus.google.com/103959793061819610212/posts/5XwXw4vEcLF" target="_blank" href="https://plus.google.com/103959793061819610212/posts/5XwXw4vEcLF">View</a> </span>
+            <span class="label ng-binding"> 0 comment<span ng-show="article.comments != 1">s</span> </span>
+            <span class="label ng-binding"> 0 share<span ng-show="article.reshares != 1">s</span> </span>
+            <div style="position: absolute; width: 450px; left: -10000px; " id="___plusone_4"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position:absolute;top:-10000px;width:450px;margin:0px;border-style:none" tabindex="0" vspace="0" width="100%" id="I4_1397695234135" name="I4_1397695234135" src="https://apis.google.com/_/+1/fastbutton?usegapi=1&amp;size=medium&amp;annotation=bubble&amp;origin=http%3A%2F%2Fwww.gdgspacecoast.org&amp;url=https%3A%2F%2Fplus.google.com%2F103959793061819610212%2Fposts%2F5XwXw4vEcLF&amp;gsrc=3p&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en_US.jD7c_eWmJ8o.O%2Fm%3D__features__%2Fam%3DAQ%2Frt%3Dj%2Fd%3D1%2Fz%3Dzcms%2Frs%3DAItRSTOVkhs5T9JHenv6-7ampqIEF9M-cA#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh&amp;id=I4_1397695234135&amp;parent=http%3A%2F%2Fwww.gdgspacecoast.org&amp;pfname=&amp;rpctoken=29827352" data-gapiattached="true"></iframe></div><span class="g-plusone label" data-size="medium" data-annotation="bubble" data-href="https://plus.google.com/103959793061819610212/posts/5XwXw4vEcLF" data-gapiscan="true" data-gapistub="true"></span>
+        </li><li ng-repeat="article in news" class="ng-scope">
+
+            <img class="icon" ng-src="https://lh4.googleusercontent.com/-H-GJkVCW_14/AAAAAAAAAAI/AAAAAAAAADo/1QorO3R-cgs/photo.jpg?sz=16" alt="Article Icon" src="https://lh4.googleusercontent.com/-H-GJkVCW_14/AAAAAAAAAAI/AAAAAAAAADo/1QorO3R-cgs/photo.jpg?sz=16">
+            <p ng-bind-html-unsafe="article.body" class="ng-binding"><b>Hi Explorers!<br><br>Are you building Glassware and stuck? If so, we're here to help. +Jenny Murphy&nbsp;and +Allen...</b><b>Glass Developer Office Hours: A Hangout for Glass Explorers Everywhere</b><p>Hi Explorers!<br><br>Are you building Glassware and stuck? If so, we're here to help. @107035033763939559981&nbsp;and @101852559274654726533&nbsp;are hosting this hangout to field your questions about developing for Glass.<br><br>This hangout is a technical Q&amp;A, so please come armed with your questions. Plan to hop in, ask your question, and hop out to make room for others. Space will open up as people get their answers, so if you don't get in right away, please keep knocking.<br><br>We'll post a link to the hangout on this event once it starts.<br><br>This hangout isn't going to be live streamed or recorded.</p></p>
+
+            <ul class="thumbnails">
+                <!-- ngRepeat: tn in article.thumbnails -->
+            </ul>
+            <div class="meta">
+            <span class="from">
+
+            </span>
+            </div>
+            <span class="label"> <a ng-href="https://plus.google.com/103959793061819610212/posts/DBbtC3QvQne" target="_blank" href="https://plus.google.com/103959793061819610212/posts/DBbtC3QvQne">View</a> </span>
+            <span class="label ng-binding"> 0 comment<span ng-show="article.comments != 1">s</span> </span>
+            <span class="label ng-binding"> 0 share<span ng-show="article.reshares != 1">s</span> </span>
+            <div style="position: absolute; width: 450px; left: -10000px; " id="___plusone_5"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position:absolute;top:-10000px;width:450px;margin:0px;border-style:none" tabindex="0" vspace="0" width="100%" id="I5_1397695234137" name="I5_1397695234137" src="https://apis.google.com/_/+1/fastbutton?usegapi=1&amp;size=medium&amp;annotation=bubble&amp;origin=http%3A%2F%2Fwww.gdgspacecoast.org&amp;url=https%3A%2F%2Fplus.google.com%2F103959793061819610212%2Fposts%2FDBbtC3QvQne&amp;gsrc=3p&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en_US.jD7c_eWmJ8o.O%2Fm%3D__features__%2Fam%3DAQ%2Frt%3Dj%2Fd%3D1%2Fz%3Dzcms%2Frs%3DAItRSTOVkhs5T9JHenv6-7ampqIEF9M-cA#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh&amp;id=I5_1397695234137&amp;parent=http%3A%2F%2Fwww.gdgspacecoast.org&amp;pfname=&amp;rpctoken=10215992" data-gapiattached="true"></iframe></div><span class="g-plusone label" data-size="medium" data-annotation="bubble" data-href="https://plus.google.com/103959793061819610212/posts/DBbtC3QvQne" data-gapiscan="true" data-gapistub="true"></span>
+        </li><li ng-repeat="article in news" class="ng-scope">
+
+            <img class="icon" ng-src="https://lh4.googleusercontent.com/-H-GJkVCW_14/AAAAAAAAAAI/AAAAAAAAADo/1QorO3R-cgs/photo.jpg?sz=16" alt="Article Icon" src="https://lh4.googleusercontent.com/-H-GJkVCW_14/AAAAAAAAAAI/AAAAAAAAADo/1QorO3R-cgs/photo.jpg?sz=16">
+            <p ng-bind-html-unsafe="article.body" class="ng-binding"><b>When 60% of the top rated laptops on Amazon are Chromebooks, Microsoft had no choice but to give in.</b><div class="link-attachment"><a href="http://www.computerworld.com/s/article/9247681/Microsoft_concedes_Chromebooks_are_work_worthy">Microsoft concedes Chromebooks are work-worthy</a></div></p>
+
+            <ul class="thumbnails">
+                <!-- ngRepeat: tn in article.thumbnails -->
+            </ul>
+            <div class="meta">
+            <span class="from">
+
+            </span>
+            </div>
+            <span class="label"> <a ng-href="https://plus.google.com/103959793061819610212/posts/gLPmMVHk1j6" target="_blank" href="https://plus.google.com/103959793061819610212/posts/gLPmMVHk1j6">View</a> </span>
+            <span class="label ng-binding"> 0 comment<span ng-show="article.comments != 1">s</span> </span>
+            <span class="label ng-binding"> 0 share<span ng-show="article.reshares != 1">s</span> </span>
+            <div style="position: absolute; width: 450px; left: -10000px; " id="___plusone_6"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position:absolute;top:-10000px;width:450px;margin:0px;border-style:none" tabindex="0" vspace="0" width="100%" id="I6_1397695234139" name="I6_1397695234139" src="https://apis.google.com/_/+1/fastbutton?usegapi=1&amp;size=medium&amp;annotation=bubble&amp;origin=http%3A%2F%2Fwww.gdgspacecoast.org&amp;url=https%3A%2F%2Fplus.google.com%2F103959793061819610212%2Fposts%2FgLPmMVHk1j6&amp;gsrc=3p&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en_US.jD7c_eWmJ8o.O%2Fm%3D__features__%2Fam%3DAQ%2Frt%3Dj%2Fd%3D1%2Fz%3Dzcms%2Frs%3DAItRSTOVkhs5T9JHenv6-7ampqIEF9M-cA#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh&amp;id=I6_1397695234139&amp;parent=http%3A%2F%2Fwww.gdgspacecoast.org&amp;pfname=&amp;rpctoken=13852671" data-gapiattached="true"></iframe></div><span class="g-plusone label" data-size="medium" data-annotation="bubble" data-href="https://plus.google.com/103959793061819610212/posts/gLPmMVHk1j6" data-gapiscan="true" data-gapistub="true"></span>
+        </li><li ng-repeat="article in news" class="ng-scope">
+
+            <img class="icon" ng-src="https://lh4.googleusercontent.com/-H-GJkVCW_14/AAAAAAAAAAI/AAAAAAAAADo/1QorO3R-cgs/photo.jpg?sz=16" alt="Article Icon" src="https://lh4.googleusercontent.com/-H-GJkVCW_14/AAAAAAAAAAI/AAAAAAAAADo/1QorO3R-cgs/photo.jpg?sz=16">
+            <p ng-bind-html-unsafe="article.body" class="ng-binding"><b>Today’s the day to become a Glass Explorer<br><br>We let the cat out of the bag, you marked your calendars...</b></p>
+
+            <ul class="thumbnails">
+                <!-- ngRepeat: tn in article.thumbnails --><li ng-repeat="tn in article.thumbnails" class="ng-scope">
+                    <a ng-href="https://lh4.googleusercontent.com/-r9psY04wS0M/U00tOnqkNBI/AAAAAAAATEY/3sS_MelB_Ko/w1805-h1296/Screen%2BShot%2B2014-04-15%2Bat%2B5.57.42%2BAM.png" href="https://lh4.googleusercontent.com/-r9psY04wS0M/U00tOnqkNBI/AAAAAAAATEY/3sS_MelB_Ko/w1805-h1296/Screen%2BShot%2B2014-04-15%2Bat%2B5.57.42%2BAM.png">
+                        <img ng-src="https://lh4.googleusercontent.com/-r9psY04wS0M/U00tOnqkNBI/AAAAAAAATEY/3sS_MelB_Ko/w506-h750/Screen%2BShot%2B2014-04-15%2Bat%2B5.57.42%2BAM.png" alt="Article Thumbnail" src="https://lh4.googleusercontent.com/-r9psY04wS0M/U00tOnqkNBI/AAAAAAAATEY/3sS_MelB_Ko/w506-h750/Screen%2BShot%2B2014-04-15%2Bat%2B5.57.42%2BAM.png">
+                    </a>
+                </li>
+            </ul>
+            <div class="meta">
+            <span class="from">
+
+            </span>
+            </div>
+            <span class="label"> <a ng-href="https://plus.google.com/103959793061819610212/posts/QQ2TamJ7qUc" target="_blank" href="https://plus.google.com/103959793061819610212/posts/QQ2TamJ7qUc">View</a> </span>
+            <span class="label ng-binding"> 0 comment<span ng-show="article.comments != 1">s</span> </span>
+            <span class="label ng-binding"> 0 share<span ng-show="article.reshares != 1">s</span> </span>
+            <div style="position: absolute; width: 450px; left: -10000px; " id="___plusone_7"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position:absolute;top:-10000px;width:450px;margin:0px;border-style:none" tabindex="0" vspace="0" width="100%" id="I7_1397695234142" name="I7_1397695234142" src="https://apis.google.com/_/+1/fastbutton?usegapi=1&amp;size=medium&amp;annotation=bubble&amp;origin=http%3A%2F%2Fwww.gdgspacecoast.org&amp;url=https%3A%2F%2Fplus.google.com%2F103959793061819610212%2Fposts%2FQQ2TamJ7qUc&amp;gsrc=3p&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en_US.jD7c_eWmJ8o.O%2Fm%3D__features__%2Fam%3DAQ%2Frt%3Dj%2Fd%3D1%2Fz%3Dzcms%2Frs%3DAItRSTOVkhs5T9JHenv6-7ampqIEF9M-cA#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh&amp;id=I7_1397695234142&amp;parent=http%3A%2F%2Fwww.gdgspacecoast.org&amp;pfname=&amp;rpctoken=70215245" data-gapiattached="true"></iframe></div><span class="g-plusone label" data-size="medium" data-annotation="bubble" data-href="https://plus.google.com/103959793061819610212/posts/QQ2TamJ7qUc" data-gapiscan="true" data-gapistub="true"></span>
+        </li><li ng-repeat="article in news" class="ng-scope">
+
+            <img class="icon" ng-src="https://lh4.googleusercontent.com/-H-GJkVCW_14/AAAAAAAAAAI/AAAAAAAAADo/1QorO3R-cgs/photo.jpg?sz=16" alt="Article Icon" src="https://lh4.googleusercontent.com/-H-GJkVCW_14/AAAAAAAAAAI/AAAAAAAAADo/1QorO3R-cgs/photo.jpg?sz=16">
+            <p ng-bind-html-unsafe="article.body" class="ng-binding"><b>Welcome to our Project Tango Google+ community.<br><br>You can connect with other developers and enthusiasts...</b></p>
+
+            <ul class="thumbnails">
+                <!-- ngRepeat: tn in article.thumbnails -->
+            </ul>
+            <div class="meta">
+            <span class="from">
+
+            </span>
+            </div>
+            <span class="label"> <a ng-href="https://plus.google.com/103959793061819610212/posts/URKo5qCAomh" target="_blank" href="https://plus.google.com/103959793061819610212/posts/URKo5qCAomh">View</a> </span>
+            <span class="label ng-binding"> 0 comment<span ng-show="article.comments != 1">s</span> </span>
+            <span class="label ng-binding"> 0 share<span ng-show="article.reshares != 1">s</span> </span>
+            <div style="position: absolute; width: 450px; left: -10000px; " id="___plusone_8"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position:absolute;top:-10000px;width:450px;margin:0px;border-style:none" tabindex="0" vspace="0" width="100%" id="I8_1397695234144" name="I8_1397695234144" src="https://apis.google.com/_/+1/fastbutton?usegapi=1&amp;size=medium&amp;annotation=bubble&amp;origin=http%3A%2F%2Fwww.gdgspacecoast.org&amp;url=https%3A%2F%2Fplus.google.com%2F103959793061819610212%2Fposts%2FURKo5qCAomh&amp;gsrc=3p&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en_US.jD7c_eWmJ8o.O%2Fm%3D__features__%2Fam%3DAQ%2Frt%3Dj%2Fd%3D1%2Fz%3Dzcms%2Frs%3DAItRSTOVkhs5T9JHenv6-7ampqIEF9M-cA#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh&amp;id=I8_1397695234144&amp;parent=http%3A%2F%2Fwww.gdgspacecoast.org&amp;pfname=&amp;rpctoken=16627675" data-gapiattached="true"></iframe></div><span class="g-plusone label" data-size="medium" data-annotation="bubble" data-href="https://plus.google.com/103959793061819610212/posts/URKo5qCAomh" data-gapiscan="true" data-gapistub="true"></span>
+        </li><li ng-repeat="article in news" class="ng-scope">
+
+            <img class="icon" ng-src="https://lh4.googleusercontent.com/-H-GJkVCW_14/AAAAAAAAAAI/AAAAAAAAADo/1QorO3R-cgs/photo.jpg?sz=16" alt="Article Icon" src="https://lh4.googleusercontent.com/-H-GJkVCW_14/AAAAAAAAAAI/AAAAAAAAADo/1QorO3R-cgs/photo.jpg?sz=16">
+            <p ng-bind-html-unsafe="article.body" class="ng-binding"><b>A talk about the Internet with one of the guys who invented it. Watch the highlights from our recent...</b></p>
+
+            <ul class="thumbnails">
+                <!-- ngRepeat: tn in article.thumbnails --><li ng-repeat="tn in article.thumbnails" class="ng-scope">
+                    <a ng-href="http://goo.gl/rS7j7e" href="http://goo.gl/rS7j7e">
+                        <img ng-src="https://lh4.googleusercontent.com/proxy/1WTc1T_fjhfTD7anXjodsqc0qUhEGvFJUtFZDdXAncH2Ip4_mpfQ3lEG_OGTM_Kqk8EjApH_8zVvJk2ZmiMy1ak=w506-h284-n" alt="Article Thumbnail" src="https://lh4.googleusercontent.com/proxy/1WTc1T_fjhfTD7anXjodsqc0qUhEGvFJUtFZDdXAncH2Ip4_mpfQ3lEG_OGTM_Kqk8EjApH_8zVvJk2ZmiMy1ak=w506-h284-n">
+                    </a>
+                </li>
+            </ul>
+            <div class="meta">
+            <span class="from">
+
+            </span>
+            </div>
+            <span class="label"> <a ng-href="https://plus.google.com/103959793061819610212/posts/6o7xepnxKDS" target="_blank" href="https://plus.google.com/103959793061819610212/posts/6o7xepnxKDS">View</a> </span>
+            <span class="label ng-binding"> 0 comment<span ng-show="article.comments != 1">s</span> </span>
+            <span class="label ng-binding"> 0 share<span ng-show="article.reshares != 1">s</span> </span>
+            <div style="position: absolute; width: 450px; left: -10000px; " id="___plusone_9"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position:absolute;top:-10000px;width:450px;margin:0px;border-style:none" tabindex="0" vspace="0" width="100%" id="I9_1397695234146" name="I9_1397695234146" src="https://apis.google.com/_/+1/fastbutton?usegapi=1&amp;size=medium&amp;annotation=bubble&amp;origin=http%3A%2F%2Fwww.gdgspacecoast.org&amp;url=https%3A%2F%2Fplus.google.com%2F103959793061819610212%2Fposts%2F6o7xepnxKDS&amp;gsrc=3p&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en_US.jD7c_eWmJ8o.O%2Fm%3D__features__%2Fam%3DAQ%2Frt%3Dj%2Fd%3D1%2Fz%3Dzcms%2Frs%3DAItRSTOVkhs5T9JHenv6-7ampqIEF9M-cA#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh&amp;id=I9_1397695234146&amp;parent=http%3A%2F%2Fwww.gdgspacecoast.org&amp;pfname=&amp;rpctoken=15070562" data-gapiattached="true"></iframe></div><span class="g-plusone label" data-size="medium" data-annotation="bubble" data-href="https://plus.google.com/103959793061819610212/posts/6o7xepnxKDS" data-gapiscan="true" data-gapistub="true"></span>
+        </li>
+    </ul>
+</div>
+<script pagespeed_no_defer="" type="text/javascript" class="ng-scope">(function(){var e=window,f=Math,g="round",h="performance";e.pagespeed=e.pagespeed||{};var q=e.pagespeed;
+q.getResourceTimingData=function(){if(e[h]&&(e[h].getEntries||e[h].webkitGetEntries)){for(var r=0,s=0,k=0,t=0,l=0,u=0,m=0,v=0,n=0,w=0,p=0,c={},d=e[h].getEntries?e[h].getEntries():e[h].webkitGetEntries(),b=0;b<d.length;b++){var a=d[b].duration;0<a&&(r+=a,++k,s=f.max(s,a));a=d[b].connectEnd-d[b].connectStart;0<a&&(u+=a,++m);a=d[b].domainLookupEnd-d[b].domainLookupStart;0<a&&(t+=a,++l);a=d[b].initiatorType;c[a]?++c[a]:c[a]=1;a=d[b].requestStart-d[b].fetchStart;0<a&&(w+=a,++p);a=d[b].responseStart-d[b].requestStart;
+0<a&&(v+=a,++n)}return"&afd="+(k?f[g](r/k):0)+"&nfd="+k+"&mfd="+f[g](s)+"&act="+(m?f[g](u/m):0)+"&nct="+m+"&adt="+(l?f[g](t/l):0)+"&ndt="+l+"&abt="+(p?f[g](w/p):0)+"&nbt="+p+"&attfb="+(n?f[g](v/n):0)+"&nttfb="+n+(c.css?"&rit_css="+c.css:"")+(c.link?"&rit_link="+c.link:"")+(c.script?"&rit_script="+c.script:"")+(c.img?"&rit_img="+c.img:"")}return""};q.getResourceTimingData=q.getResourceTimingData;})();
+(function(){var c=encodeURIComponent,g=window,h="performance";g.pagespeed=g.pagespeed||{};var l=g.pagespeed,m=function(f,a,d,b){this.c=f;this.a=a;this.b=d;this.d=b};l.beaconUrl="";
+var n=function(f){var a=f.c,d=g.mod_pagespeed_start,b=Number(new Date)-d,a=a+(-1==a.indexOf("?")?"?":"&"),a=a+"ets="+("load"==f.a?"load:":"unload:"),a=a+b;if("beforeunload"!=f.a||!g.mod_pagespeed_loaded){a+="&r"+f.a+"=";if(g[h]){var b=g[h].timing,e=b.navigationStart,k=b.requestStart,a=a+(b[f.a+"EventStart"]-e),a=a+("&nav="+(b.fetchStart-e)),a=a+("&dns="+(b.domainLookupEnd-b.domainLookupStart)),a=a+("&connect="+(b.connectEnd-b.connectStart)),a=a+("&req_start="+(k-e)),a=a+("&ttfb="+(b.responseStart-
+k)),a=a+("&dwld="+(b.responseEnd-b.responseStart)),a=a+("&dom_c="+(b.domContentLoadedEventStart-e));g[h].navigation&&(a+="&nt="+g[h].navigation.type);e=-1;b.msFirstPaint?e=b.msFirstPaint:g.chrome&&g.chrome.loadTimes&&(e=Math.floor(1E3*g.chrome.loadTimes().firstPaintTime));e=e-k;0<=e&&(a+="&fp="+e)}else a+=b;l.getResourceTimingData&&g.parent==g&&(a+=l.getResourceTimingData());a+=g.parent!=g?"&ifr=1":"&ifr=0";"load"==f.a&&(g.mod_pagespeed_loaded=!0,(b=g.mod_pagespeed_num_resources_prefetched)&&(a+=
+"&nrp="+b),(b=g.mod_pagespeed_prefetch_start)&&(a+="&htmlAt="+(d-b)));l.panelLoader&&(d=l.panelLoader.getCsiTimingsString(),""!=d&&(a+="&b_csi="+d));l.criticalCss&&(d=l.criticalCss,a+="&ccis="+d.total_critical_inlined_size+"&cces="+d.total_original_external_size+"&ccos="+d.total_overhead_size+"&ccrl="+d.num_replaced_links+"&ccul="+d.num_unreplaced_links);""!=f.b&&(a+=f.b);document.referrer&&(a+="&ref="+c(document.referrer));a+="&url="+c(f.d);l.beaconUrl=a;(new Image).src=a}};
+l.e=function(f,a,d,b){var e=new m(f,a,d,b);g.addEventListener?g.addEventListener(a,function(){n(e)},!1):g.attachEvent("on"+a,function(){n(e)})};l.addInstrumentationInit=l.e;})();
+
+pagespeed.addInstrumentationInit('http://1-ps.googleusercontent.com/beacon?org=116_1_li', 'load', '&s_ttfb=69&id=1397695231822267', 'http://www.gdgspacecoast.org/views/news.html');</script></div>
+        </div>
+    <noscript class="psa_add_styles">&lt;link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,300,700' rel='stylesheet' type='text/css'&gt;&lt;link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet"&gt;&lt;link href="http://1-ps.googleusercontent.com/x/s.gdgspacecoast.appspot.com/www.gdgspacecoast.org/css/A.gdg.css.pagespeed.cf.oJiN0qiLh5.css" rel="stylesheet" media="screen"&gt;</noscript><script pagespeed_no_defer="">(function(){var e=window,g=document,h=this,k=function(a,d){var b=a.split("."),c=h;b[0]in c||!c.execScript||c.execScript("var "+b[0]);for(var f;b.length&&(f=b.shift());)b.length||void 0===d?c[f]?c=c[f]:c=c[f]={}:c[f]=d};var m=function(){var a=e,d=l;if(a.addEventListener)a.addEventListener("load",d,!1);else if(a.attachEvent)a.attachEvent("onload",d);else{var b=a.onload;a.onload=function(){d.call(this);b&&b.call(this)}}};var n=!1,l=function(){if(!n){n=!0;for(var a=g.getElementsByClassName("psa_add_styles"),d=0,b;b=a[d];++d)if("NOSCRIPT"==b.nodeName){var c=g.createElement("div");c.innerHTML=b.textContent;g.body.appendChild(c)}}};k("pagespeed.CriticalCssLoader.addAllStyles",l);k("pagespeed.CriticalCssLoader.Run",function(){var a=e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||null;a?a(function(){e.setTimeout(l,0)}):m()});})();
+pagespeed.CriticalCssLoader.Run();</script><script pagespeed_no_defer="">(function(){var e=window,f=Math,g="round",h="performance";e.pagespeed=e.pagespeed||{};var q=e.pagespeed;
+q.getResourceTimingData=function(){if(e[h]&&(e[h].getEntries||e[h].webkitGetEntries)){for(var r=0,s=0,k=0,t=0,l=0,u=0,m=0,v=0,n=0,w=0,p=0,c={},d=e[h].getEntries?e[h].getEntries():e[h].webkitGetEntries(),b=0;b<d.length;b++){var a=d[b].duration;0<a&&(r+=a,++k,s=f.max(s,a));a=d[b].connectEnd-d[b].connectStart;0<a&&(u+=a,++m);a=d[b].domainLookupEnd-d[b].domainLookupStart;0<a&&(t+=a,++l);a=d[b].initiatorType;c[a]?++c[a]:c[a]=1;a=d[b].requestStart-d[b].fetchStart;0<a&&(w+=a,++p);a=d[b].responseStart-d[b].requestStart;
+0<a&&(v+=a,++n)}return"&afd="+(k?f[g](r/k):0)+"&nfd="+k+"&mfd="+f[g](s)+"&act="+(m?f[g](u/m):0)+"&nct="+m+"&adt="+(l?f[g](t/l):0)+"&ndt="+l+"&abt="+(p?f[g](w/p):0)+"&nbt="+p+"&attfb="+(n?f[g](v/n):0)+"&nttfb="+n+(c.css?"&rit_css="+c.css:"")+(c.link?"&rit_link="+c.link:"")+(c.script?"&rit_script="+c.script:"")+(c.img?"&rit_img="+c.img:"")}return""};q.getResourceTimingData=q.getResourceTimingData;})();
+(function(){var c=encodeURIComponent,g=window,h="performance";g.pagespeed=g.pagespeed||{};var l=g.pagespeed,m=function(f,a,d,b){this.c=f;this.a=a;this.b=d;this.d=b};l.beaconUrl="";
+var n=function(f){var a=f.c,d=g.mod_pagespeed_start,b=Number(new Date)-d,a=a+(-1==a.indexOf("?")?"?":"&"),a=a+"ets="+("load"==f.a?"load:":"unload:"),a=a+b;if("beforeunload"!=f.a||!g.mod_pagespeed_loaded){a+="&r"+f.a+"=";if(g[h]){var b=g[h].timing,e=b.navigationStart,k=b.requestStart,a=a+(b[f.a+"EventStart"]-e),a=a+("&nav="+(b.fetchStart-e)),a=a+("&dns="+(b.domainLookupEnd-b.domainLookupStart)),a=a+("&connect="+(b.connectEnd-b.connectStart)),a=a+("&req_start="+(k-e)),a=a+("&ttfb="+(b.responseStart-
+k)),a=a+("&dwld="+(b.responseEnd-b.responseStart)),a=a+("&dom_c="+(b.domContentLoadedEventStart-e));g[h].navigation&&(a+="&nt="+g[h].navigation.type);e=-1;b.msFirstPaint?e=b.msFirstPaint:g.chrome&&g.chrome.loadTimes&&(e=Math.floor(1E3*g.chrome.loadTimes().firstPaintTime));e=e-k;0<=e&&(a+="&fp="+e)}else a+=b;l.getResourceTimingData&&g.parent==g&&(a+=l.getResourceTimingData());a+=g.parent!=g?"&ifr=1":"&ifr=0";"load"==f.a&&(g.mod_pagespeed_loaded=!0,(b=g.mod_pagespeed_num_resources_prefetched)&&(a+=
+"&nrp="+b),(b=g.mod_pagespeed_prefetch_start)&&(a+="&htmlAt="+(d-b)));l.panelLoader&&(d=l.panelLoader.getCsiTimingsString(),""!=d&&(a+="&b_csi="+d));l.criticalCss&&(d=l.criticalCss,a+="&ccis="+d.total_critical_inlined_size+"&cces="+d.total_original_external_size+"&ccos="+d.total_overhead_size+"&ccrl="+d.num_replaced_links+"&ccul="+d.num_unreplaced_links);""!=f.b&&(a+=f.b);document.referrer&&(a+="&ref="+c(document.referrer));a+="&url="+c(f.d);l.beaconUrl=a;(new Image).src=a}};
+l.e=function(f,a,d,b){var e=new m(f,a,d,b);g.addEventListener?g.addEventListener(a,function(){n(e)},!1):g.attachEvent("on"+a,function(){n(e)})};l.addInstrumentationInit=l.e;})();
+
+pagespeed.addInstrumentationInit('http://1-ps.googleusercontent.com/beacon?org=116_1_li', 'load', '&id=1397695231151305', 'http://www.gdgspacecoast.org/');</script>
+<div><link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,300,700" rel="stylesheet" type="text/css"><link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet"><link href="http://1-ps.googleusercontent.com/x/s.gdgspacecoast.appspot.com/www.gdgspacecoast.org/css/A.gdg.css.pagespeed.cf.oJiN0qiLh5.css" rel="stylesheet" media="screen"></div></body></html>

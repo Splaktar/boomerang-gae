@@ -39,43 +39,51 @@ boomerang.controller('AboutControl', function ($scope, $http, $location, Config)
         });
 });
 
-boomerang.controller("NewsControl", function ($scope, $http, $timeout, Config) {
+boomerang.controller("NewsControl", function ($scope, $http, $timeout, $filter, Config) {
     $scope.loading = true;
     $scope.$parent.activeTab = "news";
     $http.
         jsonp('https://www.googleapis.com/plus/v1/people/' + Config.id +
-            '/activities/public?callback=JSON_CALLBACK&maxResults=10&key=' + Config.google_api).
+            '/activities/public?callback=JSON_CALLBACK&maxResults=20&key=' + Config.google_api).
         success(function (response) {
-            var entries = [], i, j;
+            var entries = [], i, j, k;
+            var item, actor, object, itemTitle, html, thumbnails, attachments, attachment;
+            var upper, published;
+
             for (i = 0; i < response.items.length; i++) {
-                var item = response.items[i];
-                var actor = item.actor || {};
-                var object = item.object || {};
-                // Normalize tweet to a FriendFeed-like entry.
-                var itemTitle = '<b>' + item.title + '</b>';
+                item = response.items[i];
+                actor = item.actor || {};
+                object = item.object || {};
+                itemTitle = object.content;
+                originalContent = object.originalContent || null;
+                published = $filter('date')(new Date(item.published), 'fullDate');
+                html = ['<p style="font-size:14px;">' + published + '</p>'];
 
-                var html = [itemTitle.replace(new RegExp('\n', 'g'), '<br />')];
-                //html.push(' <b>Read More &raquo;</a>');
+                if(item.annotation) {
+                    itemTitle = item.annotation;
+                }
 
-                var thumbnails = [];
+                html.push(itemTitle.replace(new RegExp('\n', 'g'), '<br />').replace('<br><br>', '<br />'));
 
-                var attachments = object.attachments || [];
+                thumbnails = [];
+                attachments = object.attachments || [];
+
                 for (j = 0; j < attachments.length; j++) {
-                    var attachment = attachments[j];
+                    attachment = attachments[j];
                     switch (attachment.objectType) {
                         case 'album':
-                            break;// TODO needs more work
-                            var upper = attachment.thumbnails.length > 7 ? 7 : attachment.thumbnails.length;
+                            upper = attachment.thumbnails.length > 10 ? 10 : attachment.thumbnails.length;
                             html.push('<ul class="thumbnails">');
-                            for (var k = 1; k < upper; k++) {
-                                html.push('<li class="span2"><img src="' + attachment.thumbnails[k].image.url + '" /></li>');
+                            for (k = 0; k < upper; k++) {
+                                html.push('<li class="span2"><a href="' + attachment.thumbnails[k].url + '" target="_blank">' +
+                                    '<img src="' + attachment.thumbnails[k].image.url + '" /></a></li>');
                             }
                             html.push('</ul>');
                             break;
                         case 'photo':
                             thumbnails.push({
                                 url: attachment.image.url,
-                                link: attachment.fullImage.url
+                                link: attachment.url
                             });
                             break;
 
@@ -87,17 +95,13 @@ boomerang.controller("NewsControl", function ($scope, $http, $timeout, Config) {
                             break;
 
                         case 'article':
+                        case 'event':
                             html.push('<div class="link-attachment"><a href="' +
-                                attachment.url + '">' + attachment.displayName + '</a>');
+                                attachment.url + '" target="_blank">' + attachment.displayName + '</a>');
                             if (attachment.content) {
                                 html.push('<br>' + attachment.content + '');
                             }
                             html.push('</div>');
-                            break;
-                        case 'event':
-                            console.log(attachment);
-                            html.push('<b>' + attachment.displayName + '</b>');
-                            html.push('<p>' + attachment.content.replace(new RegExp('\n', 'g'), '<br />') + '</p>');
                             break;
                         default :
                             console.log(attachment.objectType);
@@ -132,7 +136,6 @@ boomerang.controller("NewsControl", function ($scope, $http, $timeout, Config) {
             $scope.loading = false;
             $scope.status = 'ready';
         });
-
 });
 
 boomerang.controller("EventsControl", function ($scope, $http, Config) {

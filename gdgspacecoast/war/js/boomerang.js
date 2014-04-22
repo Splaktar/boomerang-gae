@@ -18,7 +18,7 @@ boomerang.controller('MainControl', function ($scope, Config) {
     $scope.status = 'ready';
 });
 
-boomerang.controller('AboutControl', function ($scope, $http, $location, Config) {
+boomerang.controller('AboutControl', function ($scope, $http, Config) {
     $scope.loading = true;
     $scope.$parent.activeTab = "about";
     $scope.cover = Config.cover;
@@ -48,14 +48,13 @@ boomerang.controller("NewsControl", function ($scope, $http, $timeout, $filter, 
         success(function (response) {
             var entries = [], i, j, k;
             var item, actor, object, itemTitle, html, thumbnails, attachments, attachment;
-            var upper, published;
+            var upper, published, actorImage, entry;
 
             for (i = 0; i < response.items.length; i++) {
                 item = response.items[i];
                 actor = item.actor || {};
                 object = item.object || {};
                 itemTitle = object.content;
-                originalContent = object.originalContent || null;
                 published = $filter('date')(new Date(item.published), 'fullDate');
                 html = ['<p style="font-size:14px;">' + published + '</p>'];
 
@@ -99,7 +98,7 @@ boomerang.controller("NewsControl", function ($scope, $http, $timeout, $filter, 
                             html.push('<div class="link-attachment"><a href="' +
                                 attachment.url + '" target="_blank">' + attachment.displayName + '</a>');
                             if (attachment.content) {
-                                html.push('<br>' + attachment.content + '');
+                                html.push('<br>' + attachment.content);
                             }
                             html.push('</div>');
                             break;
@@ -110,10 +109,10 @@ boomerang.controller("NewsControl", function ($scope, $http, $timeout, $filter, 
 
                 html = html.join('');
 
-                var actorImage = actor.image.url;
+                actorImage = actor.image.url;
                 actorImage = actorImage.substr(0, actorImage.length - 2) + '16';
 
-                var entry = {
+                entry = {
                     via: {
                         name: 'Google+',
                         url: item.url
@@ -146,8 +145,9 @@ boomerang.controller("EventsControl", function ($scope, $http, Config) {
     $http.get("http://gdgfresno.com/gdgfeed.php?id=" + Config.id).
         success(function (data) {
             var now = new Date();
-            for (var i = data.length - 1; i >= 0; i--) {
-                var start = new Date(data[i].start);
+            var i, start;
+            for (i = data.length - 1; i >= 0; i--) {
+                start = new Date(data[i].start);
 
                 data[i].start = start;
                 data[i].end = new Date(data[i].end);
@@ -209,8 +209,9 @@ boomerang.filter('htmlLinky', function($sanitize, linkyFilter) {
 				linkifiedDOM.innerHTML = linkyFilter(currentNode.textContent);
 				i += linkifiedDOM.childNodes.length - 1;
 
-				while(linkifiedDOM.childNodes.length)
-					startNode.insertBefore(linkifiedDOM.childNodes[0], currentNode);
+				while(linkifiedDOM.childNodes.length) {
+                    startNode.insertBefore(linkifiedDOM.childNodes[0], currentNode);
+                }
 
 				startNode.removeChild(currentNode);
 			}

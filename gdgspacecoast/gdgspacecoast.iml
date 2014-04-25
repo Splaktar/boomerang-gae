@@ -45,6 +45,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="library" scope="PROVIDED" name="AppEngine Dev" level="application_server_libraries" />
+    <orderEntry type="library" name="thirdparty" level="project" />
   </component>
 </module>
 

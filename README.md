@@ -1,6 +1,6 @@
 GDG Boomerang for App Engine (Java)
 ==============================
-This is forked from the [GDG-X boomerang] project.
+This is forked from the [GDG-X boomerang] project. Unlike that project, you are able to test this project locally and have all of the API calls work.
 
 GDG boilerplate, feeds from DevSite and Google+ using AngularJS and Twitter Bootstrap.
 
@@ -26,11 +26,14 @@ The paths are Linux specific, so additional path changes will be needed on Windo
 Configure your chapter's site:
 * Setup the GAE SDK and point your project to it as mentioned above.
 * GAE requires Java 7.
-* Modify the config.js file to have it pull from your chapter's Google+ page instead of GDG Space Coast.
+* Modify the config.js file to have it pull from your chapter's Google+ page id, Picasa Web Album id, and Google+ API key instead of GDG Space Coast.
 * Modify the images/sponsor1 and images/sponsor2.
 * Modify the sponsor links in about.html.
-* Use [this repo] to generate static pages and place them in the snapshots directory.
+* Create a free https://prerender.io account (up to 250 pages).
+* Find your token on prerender.io, insert it into web.xml where it says INSERT_YOUR_PRERENDER_TOKEN_HERE.
+* Deploy and test locally.
+* Upload app to App Engine!
 
+Note that you cannot test prerendering of pages locally.
 
 [GDG-X boomerang]: https://github.com/gdg-x/boomerang
-[this repo]: https://github.com/yearofmoo-articles/AngularJS-SEO-Article

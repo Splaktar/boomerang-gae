@@ -29,6 +29,7 @@ Configure your chapter's site:
 * Modify the config.js file to have it pull from your chapter's Google+ page id, Picasa Web Album id, and Google+ API key instead of GDG Space Coast.
 * Modify the images/sponsor1 and images/sponsor2.
 * Modify the sponsor links in about.html.
+* Create your Google Analytics account and modify the Google Analytics settings in index.html.
 * Create a free https://prerender.io account (up to 250 pages).
 * Find your token on prerender.io, insert it into web.xml where it says INSERT_YOUR_PRERENDER_TOKEN_HERE.
 * Deploy and test locally.

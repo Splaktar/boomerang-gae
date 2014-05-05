@@ -184,6 +184,11 @@ boomerang.controller("PhotosControl", function ($scope, $http, Config) {
             }
             $scope.loading = false;
             $scope.status = 'ready';
+        })
+        .error(function (data) {
+            $scope.error_msg = "Sorry, we failed to retrieve the Photos from the Picasa Web Albums API. Logging out of your Google Account and logging back in may resolve this issue.";
+            $scope.loading = false;
+            $scope.status = 'ready';
         });
 });
 

@@ -201,18 +201,18 @@ boomerang.filter('htmlLinky', function($sanitize, linkyFilter) {
 			currentNode = startNode.childNodes[i];
 
 			switch (currentNode.nodeType) {
-			case ELEMENT_NODE:
-				linkify(currentNode);
-				break;
-			case TEXT_NODE:
-				linkifiedDOM.innerHTML = linkyFilter(currentNode.textContent);
-				i += linkifiedDOM.childNodes.length - 1;
+                case ELEMENT_NODE:
+                    linkify(currentNode);
+                    break;
+                case TEXT_NODE:
+                    linkifiedDOM.innerHTML = linkyFilter(currentNode.textContent);
+                    i += linkifiedDOM.childNodes.length - 1;
 
-				while(linkifiedDOM.childNodes.length) {
-                    startNode.insertBefore(linkifiedDOM.childNodes[0], currentNode);
-                }
+                    while(linkifiedDOM.childNodes.length) {
+                        startNode.insertBefore(linkifiedDOM.childNodes[0], currentNode);
+                    }
 
-				startNode.removeChild(currentNode);
+                    startNode.removeChild(currentNode);
 			}
 		}
 

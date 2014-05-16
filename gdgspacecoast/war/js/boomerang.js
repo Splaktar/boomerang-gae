@@ -1,4 +1,4 @@
-var boomerang = angular.module('gdgBoomerang', ['ngSanitize', 'ui.bootstrap'])
+var boomerang = angular.module('gdgBoomerang', ['ngSanitize', 'ngRoute', 'ui.bootstrap'])
     .config(function ($routeProvider, $locationProvider) {
 
         $locationProvider.hashPrefix('!');
@@ -39,7 +39,7 @@ boomerang.controller('AboutControl', function ($scope, $http, Config) {
         });
 });
 
-boomerang.controller("NewsControl", function ($scope, $http, $timeout, $filter, Config) {
+boomerang.controller("NewsControl", function ($scope, $http, $timeout, $filter, $sce, Config) {
     $scope.loading = true;
     $scope.$parent.activeTab = "news";
     $http.jsonp('https://www.googleapis.com/plus/v1/people/' + Config.id +
@@ -107,6 +107,7 @@ boomerang.controller("NewsControl", function ($scope, $http, $timeout, $filter, 
                 }
 
                 html = html.join('');
+                $sce.trustAsHtml(html);
 
                 actorImage = actor.image.url;
                 actorImage = actorImage.substr(0, actorImage.length - 2) + '16';
@@ -131,6 +132,11 @@ boomerang.controller("NewsControl", function ($scope, $http, $timeout, $filter, 
             $timeout(function () {
                 gapi.plusone.go();
             });
+            $scope.loading = false;
+            $scope.status = 'ready';
+        })
+        .error(function (response) {
+            $scope.desc = "Sorry, we failed to retrieve the News from the Google+ API.";
             $scope.loading = false;
             $scope.status = 'ready';
         });

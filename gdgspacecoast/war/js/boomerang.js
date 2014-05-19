@@ -18,7 +18,7 @@ boomerang.controller('MainControl', function ($scope, Config) {
     $scope.status = 'ready';
 });
 
-boomerang.controller('AboutControl', function ($scope, $http, Config) {
+boomerang.controller('AboutControl', function ($scope, $http, $sce, Config) {
     $scope.loading = true;
     $scope.$parent.activeTab = "about";
     $scope.cover = Config.cover;
@@ -26,6 +26,8 @@ boomerang.controller('AboutControl', function ($scope, $http, Config) {
         '?callback=JSON_CALLBACK&fields=aboutMe%2Ccover%2Cimage%2CplusOneCount&key=' + Config.google_api)
         .success(function (data) {
             $scope.desc = data.aboutMe;
+            $sce.trustAsHtml($scope.desc);
+
             if (data.cover && data.cover.coverPhoto.url) {
                 $scope.cover.url = data.cover.coverPhoto.url;
             }

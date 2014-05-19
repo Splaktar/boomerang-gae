@@ -102,8 +102,8 @@ body {
 #cover-content {
   margin-top: 140px;
 }
-[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-  display: none;
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide {
+  display: none !important;
 }
 .gdg_loading {
     background: url('../images/gdg_loading.gif') no-repeat 0 0 rgb(255, 255, 255);

@@ -11,6 +11,7 @@
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,300,700' rel='stylesheet' type='text/css'>
         <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="css/gdg.css" rel="stylesheet" media="screen">
+        <script src="http://code.angularjs.org/1.2.16/angular.min.js"></script>
         <script>
             (function (i, s, o, g, r, a, m) {i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {
                     (i[r].q = i[r].q || []).push(arguments)}, i[r].l = 1 * new Date();a = s.createElement(o),
@@ -22,7 +23,7 @@
             ga('send', 'pageview');
         </script>
     </head>
-    <body ng-controller="MainControl" data-status="{{ status }}" class="ng-cloak">
+    <body ng-controller="MainControl" data-status="{{ status }}">
         <div class="navbar navbar-static-top navbar-inverse">
             <div class="navbar-inner">
                 <div class="container">
@@ -31,7 +32,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="brand ng-cloak" id="gdg_chapter_name" href="#!/about">{{ chapter_name }}</a>
+                    <a class="brand" ng-cloak id="gdg_chapter_name" href="#!/about">{{ chapter_name }}</a>
 
                     <div class="nav-collapse" collapse="isNavCollapsed" ng-click="isNavCollapsed = true">
                         <ul class="nav">
@@ -50,7 +51,6 @@
         </div>
     </body>
 
-    <script src="http://code.angularjs.org/1.2.16/angular.min.js"></script>
     <script src="http://code.angularjs.org/1.2.16/angular-route.min.js"></script>
     <script src="http://code.angularjs.org/1.2.16/angular-sanitize.min.js"></script>
     <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>

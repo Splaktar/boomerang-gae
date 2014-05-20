@@ -11,11 +11,12 @@ var boomerang = angular.module('gdgBoomerang', ['ngSanitize', 'ngRoute', 'ui.boo
             otherwise({ redirectTo: '/about' });
     });
 
-boomerang.controller('MainControl', function ($scope, Config) {
+boomerang.controller('MainControl', function ($rootScope, $scope, Config) {
     $scope.chapter_name = Config.name;
     $scope.google_plus_link = 'https://plus.google.com/' + Config.id;
     $scope.isNavCollapsed = true;
     $scope.status = 'ready';
+    $rootScope.canonical = Config.domain;
 });
 
 boomerang.controller('AboutControl', function ($scope, $http, $sce, Config) {

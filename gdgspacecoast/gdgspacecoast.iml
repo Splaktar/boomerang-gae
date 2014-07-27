@@ -29,7 +29,7 @@
     </facet>
     <facet type="google-app-engine" name="Google App Engine">
       <configuration>
-        <sdk-home-path>/opt/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.9.3/appengine-java-sdk-1.9.3</sdk-home-path>
+        <sdk-home-path>/opt/google/google-cloud-sdk/platform/appengine-java-sdk</sdk-home-path>
         <files-to-enhance>
           <file path="$MODULE_DIR$/src" />
         </files-to-enhance>
@@ -48,7 +48,6 @@
     <orderEntry type="library" name="thirdparty" level="project" />
     <orderEntry type="library" name="angular" level="application" />
     <orderEntry type="library" name="angular-sanitize" level="application" />
-    <orderEntry type="library" name="plusone" level="application" />
     <orderEntry type="library" name="angular-route" level="application" />
   </component>
 </module>

@@ -46,10 +46,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="library" scope="PROVIDED" name="AppEngine Dev" level="application_server_libraries" />
     <orderEntry type="library" name="thirdparty" level="project" />
-    <orderEntry type="library" name="angular" level="application" />
-    <orderEntry type="library" name="angular-sanitize" level="application" />
-    <orderEntry type="library" name="angular-route" level="application" />
-    <orderEntry type="library" name="angular-route" level="application" />
   </component>
 </module>
 

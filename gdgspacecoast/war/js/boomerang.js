@@ -150,21 +150,22 @@ boomerang.controller("EventsControl", function ($scope, $http, Config) {
     $scope.$parent.activeTab = "events";
 
     $scope.events = {past: [], future: []};
-    $http.get("http://gdgfresno.com/gdgfeed.php?id=" + Config.id)
+    var url = 'http://hub.gdgx.io/api/v1/chapters/' + Config.id + '/events/upcoming?callback=JSON_CALLBACK';
+    var headers = { 'headers': {'Accept': 'application/json;'}, 'timeout': 2000 };
+    $http.jsonp(url, headers)
         .success(function (data) {
-            var now = new Date();
-            var i, start;
-            for (i = data.length - 1; i >= 0; i--) {
-                start = new Date(data[i].start);
+            for (var i = data.items.length - 1; i >= 0; i--) {
+                $scope.events.future.push(data.items[i]);
+            }
+            $scope.loading = false;
+            $scope.status = 'ready';
+        });
 
-                data[i].start = start;
-                data[i].end = new Date(data[i].end);
-
-                if (start < now) {
-                    $scope.events.past.push(data[i]);
-                } else {
-                    $scope.events.future.push(data[i]);
-                }
+    url = 'http://hub.gdgx.io/api/v1/chapters/' + Config.id + '/events/past?callback=JSON_CALLBACK';
+    $http.jsonp(url, headers)
+        .success(function (data) {
+            for (var i = data.items.length - 1; i >= 0; i--) {
+                $scope.events.past.push(data.items[i]);
             }
             $scope.loading = false;
             $scope.status = 'ready';
@@ -180,8 +181,8 @@ boomerang.controller("PhotosControl", function ($scope, $http, Config) {
         '?access=public&alt=json-in-script&kind=photo&max-results=50&fields=entry(title,link/@href,summary,content/@src)&v=2.0&callback=JSON_CALLBACK';
 
     $http.jsonp(pwa)
-        .success(function (d) {
-            var p = d.feed.entry;
+        .success(function (data) {
+            var p = data.feed.entry;
             for (var x in p) {
                 var photo = {
                     link: p[x].link[1].href,

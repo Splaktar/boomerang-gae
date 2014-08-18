@@ -1,3 +1,4 @@
+/*global exports*/
 exports.config = {
     seleniumAddress: 'http://localhost:4444/wd/hub',
     specs: ['AboutTest.js'],
@@ -5,5 +6,7 @@ exports.config = {
         browserName: 'firefox'
     }, {
         browserName: 'chrome'
+    }, {
+        browserName: 'safari'
     }]
 }

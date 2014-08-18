@@ -1,3 +1,4 @@
+/*global boomerang*/
 boomerang.factory('Config', function () {
     return {
         //modify these

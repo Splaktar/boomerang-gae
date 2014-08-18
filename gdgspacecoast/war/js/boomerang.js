@@ -1,3 +1,4 @@
+/*global angular,gapi*/
 var boomerang = angular.module('gdgBoomerang', ['ngSanitize', 'ngRoute', 'ui.bootstrap'])
     .config(function ($routeProvider, $locationProvider) {
 
@@ -35,7 +36,7 @@ boomerang.controller('AboutControl', function ($scope, $http, $sce, Config) {
             $scope.loading = false;
             $scope.status = 'ready';
         })
-        .error(function (data) {
+        .error(function () {
             $scope.desc = "Sorry, we failed to retrieve the About text from the Google+ API.";
             $scope.loading = false;
             $scope.status = 'ready';
@@ -60,7 +61,7 @@ boomerang.controller("NewsControl", function ($scope, $http, $timeout, $filter, 
                 published = $filter('date')(new Date(item.published), 'fullDate');
                 html = ['<p style="font-size:14px;">' + published + '</p>'];
 
-                if(item.annotation) {
+                if (item.annotation) {
                     itemTitle = item.annotation;
                 }
 
@@ -72,40 +73,40 @@ boomerang.controller("NewsControl", function ($scope, $http, $timeout, $filter, 
                 for (j = 0; j < attachments.length; j++) {
                     attachment = attachments[j];
                     switch (attachment.objectType) {
-                        case 'album':
-                            upper = attachment.thumbnails.length > 10 ? 10 : attachment.thumbnails.length;
-                            html.push('<ul class="thumbnails">');
-                            for (k = 0; k < upper; k++) {
-                                html.push('<li class="span2"><a href="' + attachment.thumbnails[k].url + '" target="_blank">' +
-                                    '<img src="' + attachment.thumbnails[k].image.url + '" /></a></li>');
-                            }
-                            html.push('</ul>');
-                            break;
-                        case 'photo':
-                            thumbnails.push({
-                                url: attachment.image.url,
-                                link: attachment.url
-                            });
-                            break;
+                    case 'album':
+                        upper = attachment.thumbnails.length > 10 ? 10 : attachment.thumbnails.length;
+                        html.push('<ul class="thumbnails">');
+                        for (k = 0; k < upper; k++) {
+                            html.push('<li class="span2"><a href="' + attachment.thumbnails[k].url + '" target="_blank">' +
+                                '<img src="' + attachment.thumbnails[k].image.url + '" /></a></li>');
+                        }
+                        html.push('</ul>');
+                        break;
+                    case 'photo':
+                        thumbnails.push({
+                            url: attachment.image.url,
+                            link: attachment.url
+                        });
+                        break;
 
-                        case 'video':
-                            thumbnails.push({
-                                url: attachment.image.url,
-                                link: attachment.url
-                            });
-                            break;
+                    case 'video':
+                        thumbnails.push({
+                            url: attachment.image.url,
+                            link: attachment.url
+                        });
+                        break;
 
-                        case 'article':
-                        case 'event':
-                            html.push('<div class="link-attachment"><a href="' +
-                                attachment.url + '" target="_blank">' + attachment.displayName + '</a>');
-                            if (attachment.content) {
-                                html.push('<br>' + attachment.content);
-                            }
-                            html.push('</div>');
-                            break;
-                        default :
-                            console.log(attachment.objectType);
+                    case 'article':
+                    case 'event':
+                        html.push('<div class="link-attachment"><a href="' +
+                            attachment.url + '" target="_blank">' + attachment.displayName + '</a>');
+                        if (attachment.content) {
+                            html.push('<br>' + attachment.content);
+                        }
+                        html.push('</div>');
+                        break;
+                    default:
+                        console.log(attachment.objectType);
                     }
                 }
 
@@ -138,7 +139,7 @@ boomerang.controller("NewsControl", function ($scope, $http, $timeout, $filter, 
             $scope.loading = false;
             $scope.status = 'ready';
         })
-        .error(function (response) {
+        .error(function () {
             $scope.desc = "Sorry, we failed to retrieve the News from the Google+ API.";
             $scope.loading = false;
             $scope.status = 'ready';
@@ -154,7 +155,8 @@ boomerang.controller("EventsControl", function ($scope, $http, Config) {
     var headers = { 'headers': {'Accept': 'application/json;'}, 'timeout': 2000 };
     $http.jsonp(url, headers)
         .success(function (data) {
-            for (var i = data.items.length - 1; i >= 0; i--) {
+            var i;
+            for (i = data.items.length - 1; i >= 0; i--) {
                 $scope.events.future.push(data.items[i]);
             }
             $scope.loading = false;
@@ -164,7 +166,8 @@ boomerang.controller("EventsControl", function ($scope, $http, Config) {
     url = 'http://hub.gdgx.io/api/v1/chapters/' + Config.id + '/events/past?callback=JSON_CALLBACK';
     $http.jsonp(url, headers)
         .success(function (data) {
-            for (var i = data.items.length - 1; i >= 0; i--) {
+            var i;
+            for (i = data.items.length - 1; i >= 0; i--) {
                 $scope.events.past.push(data.items[i]);
             }
             $scope.loading = false;
@@ -183,8 +186,10 @@ boomerang.controller("PhotosControl", function ($scope, $http, Config) {
     $http.jsonp(pwa)
         .success(function (data) {
             var p = data.feed.entry;
-            for (var x in p) {
-                var photo = {
+            var x;
+            var photo;
+            for (x in p) {
+                photo = {
                     link: p[x].link[1].href,
                     src: p[x].content.src,
                     alt: p[x].title.$t,
@@ -195,7 +200,7 @@ boomerang.controller("PhotosControl", function ($scope, $http, Config) {
             $scope.loading = false;
             $scope.status = 'ready';
         })
-        .error(function (data) {
+        .error(function () {
             $scope.error_msg = "Sorry, we failed to retrieve the Photos from the Picasa Web Albums API. Logging out of your Google Account and logging back in may resolve this issue.";
             $scope.loading = false;
             $scope.status = 'ready';
@@ -203,78 +208,80 @@ boomerang.controller("PhotosControl", function ($scope, $http, Config) {
 });
 
 // HTML-ified linky from http://plnkr.co/edit/IEpLfZ8gO2B9mJcTKuWY?p=preview
-boomerang.filter('htmlLinky', function($sanitize, linkyFilter) {
-	var ELEMENT_NODE = 1;
-	var TEXT_NODE = 3;
-	var linkifiedDOM = document.createElement('div');
-	var inputDOM = document.createElement('div');
-
-	var linkify = function linkify(startNode) {
-		var i, currentNode;
-
-		for (i = 0; i < startNode.childNodes.length; i++) {
-			currentNode = startNode.childNodes[i];
-
-			switch (currentNode.nodeType) {
-                case ELEMENT_NODE:
-                    linkify(currentNode);
-                    break;
-                case TEXT_NODE:
-                    linkifiedDOM.innerHTML = linkyFilter(currentNode.textContent);
-                    i += linkifiedDOM.childNodes.length - 1;
-
-                    while(linkifiedDOM.childNodes.length) {
-                        startNode.insertBefore(linkifiedDOM.childNodes[0], currentNode);
-                    }
-
-                    startNode.removeChild(currentNode);
-			}
-		}
-
-		return startNode;
-	};
-
-	return function(input) {
-		inputDOM.innerHTML = input;
-		return linkify(inputDOM).innerHTML;
-	};
-});
-
-boomerang.filter('hashLinky', function($sanitize, linkyFilter) {
+boomerang.filter('htmlLinky', function ($sanitize, linkyFilter) {
     var ELEMENT_NODE = 1;
     var TEXT_NODE = 3;
     var linkifiedDOM = document.createElement('div');
     var inputDOM = document.createElement('div');
 
-    var hashLinky = function hashLinky(startNode) {
+    var linkify = function linkify(startNode) {
         var i, currentNode;
 
         for (i = 0; i < startNode.childNodes.length; i++) {
             currentNode = startNode.childNodes[i];
 
             switch (currentNode.nodeType) {
-                case ELEMENT_NODE:
-                    hashLinky(currentNode);
-                    break;
-                case TEXT_NODE:
-                    var hashtagRegex = /#([A-Za-z0-9-_]+)/g;
-                    currentNode.textContent =  currentNode.textContent.replace(hashtagRegex,
-                        '<a href="https://plus.google.com/s/%23$1">#$1</a>');
+            case ELEMENT_NODE:
+                linkify(currentNode);
+                break;
+            case TEXT_NODE:
+                linkifiedDOM.innerHTML = linkyFilter(currentNode.textContent);
+                i += linkifiedDOM.childNodes.length - 1;
 
-                    linkifiedDOM.innerHTML = currentNode.textContent;
-                    i += linkifiedDOM.childNodes.length - 1;
+                while (linkifiedDOM.childNodes.length) {
+                    startNode.insertBefore(linkifiedDOM.childNodes[0], currentNode);
+                }
 
-                    while(linkifiedDOM.childNodes.length) {
-                        startNode.insertBefore(linkifiedDOM.childNodes[0], currentNode);
-                    }
-                    startNode.removeChild(currentNode);
+                startNode.removeChild(currentNode);
+                break;
             }
         }
 
         return startNode;
     };
 
-    return function(input) {
+    return function (input) {
+        inputDOM.innerHTML = input;
+        return linkify(inputDOM).innerHTML;
+    };
+});
+
+boomerang.filter('hashLinky', function ($sanitize, linkyFilter) {
+    var ELEMENT_NODE = 1;
+    var TEXT_NODE = 3;
+    var linkifiedDOM = document.createElement('div');
+    var inputDOM = document.createElement('div');
+
+    var hashLinky = function hashLinky(startNode) {
+        var i, currentNode, hashtagRegex;
+
+        for (i = 0; i < startNode.childNodes.length; i++) {
+            currentNode = startNode.childNodes[i];
+
+            switch (currentNode.nodeType) {
+            case ELEMENT_NODE:
+                hashLinky(currentNode);
+                break;
+            case TEXT_NODE:
+                hashtagRegex = /#([A-Za-z0-9-_]+)/g;
+                currentNode.textContent =  currentNode.textContent.replace(hashtagRegex,
+                    '<a href="https://plus.google.com/s/%23$1">#$1</a>');
+
+                linkifiedDOM.innerHTML = currentNode.textContent;
+                i += linkifiedDOM.childNodes.length - 1;
+
+                while (linkifiedDOM.childNodes.length) {
+                    startNode.insertBefore(linkifiedDOM.childNodes[0], currentNode);
+                }
+                startNode.removeChild(currentNode);
+                break;
+            }
+        }
+
+        return startNode;
+    };
+
+    return function (input) {
         inputDOM.innerHTML = input;
         return hashLinky(inputDOM).innerHTML;
     };

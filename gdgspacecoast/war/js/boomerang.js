@@ -1,4 +1,3 @@
-/*global angular,gapi*/
 var boomerang = angular.module('gdgBoomerang', ['ngSanitize', 'ngRoute', 'ui.bootstrap'])
     .config(function ($routeProvider, $locationProvider) {
 
@@ -24,8 +23,9 @@ boomerang.controller('AboutControl', function ($scope, $http, $sce, Config) {
     $scope.loading = true;
     $scope.$parent.activeTab = "about";
     $scope.cover = Config.cover;
-    $http.jsonp('https://www.googleapis.com/plus/v1/people/' + Config.id +
-        '?callback=JSON_CALLBACK&fields=aboutMe%2Ccover%2Cimage%2CplusOneCount&key=' + Config.google_api)
+    this.request = 'https://www.googleapis.com/plus/v1/people/' + Config.id +
+        '?callback=JSON_CALLBACK&fields=aboutMe%2Ccover%2Cimage%2CplusOneCount&key=' + Config.google_api;
+    $http.jsonp(this.request)
         .success(function (data) {
             $scope.desc = data.aboutMe;
             $sce.trustAsHtml($scope.desc);
@@ -46,8 +46,9 @@ boomerang.controller('AboutControl', function ($scope, $http, $sce, Config) {
 boomerang.controller("NewsControl", function ($scope, $http, $timeout, $filter, $sce, Config) {
     $scope.loading = true;
     $scope.$parent.activeTab = "news";
-    $http.jsonp('https://www.googleapis.com/plus/v1/people/' + Config.id +
-            '/activities/public?callback=JSON_CALLBACK&maxResults=20&key=' + Config.google_api)
+    this.request = 'https://www.googleapis.com/plus/v1/people/' + Config.id +
+            '/activities/public?callback=JSON_CALLBACK&maxResults=20&key=' + Config.google_api;
+    $http.jsonp(this.request)
         .success(function (response) {
             var entries = [], i, j, k;
             var item, actor, object, itemTitle, html, thumbnails, attachments, attachment;
@@ -149,11 +150,11 @@ boomerang.controller("NewsControl", function ($scope, $http, $timeout, $filter, 
 boomerang.controller("EventsControl", function ($scope, $http, Config) {
     $scope.loading = true;
     $scope.$parent.activeTab = "events";
-
     $scope.events = {past: [], future: []};
-    var url = 'http://hub.gdgx.io/api/v1/chapters/' + Config.id + '/events/upcoming?callback=JSON_CALLBACK';
-    var headers = { 'headers': {'Accept': 'application/json;'}, 'timeout': 2000 };
-    $http.jsonp(url, headers)
+
+    this.url = 'http://hub.gdgx.io/api/v1/chapters/' + Config.id + '/events/upcoming?callback=JSON_CALLBACK';
+    this.headers = { 'headers': {'Accept': 'application/json;'}, 'timeout': 2000 };
+    $http.jsonp(this.url, this.headers)
         .success(function (data) {
             var i;
             for (i = data.items.length - 1; i >= 0; i--) {
@@ -163,8 +164,8 @@ boomerang.controller("EventsControl", function ($scope, $http, Config) {
             $scope.status = 'ready';
         });
 
-    url = 'http://hub.gdgx.io/api/v1/chapters/' + Config.id + '/events/past?callback=JSON_CALLBACK';
-    $http.jsonp(url, headers)
+    this.url = 'http://hub.gdgx.io/api/v1/chapters/' + Config.id + '/events/past?callback=JSON_CALLBACK';
+    $http.jsonp(this.url, this.headers)
         .success(function (data) {
             var i;
             for (i = data.items.length - 1; i >= 0; i--) {
@@ -180,10 +181,9 @@ boomerang.controller("PhotosControl", function ($scope, $http, Config) {
     $scope.$parent.activeTab = "photos";
     $scope.photos = [];
 
-    var pwa = 'https://picasaweb.google.com/data/feed/api/user/' + Config.id + '/albumid/' + Config.pwa_id +
+    this.request = 'https://picasaweb.google.com/data/feed/api/user/' + Config.id + '/albumid/' + Config.pwa_id +
         '?access=public&alt=json-in-script&kind=photo&max-results=50&fields=entry(title,link/@href,summary,content/@src)&v=2.0&callback=JSON_CALLBACK';
-
-    $http.jsonp(pwa)
+    $http.jsonp(this.request)
         .success(function (data) {
             var p = data.feed.entry;
             var x;

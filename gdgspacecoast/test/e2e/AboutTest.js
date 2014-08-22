@@ -1,4 +1,5 @@
-/*global describe,beforeEach,it,inject,angular,expect,element,by,browser*/
+var env = require('./env.js');
+
 describe('boomerang about page', function () {
     var coverTitle = element(by.binding('cover.title'));
     var coverSubTitle = element(by.binding('cover.subtitle'));
@@ -8,10 +9,7 @@ describe('boomerang about page', function () {
     var googlePlus = element(by.binding('google_plus_link'));
 
     beforeEach(function () {
-        // Test
-        browser.get('http://localhost:8888');
-        // Production
-//        browser.get('http://www.gdgspacecoast.org');
+        browser.get(env.baseUrl);
     });
 
     it('should have a title and chapter name', function () {

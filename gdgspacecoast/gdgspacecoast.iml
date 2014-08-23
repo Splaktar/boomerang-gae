@@ -48,7 +48,6 @@
     <orderEntry type="library" name="angular-route" level="application" />
     <orderEntry type="library" name="Karma-jasmine" level="application" />
     <orderEntry type="library" name="Protractor" level="application" />
-    <orderEntry type="library" name="plusone" level="application" />
     <orderEntry type="library" name="angular" level="application" />
   </component>
 </module>

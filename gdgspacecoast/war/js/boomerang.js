@@ -15,8 +15,8 @@ boomerang.controller('MainControl', function ($rootScope, $scope, Config) {
     $scope.chapter_name = Config.name;
     $scope.google_plus_link = 'https://plus.google.com/' + Config.id;
     $scope.isNavCollapsed = true;
-    $scope.status = 'ready';
     $rootScope.canonical = Config.domain;
+    $scope.status = 'ready';
 });
 
 boomerang.controller('AboutControl', function ($scope, $http, $sce, Config) {

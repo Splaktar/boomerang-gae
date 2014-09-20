@@ -103,3 +103,7 @@ local.properties
 **/war/WEB-INF/classes
 **/war/WEB-INF/lib
 **/war/WEB-INF/appengine-generated
+
+# Package managers and builders
+bower_components/
+node_modules/

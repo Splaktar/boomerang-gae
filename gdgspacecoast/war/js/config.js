@@ -8,11 +8,11 @@ boomerang.factory('Config', function () {
         'pwa_id'        : '5915725140705884785', //picasa web album id, must belong to google+ id above
         'domain'        : 'http://www.gdgspacecoast.org',
         'cover' : {
-            title : 'Google I/O 2014',
-            subtitle : 'Google\'s yearly developer event is being held June 25-26th in San Francisco, CA.',
+            title : 'Android DevFest Space Coast',
+            subtitle : 'Our biggest Android event yet is being held at Florida Tech on October 18th!',
             button : {
-                text : 'Find out more',
-                url : 'https://www.google.com/events/io'
+                text : 'Sign up for free',
+                url : 'http://gdg-space-coast.github.io/zeppelin/'
             }
         }
     };

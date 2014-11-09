@@ -9,10 +9,10 @@ boomerang.factory('Config', function () {
         'domain'        : 'http://www.gdgspacecoast.org',
         'cover' : {
             title : 'Android DevFest Space Coast',
-            subtitle : 'Our biggest Android event yet is being held at Florida Tech on October 18th!',
+            subtitle : 'Our biggest Android event ever was held at Florida Tech on October 18th!',
             button : {
-                text : 'Sign up for free',
-                url : 'http://gdg-space-coast.github.io/zeppelin/'
+                text : 'See the pictures',
+                url : 'https://plus.google.com/u/0/events/gallery/cafgfoud5on0fd60b8rtr5rvb5c'
             }
         }
     };

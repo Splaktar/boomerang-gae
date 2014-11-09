@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<component LANGUAGE_LEVEL="JDK_1_7" jdk="1.7" jdk_type="JavaSDK">
-	<exclude-output/>
-	<contentEntry url="file://$MODULE_DIR$"/>
-	<lib name="AppEngine Dev" scope="PROVIDED"/>
-	<levels>
-		<level name="AppEngine Dev" value="application_server_libraries"/>
-	</levels>
-</component>

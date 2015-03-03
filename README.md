@@ -1,5 +1,7 @@
 GDG Boomerang for App Engine (Java)
 ==============================
+
+[![Join the chat at https://gitter.im/Splaktar/boomerang-gae](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Splaktar/boomerang-gae?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 This is forked from the [GDG-X boomerang] project. Unlike that project, you are able to test this project locally and have all of the API calls work.
 
 GDG boilerplate, feeds from DevSite and Google+ using AngularJS and Twitter Bootstrap.

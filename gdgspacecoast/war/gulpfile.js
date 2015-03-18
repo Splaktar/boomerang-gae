@@ -10,7 +10,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var ngAnnotate = require('gulp-ng-annotate');
 
 var getBundleName = function () {
-  var name = require('./package.json').name;
+  var name = require('./../package.json').name;
   return name + '.' + 'min';
 };
 

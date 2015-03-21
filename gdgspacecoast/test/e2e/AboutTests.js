@@ -1,21 +1,29 @@
 var env = require('./env.js');
 
 describe('Boomerang About page', function () {
-    var coverTitle = element(by.binding('cover.title'));
-    var coverSubTitle = element(by.binding('cover.subtitle'));
-    var coverButtonText = element(by.binding('cover.button.text'));
-    var chapterDescription = element(by.binding('desc'));
-    var chapterName = element(by.binding('chapterName'));
-//    var googlePlus = element(by.binding('googlePlusLink'));
+    var coverTitle = element(by.binding('vm.cover.title'));
+    var coverSubTitle = element(by.binding('vm.cover.subtitle'));
+    var coverButtonText = element(by.binding('vm.cover.button.text'));
+    var chapterDescription = element(by.binding('vm.desc'));
+    var chapterName = element(by.binding('mc.chapterName'));
+
+    var googlePlusLink = element(by.css('.fa.fa-lg.fa-google-plus-square'));
+    var twitterLink = element(by.css('.fa.fa-lg.fa-twitter-square'));
+    var facebookLink = element(by.css('.fa.fa-lg.fa-facebook-square'));
+    var meetupLink = element(by.css('.png-icon.invert'));
+    var gdgLink = element(by.css('.png-icon.grayscale'));
 
     beforeEach(function () {
         browser.get(env.baseUrl);
     });
 
-    it('should have a title and chapter name', function () {
+    it('should have a title and social links', function () {
         expect(browser.getTitle()).toEqual('Google Developer Group');
-        // TODO figure out why I can't test anything in a Bootstrap navBar
-//        expect(googlePlus.isPresent()).toBe(true);
+        expect(googlePlusLink.isPresent()).toBe(true);
+        expect(twitterLink.isPresent()).toBe(true);
+        expect(facebookLink.isPresent()).toBe(true);
+        expect(meetupLink.isPresent()).toBe(true);
+        expect(gdgLink.isPresent()).toBe(true);
         expect(chapterName.isPresent()).toBe(true);
     });
 

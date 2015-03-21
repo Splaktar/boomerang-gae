@@ -5,13 +5,11 @@ exports.config = {
         'newsTests.js'
 //        'navigationTests.js'
     ],
-    multiCapabilities: [{
-        browserName: 'firefox'
-    }, {
-        browserName: 'chrome'
-    }, {
-        browserName: 'safari'
-    }],
+    multiCapabilities: [
+        { browserName: 'firefox' },
+        //{ browserName: 'safari' },
+        { browserName: 'chrome' }
+    ],
     // Options to be passed to Jasmine-node.
     jasmineNodeOpts: {
         showColors: true // Use colors in the command line report.

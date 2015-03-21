@@ -37,7 +37,7 @@
                 <h2 flex>
                     <span ng-cloak>{{ mc.chapterName }}</span>
                 </h2>
-                <a ng-href="{{ mc.googlePlusLink }}" rel="publisher" target="_blank">
+                <a ng-if="mc.googlePlusLink" ng-href="{{ mc.googlePlusLink }}" rel="publisher" target="_blank">
                     <md-icon md-font-icon="fa fa-lg fa-google-plus-square" alt="Google+"></md-icon>
                 </a>
                 <a ng-if="mc.twitterLink" ng-href="{{ mc.twitterLink }}" target="_blank">

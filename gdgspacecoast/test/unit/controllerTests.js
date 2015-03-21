@@ -1,65 +1,55 @@
 describe('Controllers', function () {
     var rootScope;
-    var scope;
 
-    beforeEach(module('gdgBoomerang'));
+    beforeEach(module('gdgXBoomerang'));
     beforeEach(inject(function ($rootScope) {
         rootScope = $rootScope;
-        scope = $rootScope.$new();
     }));
 
-    describe('MainControl', function () {
+    describe('MainController', function () {
         it('should set some values', inject(function (Config, $controller) {
-            $controller('MainControl', {$scope: scope});
-            expect(scope.chapterName).toBe(Config.name);
-            expect(scope.googlePlusLink).toBe('https://plus.google.com/' + Config.id);
-            expect(scope.isNavCollapsed).toBe(true);
-            expect(scope.status).toBe('ready');
+            var mc = $controller('MainController');
+            expect(mc.chapterName).toBe(Config.name);
+            expect(mc.googlePlusLink).toBe('https://plus.google.com/' + Config.id);
             expect(rootScope.canonical).toBe(Config.domain);
         }));
     });
 
-    describe('AboutControl', function () {
+    describe('AboutController', function () {
         it('should set some values', inject(function (Config, $controller) {
-            var controller = $controller('AboutControl', {$scope: scope});
-            expect(scope.$parent.activeTab).toBe('about');
-            expect(scope.cover).toBe(Config.cover);
-            expect(scope.loading).toBe(true);
-            expect(scope.status).toBeUndefined();
-            expect(controller.request).toContain(Config.googleApi);
-            expect(controller.request).toContain(Config.id);
+            var vm = $controller('AboutController');
+            expect(vm.cover).toBe(Config.cover);
+            expect(vm.loading).toBe(true);
+            expect(vm.status).toBeUndefined();
         }));
     });
 
-    describe('NewsControl', function () {
+    describe('NewsController', function () {
         it('should set some values', inject(function (Config, $controller) {
-            var controller = $controller('NewsControl', {$scope: scope});
-            expect(scope.$parent.activeTab).toBe('news');
-            expect(scope.loading).toBe(true);
-            expect(scope.status).toBeUndefined();
-            expect(controller.request).toContain(Config.googleApi);
-            expect(controller.request).toContain(Config.id);
+            var vm = $controller('NewsController');
+            expect(vm.chapterName).toBe(Config.name);
+            expect(vm.loading).toBe(true);
+            expect(vm.status).toBeUndefined();
         }));
     });
 
-    describe('EventsControl', function () {
+    describe('EventsController', function () {
         it('should set some values', inject(function (Config, $controller) {
-            var controller = $controller('EventsControl', {$scope: scope});
-            expect(scope.$parent.activeTab).toBe('events');
-            expect(scope.loading).toBe(true);
-            expect(scope.events).toBeDefined();
-            expect(controller.url).toContain(Config.id);
+            var vm = $controller('EventsController');
+            expect(vm.chapterName).toBe(Config.name);
+            expect(vm.loading).toBe(true);
+            expect(vm.status).toBeUndefined();
+            expect(vm.events).toBeDefined();
+            expect(vm.dateFormat).toBe(Config.dateFormat);
         }));
     });
 
-    describe('PhotosControl', function () {
+    describe('PhotosController', function () {
         it('should set some values', inject(function (Config, $controller) {
-            var controller = $controller('PhotosControl', {$scope: scope});
-            expect(scope.$parent.activeTab).toBe('photos');
-            expect(scope.loading).toBe(true);
-            expect(scope.photos).toBeDefined();
-            expect(controller.request).toContain(Config.id);
-            expect(controller.request).toContain(Config.pwaId);
+            var vm = $controller('PhotosController');
+            expect(vm.chapterName).toBe(Config.name);
+            expect(vm.loading).toBe(true);
+            expect(vm.photos).toBeDefined();
         }));
     });
 });

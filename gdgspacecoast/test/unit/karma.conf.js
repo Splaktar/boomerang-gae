@@ -12,14 +12,17 @@ module.exports = function (config) {
 
         // list of files / patterns to load in the browser
         files: [
-            'test/lib/angular.js',
-            'test/lib/angular-mocks.js',
-            'test/lib/angular-route.js',
-            'test/lib/angular-sanitize.js',
+            'war/bower_components/angular/angular.js',
+            'war/bower_components/angular-mocks/angular-mocks.js',
+            'war/bower_components/angular-route/angular-route.js',
+            'war/bower_components/angular-sanitize/angular-sanitize.js',
+            'war/bower_components/angular-aria/angular-aria.js',
+            'war/bower_components/angular-animate/angular-animate.js',
+            'war/bower_components/angular-material/angular-material.js',
             'test/lib/plusone.js',
-            'war/lib/*.js',
-            'war/js/*.js',
-            'test/unit/*.js'
+            'war/app/boomerang.module.js',
+            'war/app/**/*.js',
+            'test/unit/**/*.js'
         ],
 
         // list of files to exclude
@@ -53,7 +56,8 @@ module.exports = function (config) {
             'Chrome',
             'ChromeCanary',
             'Firefox',
-            'Safari'
+            'Safari',
+            'PhantomJS'
         ],
 
         // Continuous Integration mode

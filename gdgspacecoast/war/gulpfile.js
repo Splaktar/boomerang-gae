@@ -9,6 +9,7 @@ var uglify = require('gulp-uglify');
 var sourcemaps = require('gulp-sourcemaps');
 var ngAnnotate = require('gulp-ng-annotate');
 var jscs = require('gulp-jscs');
+var karma = require('karma').server;
 
 var getBundleName = function () {
     var name = require('./../package.json').name;
@@ -41,6 +42,24 @@ gulp.task('jscs', function () {
         '../test/unit/**.js'
     ])
         .pipe(jscs({configPath: '.jscsrc'}));
+});
+
+/**
+ * Run test once and exit
+ */
+gulp.task('karma', function (done) {
+    karma.start({
+        configFile: __dirname + '/../test/unit/karma.conf.js',
+        singleRun: true
+    }, done);
+});
+
+gulp.task('karma-watch', function (done) {
+    karma.start({
+        configFile: __dirname + '/../test/unit/karma.conf.js',
+        singleRun: false,
+        autoWatch: true
+    }, done);
 });
 
 gulp.task('concat', ['clean'], function () {

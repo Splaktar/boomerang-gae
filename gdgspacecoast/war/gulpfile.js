@@ -8,10 +8,11 @@ var buffer = require('vinyl-buffer');
 var uglify = require('gulp-uglify');
 var sourcemaps = require('gulp-sourcemaps');
 var ngAnnotate = require('gulp-ng-annotate');
+var jscs = require('gulp-jscs');
 
 var getBundleName = function () {
-  var name = require('./../package.json').name;
-  return name + '.' + 'min';
+    var name = require('./../package.json').name;
+    return name + '.' + 'min';
 };
 
 var outputPath = './app/dist/';
@@ -21,10 +22,25 @@ gulp.task('clean', function (cb) {
 });
 
 gulp.task('jshint', ['clean'], function () {
-    return gulp.src(['./**.js'])
+    return gulp.src([
+        './gulpfile.js',
+        './app/**/**.js',
+        '../test/e2e/**.js',
+        '../test/unit/**.js'
+    ])
         .pipe(jshint())
         .pipe(jshint.reporter('default'))
         .pipe(jshint.reporter('fail'));
+});
+
+gulp.task('jscs', function () {
+    return gulp.src([
+        './gulpfile.js',
+        './app/**/**.js',
+        '../test/e2e/**.js',
+        '../test/unit/**.js'
+    ])
+        .pipe(jscs({configPath: '.jscsrc'}));
 });
 
 gulp.task('concat', ['clean'], function () {
@@ -38,25 +54,25 @@ gulp.task('concat', ['clean'], function () {
         .pipe(gulp.dest(outputPath));
 });
 
-gulp.task('javascript', ['clean', 'concat'], function() {
-  var bundler = browserify({
-    entries: [outputPath + 'boomerang.js'],
-    debug: true
-  });
+gulp.task('javascript', ['clean', 'concat'], function () {
+    var bundler = browserify({
+        entries: [outputPath + 'boomerang.js'],
+        debug: true
+    });
 
-  var bundle = function() {
-    return bundler.bundle()
-        .pipe(source(getBundleName() + '.js'))
-        .pipe(buffer())
-        .pipe(ngAnnotate())
-        .pipe(sourcemaps.init({loadMaps: true}))
-        // Add transformation tasks to the pipeline here.
-        .pipe(uglify())
-        .pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest(outputPath));
-  };
+    var bundle = function () {
+        return bundler.bundle()
+            .pipe(source(getBundleName() + '.js'))
+            .pipe(buffer())
+            .pipe(ngAnnotate())
+            .pipe(sourcemaps.init({loadMaps: true}))
+            // Add transformation tasks to the pipeline here.
+            .pipe(uglify())
+            .pipe(sourcemaps.write('./'))
+            .pipe(gulp.dest(outputPath));
+    };
 
-  return bundle();
+    return bundle();
 });
 
-gulp.task('default', ['jshint', 'javascript']);
+gulp.task('default', ['jshint', 'jscs', 'javascript']);

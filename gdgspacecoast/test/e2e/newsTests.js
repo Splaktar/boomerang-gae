@@ -2,7 +2,7 @@ var env = require('./env.js');
 
 describe('Boomerang News page', function () {
     var heading = element(by.id('heading'));
-    var gdg_loading = element(by.css('.gdg_loading'));
+    var gdgLoading = element(by.css('.gdg_loading'));
     var newsFeed = element(by.id('news-feed'));
     var newsArticles = element.all((by.repeater('article in news')));
 
@@ -17,7 +17,7 @@ describe('Boomerang News page', function () {
 
     it('should hide the loading image', function () {
         expect(heading.isDisplayed()).toBe(true);
-        expect(gdg_loading.isDisplayed()).not.toBe(true);
+        expect(gdgLoading.isDisplayed()).not.toBe(true);
     });
 
     it('should load the news feed', function () {

@@ -11,8 +11,8 @@ describe('Controllers', function () {
     describe('MainControl', function () {
         it('should set some values', inject(function (Config, $controller) {
             $controller('MainControl', {$scope: scope});
-            expect(scope.chapter_name).toBe(Config.name);
-            expect(scope.google_plus_link).toBe('https://plus.google.com/' + Config.id);
+            expect(scope.chapterName).toBe(Config.name);
+            expect(scope.googlePlusLink).toBe('https://plus.google.com/' + Config.id);
             expect(scope.isNavCollapsed).toBe(true);
             expect(scope.status).toBe('ready');
             expect(rootScope.canonical).toBe(Config.domain);
@@ -26,7 +26,7 @@ describe('Controllers', function () {
             expect(scope.cover).toBe(Config.cover);
             expect(scope.loading).toBe(true);
             expect(scope.status).toBeUndefined();
-            expect(controller.request).toContain(Config.google_api);
+            expect(controller.request).toContain(Config.googleApi);
             expect(controller.request).toContain(Config.id);
         }));
     });
@@ -37,7 +37,7 @@ describe('Controllers', function () {
             expect(scope.$parent.activeTab).toBe('news');
             expect(scope.loading).toBe(true);
             expect(scope.status).toBeUndefined();
-            expect(controller.request).toContain(Config.google_api);
+            expect(controller.request).toContain(Config.googleApi);
             expect(controller.request).toContain(Config.id);
         }));
     });
@@ -59,7 +59,7 @@ describe('Controllers', function () {
             expect(scope.loading).toBe(true);
             expect(scope.photos).toBeDefined();
             expect(controller.request).toContain(Config.id);
-            expect(controller.request).toContain(Config.pwa_id);
+            expect(controller.request).toContain(Config.pwaId);
         }));
     });
 });

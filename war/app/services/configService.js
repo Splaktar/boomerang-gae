@@ -1,4 +1,5 @@
-boomerang.factory('Config', function () {
+angular.module('gdgXBoomerang')
+.factory('Config', function () {
     return {
         // TODO Modify these to configure your app
         'name'          : 'GDG Space Coast',

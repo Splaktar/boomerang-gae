@@ -108,3 +108,6 @@ local.properties
 # Package managers and builders
 bower_components/
 node_modules/
+
+#Generated Gulp output
+dist/

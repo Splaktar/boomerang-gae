@@ -16,7 +16,7 @@ var getBundleName = function () {
     return name + '.' + 'min';
 };
 
-var outputPath = './app/dist/';
+var outputPath = __dirname + '/app/dist/';
 
 gulp.task('clean', function (cb) {
     del([outputPath + '**'], cb);
@@ -24,10 +24,11 @@ gulp.task('clean', function (cb) {
 
 gulp.task('jshint', ['clean'], function () {
     return gulp.src([
-        './gulpfile.js',
-        './app/**/**.js',
-        '../test/e2e/**.js',
-        '../test/unit/**.js'
+        __dirname + '/gulpfile.js',
+        __dirname + '/app/**/**.js',
+        __dirname + '../test/e2e/**.js',
+        __dirname + '../test/unit/**.js',
+        '!' + outputPath + '**'
     ])
         .pipe(jshint())
         .pipe(jshint.reporter('default'))
@@ -36,10 +37,11 @@ gulp.task('jshint', ['clean'], function () {
 
 gulp.task('jscs', function () {
     return gulp.src([
-        './gulpfile.js',
-        './app/**/**.js',
-        '../test/e2e/**.js',
-        '../test/unit/**.js'
+        __dirname + '/gulpfile.js',
+        __dirname + '/app/**/**.js',
+        __dirname + '../test/e2e/**.js',
+        __dirname + '../test/unit/**.js',
+        '!' + outputPath + '**'
     ])
         .pipe(jscs({configPath: '.jscsrc'}));
 });
@@ -64,10 +66,11 @@ gulp.task('karma-watch', function (done) {
 
 gulp.task('concat', ['clean'], function () {
     return gulp.src([
-        './app/boomerang.module.js',
-        './app/boomerang.config.js',
-        './app/services/*.js',
-        './app/**/**.js'
+        __dirname + '/app/boomerang.module.js',
+        __dirname + '/app/boomerang.config.js',
+        __dirname + '/app/services/*.js',
+        __dirname + '/app/**/**.js',
+        '!' + outputPath + '**'
     ])
         .pipe(concat('boomerang.js'))
         .pipe(gulp.dest(outputPath));

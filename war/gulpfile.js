@@ -12,7 +12,7 @@ var jscs = require('gulp-jscs');
 var karma = require('karma').server;
 
 var getBundleName = function () {
-    var name = require('./../package.json').name;
+    var name = require(__dirname + '/../package.json').name;
     return name + '.' + 'min';
 };
 

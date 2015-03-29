@@ -2,5 +2,6 @@
 module.exports = {
     // A base URL for your application under test.
     baseUrl: 'http://localhost:8888'
-//    baseUrl: 'http://www.gdgspacecoast.org'
+    // URL for testing production deployment
+    //baseUrl: 'http://www.gdgspacecoast.org'
 };

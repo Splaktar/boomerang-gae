@@ -17,7 +17,7 @@ angular.module('gdgXBoomerang')
             vm.loading = false;
             vm.status = 'ready';
         })
-        .error(function (error) {
+        .error(function () {
             vm.desc = 'Sorry, we failed to retrieve the About text from the Google+ API.';
             vm.loading = false;
             vm.status = 'ready';

@@ -1,6 +1,6 @@
 var gulp = require('gulp');
-var jshint = require('gulp-jshint');
-var concat = require('gulp-concat');
+var gulpJshint = require('gulp-jshint');
+var gulpConcat = require('gulp-concat');
 var del = require('del');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
@@ -8,8 +8,11 @@ var buffer = require('vinyl-buffer');
 var uglify = require('gulp-uglify');
 var sourcemaps = require('gulp-sourcemaps');
 var ngAnnotate = require('gulp-ng-annotate');
-var jscs = require('gulp-jscs');
-var karma = require('karma').server;
+var gulpJscs = require('gulp-jscs');
+var karmaServer = require('karma').server;
+var inject = require('gulp-inject');
+var mainBowerFiles = require('main-bower-files');
+var angularFilesort = require('gulp-angular-filesort');
 
 var getBundleName = function () {
     var name = require(__dirname + '/../package.json').name;
@@ -18,11 +21,27 @@ var getBundleName = function () {
 
 var outputPath = __dirname + '/app/dist/';
 
-gulp.task('clean', function (cb) {
+/**
+ *  Tasks
+ */
+gulp.task('default', ['jshint', 'jscs', 'dev']);
+gulp.task('clean', clean);
+gulp.task('gulpConcat', ['clean'], concat);
+gulp.task('gulpJshint', ['clean'], jshint);
+gulp.task('gulpJscs', jscs);
+gulp.task('dev', ['clean'], devBuild);
+gulp.task('prod', ['clean', 'concat'], productionBuild);
+gulp.task('karma', karma);
+gulp.task('karma-watch', karmaWatch);
+
+/**
+ * Functions
+ */
+function clean(cb) {
     del([outputPath + '**'], cb);
-});
+}
 
-gulp.task('jshint', ['clean'], function () {
+function jshint() {
     return gulp.src([
         __dirname + '/gulpfile.js',
         __dirname + '/app/**/**.js',
@@ -30,12 +49,12 @@ gulp.task('jshint', ['clean'], function () {
         __dirname + '../test/unit/**.js',
         '!' + outputPath + '**'
     ])
-        .pipe(jshint())
-        .pipe(jshint.reporter('default'))
-        .pipe(jshint.reporter('fail'));
-});
+        .pipe(gulpJshint())
+        .pipe(gulpJshint.reporter('default'))
+        .pipe(gulpJshint.reporter('fail'));
+}
 
-gulp.task('jscs', function () {
+function jscs() {
     return gulp.src([
         __dirname + '/gulpfile.js',
         __dirname + '/app/**/**.js',
@@ -43,28 +62,28 @@ gulp.task('jscs', function () {
         __dirname + '../test/unit/**.js',
         '!' + outputPath + '**'
     ])
-        .pipe(jscs({configPath: '.jscsrc'}));
-});
+        .pipe(gulpJscs({configPath: '.jscsrc'}));
+}
 
 /**
  * Run test once and exit
  */
-gulp.task('karma', function (done) {
-    karma.start({
+function karma(done) {
+    karmaServer.start({
         configFile: __dirname + '/../test/unit/karma.conf.js',
         singleRun: true
     }, done);
-});
+}
 
-gulp.task('karma-watch', function (done) {
-    karma.start({
+function karmaWatch(done) {
+    karmaServer.start({
         configFile: __dirname + '/../test/unit/karma.conf.js',
         singleRun: false,
         autoWatch: true
     }, done);
-});
+}
 
-gulp.task('concat', ['clean'], function () {
+function concat() {
     return gulp.src([
         __dirname + '/app/boomerang.module.js',
         __dirname + '/app/boomerang.config.js',
@@ -72,11 +91,11 @@ gulp.task('concat', ['clean'], function () {
         __dirname + '/app/**/**.js',
         '!' + outputPath + '**'
     ])
-        .pipe(concat('boomerang.js'))
+        .pipe(gulpConcat('boomerang.js'))
         .pipe(gulp.dest(outputPath));
-});
+}
 
-gulp.task('javascript', ['clean', 'concat'], function () {
+function productionBuild() {
     var bundler = browserify({
         entries: [outputPath + 'boomerang.js'],
         debug: true
@@ -95,6 +114,16 @@ gulp.task('javascript', ['clean', 'concat'], function () {
     };
 
     return bundle();
-});
+}
 
-gulp.task('default', ['jshint', 'jscs', 'javascript']);
+function devBuild() {
+    var target = gulp.src(__dirname + '/index.html');
+    var sources = gulp.src([__dirname + '/app/**/**.js'], {read: true});
+    var styles = gulp.src([__dirname + '/app/**/**.css'], {read: false});
+
+    return target
+        .pipe(inject(gulp.src(mainBowerFiles(), {read: false}), {name: 'bower'}))
+        .pipe(inject(sources.pipe(angularFilesort())))
+        .pipe(inject(styles))
+        .pipe(gulp.dest(__dirname));
+}

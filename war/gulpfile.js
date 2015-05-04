@@ -13,24 +13,27 @@ var karmaServer = require('karma').server;
 var inject = require('gulp-inject');
 var mainBowerFiles = require('main-bower-files');
 var angularFilesort = require('gulp-angular-filesort');
+var gulpFile = require('gulp-file');
+
+const CDN_FILES = require(__dirname + '/config/CDN.json');
+const outputPath = __dirname + '/app/dist/';
 
 var getBundleName = function () {
     var name = require(__dirname + '/../package.json').name;
     return name + '.' + 'min';
 };
 
-var outputPath = __dirname + '/app/dist/';
-
 /**
  *  Tasks
  */
 gulp.task('default', ['jshint', 'jscs', 'dev']);
 gulp.task('clean', clean);
-gulp.task('gulpConcat', ['clean'], concat);
-gulp.task('gulpJshint', ['clean'], jshint);
-gulp.task('gulpJscs', jscs);
+gulp.task('concat', ['clean'], concat);
+gulp.task('jshint', ['clean'], jshint);
+gulp.task('jscs', jscs);
 gulp.task('dev', ['clean'], devBuild);
-gulp.task('prod', ['clean', 'concat'], productionBuild);
+gulp.task('inject-cdn', injectCdn);
+gulp.task('prod', ['clean', 'concat', 'inject-cdn'], productionBuild);
 gulp.task('karma', karma);
 gulp.task('karma-watch', karmaWatch);
 
@@ -107,13 +110,53 @@ function productionBuild() {
             .pipe(buffer())
             .pipe(ngAnnotate())
             .pipe(sourcemaps.init({loadMaps: true}))
-            // Add transformation tasks to the pipeline here.
             .pipe(uglify())
             .pipe(sourcemaps.write('./'))
             .pipe(gulp.dest(outputPath));
     };
 
     return bundle();
+}
+
+function injectCdn() {
+    return gulp.src(__dirname + '/index.html')
+        .pipe(inject(
+            gulpFile('cdn.css', '', { src: true })
+                .pipe(gulpFile('cdn.js', '')),
+            {
+                name: 'bower',
+                transform: function (filePath) {
+                    var tags = '', jsIndex, cssIndex;
+                    if (filePath.indexOf('.js') !== -1){
+                        var jsUrls = CDN_FILES.js;
+                        for (jsIndex = 0; jsIndex < jsUrls.length; jsIndex++){
+                            tags += '<script src="' + jsUrls[jsIndex] + '"></script>\n';
+                        }
+                    } else {
+                        var cssUrls = CDN_FILES.css;
+                        for (cssIndex = 0; cssIndex < cssUrls.length; cssIndex++){
+                            tags += '<link rel="stylesheet" href="' + cssUrls[cssIndex] + '">\n';
+                        }
+                    }
+                    return tags.substring(0, tags.length - 1);
+                }
+            }))
+        .pipe(inject(
+            gulpFile('local.css', '', { src: true })
+                .pipe(gulpFile('local.js', '')),
+            {
+                name: 'inject',
+                transform: function (filePath) {
+                    var tags = '';
+                    if (filePath.indexOf('.js') !== -1){
+                        tags += '<script src="' + '/app/dist/' + getBundleName() + '.js' + '"></script>\n';
+                    } else {
+                        tags += '<link rel="stylesheet" href="' + '/app/css/gdg.css' + '">\n';
+                    }
+                    return tags.substring(0, tags.length - 1);
+                }
+            }))
+        .pipe(gulp.dest(__dirname));
 }
 
 function devBuild() {

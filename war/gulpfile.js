@@ -10,7 +10,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var ngAnnotate = require('gulp-ng-annotate');
 var gulpJscs = require('gulp-jscs');
 var karmaServer = require('karma').server;
-var inject = require('gulp-inject');
+var gulpInject = require('gulp-inject');
 var mainBowerFiles = require('main-bower-files');
 var angularFilesort = require('gulp-angular-filesort');
 var gulpFile = require('gulp-file');
@@ -33,7 +33,7 @@ gulp.task('jshint', ['clean'], jshint);
 gulp.task('jscs', jscs);
 gulp.task('dev', ['clean'], devBuild);
 gulp.task('inject-cdn', injectCdn);
-gulp.task('prod', ['clean', 'concat', 'inject-cdn'], productionBuild);
+gulp.task('prod', ['jshint', 'jscs', 'concat', 'inject-cdn'], productionBuild);
 gulp.task('karma', karma);
 gulp.task('karma-watch', karmaWatch);
 
@@ -120,7 +120,7 @@ function productionBuild() {
 
 function injectCdn() {
     return gulp.src(__dirname + '/index.html')
-        .pipe(inject(
+        .pipe(gulpInject(
             gulpFile('cdn.css', '', { src: true })
                 .pipe(gulpFile('cdn.js', '')),
             {
@@ -141,7 +141,7 @@ function injectCdn() {
                     return tags.substring(0, tags.length - 1);
                 }
             }))
-        .pipe(inject(
+        .pipe(gulpInject(
             gulpFile('local.css', '', { src: true })
                 .pipe(gulpFile('local.js', '')),
             {
@@ -165,8 +165,8 @@ function devBuild() {
     var styles = gulp.src([__dirname + '/app/**/**.css'], {read: false});
 
     return target
-        .pipe(inject(gulp.src(mainBowerFiles(), {read: false}), {name: 'bower'}))
-        .pipe(inject(sources.pipe(angularFilesort())))
-        .pipe(inject(styles))
+        .pipe(gulpInject(gulp.src(mainBowerFiles(), {read: false}), {name: 'bower'}))
+        .pipe(gulpInject(sources.pipe(angularFilesort())))
+        .pipe(gulpInject(styles))
         .pipe(gulp.dest(__dirname));
 }

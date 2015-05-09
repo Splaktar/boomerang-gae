@@ -127,14 +127,14 @@ function injectCdn() {
                 name: 'bower',
                 transform: function (filePath) {
                     var tags = '', jsIndex, cssIndex;
-                    if (filePath.indexOf('.js') !== -1){
+                    if (filePath.indexOf('.js') !== -1) {
                         var jsUrls = CDN_FILES.js;
-                        for (jsIndex = 0; jsIndex < jsUrls.length; jsIndex++){
+                        for (jsIndex = 0; jsIndex < jsUrls.length; jsIndex++) {
                             tags += '<script src="' + jsUrls[jsIndex] + '"></script>\n';
                         }
                     } else {
                         var cssUrls = CDN_FILES.css;
-                        for (cssIndex = 0; cssIndex < cssUrls.length; cssIndex++){
+                        for (cssIndex = 0; cssIndex < cssUrls.length; cssIndex++) {
                             tags += '<link rel="stylesheet" href="' + cssUrls[cssIndex] + '">\n';
                         }
                     }
@@ -148,7 +148,7 @@ function injectCdn() {
                 name: 'inject',
                 transform: function (filePath) {
                     var tags = '';
-                    if (filePath.indexOf('.js') !== -1){
+                    if (filePath.indexOf('.js') !== -1) {
                         tags += '<script src="' + '/app/dist/' + getBundleName() + '.js' + '"></script>\n';
                     } else {
                         tags += '<link rel="stylesheet" href="' + '/app/css/gdg.css' + '">\n';

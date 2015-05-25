@@ -77,11 +77,13 @@ From the boomerang directory, run the following:
 3. `gulp prod`
 
 NOTE: You may need to use `sudo` for running `npm` on OS X or Linux.
+
 NOTE: For easier debugging and development use, use `gulp dev` but make sure to run `gulp prod` before deploying to production.
 
 Deploy locally
 ---------------
 Make sure you cd into the boomerang-gae directory, then: `dev_appserver.sh war`
+
 On Windows: `dev_appserver.cmd war`
 
 Testing
@@ -96,6 +98,7 @@ Testing
 Deploy to App Engine via the CLI
 ---------------
 Make sure you cd into the boomerang-gae directory, then: `sudo appcfg.sh --oauth2 update war`
+
 On Windows: `appcfg.cmd --oauth2 update war`
 
 If you see an exception about creds, run `gcloud auth login` and go through the OAuth flow with the proper account.

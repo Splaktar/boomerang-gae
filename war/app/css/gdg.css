@@ -139,3 +139,9 @@ md-card a {
 a:hover {
     text-decoration: underline;
 }
+news-item-footer [id*="___plusone"] {
+    padding-top: 12px !important;
+}
+md-toolbar [id*="___plusone"] {
+    padding-top: 5px !important;
+}

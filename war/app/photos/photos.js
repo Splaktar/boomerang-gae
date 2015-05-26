@@ -2,7 +2,7 @@ angular.module('gdgXBoomerang')
 .controller('PhotosController', function ($http, Config, NavService) {
     var vm = this;
     vm.loading = true;
-    NavService.setNavTab(4);
+    NavService.setNavTab(5);
     vm.chapterName = Config.name;
     vm.photos = [];
 

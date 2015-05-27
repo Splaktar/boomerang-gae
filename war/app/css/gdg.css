@@ -97,7 +97,7 @@ md-grid-tile {
     height: 120px;
     width: 120px;
 }
-md-toolbar.md-default-theme {
+md-toolbar.md-default-theme:not(.navBar) {
     border-top-right-radius: 3px;
     border-top-left-radius: 3px;
 }

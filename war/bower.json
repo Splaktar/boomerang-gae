@@ -1,6 +1,6 @@
 {
     "name": "boomerang-gae",
-    "version": "2.0.4",
+    "version": "2.0.5",
     "homepage": "https://github.com/gdg-x/boomerang.git",
     "authors": [
         "GDG-X"
@@ -28,7 +28,7 @@
         "angular-sanitize": "1.4.0",
         "angular-aria": "1.4.0",
         "angular-animate": "1.4.0",
-        "angular-material": "0.9.0",
+        "angular-material": "0.10.0",
         "font-awesome": "~4.3.0"
     },
     "devDependencies": {

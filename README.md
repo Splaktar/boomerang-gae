@@ -61,6 +61,7 @@ Additional Optional Config
 14. Modify the sponsor links in **about.html**.
 16. Create a free https://prerender.io account (up to 250 pages).
 17. Find your token on prerender.io, insert it into **web.xml** where it says `INSERT_YOUR_PRERENDER_TOKEN_HERE`.
+18. Update the war/sitemap.xml with the URL of your site.
 
 NOTE: You cannot test prerendering of pages locally.
 

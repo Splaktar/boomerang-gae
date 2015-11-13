@@ -153,3 +153,6 @@ md-toolbar [id*="___plusone"] {
 .sponsor {
     max-width: 298px;
 }
+md-toolbar {
+    margin: 0 !important;
+}

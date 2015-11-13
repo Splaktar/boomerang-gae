@@ -1,6 +1,6 @@
 {
     "name": "boomerang-gae",
-    "version": "2.0.5",
+    "version": "2.0.6",
     "description": "GDG chapter boilerplate that feeds from DevSite and Google+ using AngularJS and Angular Material.",
     "main": "index.html",
     "scripts": {

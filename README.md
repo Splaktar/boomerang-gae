@@ -117,7 +117,7 @@ Make sure that you do the following successfully before committing:
 ###Contributors
 See [list of contributors](https://github.com/gdg-x/boomerang-gae/graphs/contributors)
 
-Maintainer: [@splanktar](https://github.com/splanktar).
+Maintainer: [@Splaktar](https://github.com/Splaktar).
 
 ######GDG Apps, GDG[x] are not endorsed and/or supported by Google, the corporation.
 

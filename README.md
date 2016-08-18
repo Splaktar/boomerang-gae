@@ -5,7 +5,7 @@ GDG-X Boomerang for App Engine (Java)
 
 ## Notice
 
-This project has been deprecated in favor of using either GitHub Pages or Firebase Hosting with the core [boomerang project](https://github.com/gdg-x/boomerang). That approach is much more straightforward. 
+This project has been deprecated in favor of using either GitHub Pages or Firebase Hosting with the core [boomerang project](https://github.com/gdg-x/boomerang). That approach is much more straightforward. Firebase Hosting provides free SSL Certificates and HTTPS hosting.
 
 However this project can still be used in combination with Prerender.io if SEO is important for your chapter. You will need to manually update the contents of `/war` with the latest changes from [boomerang](https://github.com/gdg-x/boomerang). I had been manually keeping this project updated in the past, but that will no longer happen.
 
